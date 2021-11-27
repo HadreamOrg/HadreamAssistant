@@ -1,9 +1,9 @@
 # coding=utf-8
 # author: Lan_zhijiang
 # description: snowboy engine
-# date: 2020/10/3
+# date: 2021/11/20
 
-import backend.bot.snowboy.snowboydecoder
+from backend.bot.snowboy import snowboydecoder
 
 
 class HASnowboy:
@@ -11,7 +11,6 @@ class HASnowboy:
     def __init__(self, ba):
 
         self.ba = ba
-        self.log = ba.log
         self.setting = ba.setting
 
     def run(self, callback):
@@ -21,9 +20,9 @@ class HASnowboy:
         :param callback: 回调函数
         :return:
         """
-        detector = snowboy.snowboydecoder.HotwordDetector(
-            self.setting["snowboySettings"]["hotword"],
-            sensitivity=self.setting["snowboySettings"]["sensitivity"],
+        detector = snowboydecoder.HotwordDetector(
+            self.setting["conversation"]["bot"]["snowboy"]["hotword"],
+            sensitivity=self.setting["conversation"]["bot"]["snowboy"]["sensitivity"],
             audio_gain=1)
         detector.start(callback)
 
