@@ -27,18 +27,27 @@ class HANlu:
         :param text: 文本
         :return: str
         """
-        returns = []
-        for keyword in self.skill_manager.keyword_intent_list.keys():
-            if keyword in text:
-                intent = self.skill_manager.keyword_intent_list[keyword]
-                returns.append(intent)
+        intent = []
+        if "打开" in text:
+            # open skill
+            intent.append("open_skill")
+            intent.append(text[2:])
+        else:
+            # other intents
+            for group in self.skill_manager.keyword_intent_list.keys():
+                for keyword in group[0]:
+                    intent = self.skill_manager.keyword_intent_list[keyword]
+                    returns.append(intent)
 
-                if intent == "call_skill":
-                    returns.append(self.skill_manager.name_skill_list[text[2:]])
-                return returns
+                    if intent == "call_skill":
+                        returns.append(self.skill_manager.name_skill_list[text[2:]])
+                    return returns
 
-        returns.append("talk")
-        return returns
+        # returns = []
+
+        #
+        # returns.append("talk")
+        # return returns
 
     def skill_nlu(self, text, data):
 
