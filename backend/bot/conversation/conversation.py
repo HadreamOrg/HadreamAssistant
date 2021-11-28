@@ -44,5 +44,5 @@ class HAConversation:
             if intent[0] == "open_skill":
                 self.skill_manager.name_skill_list[intent[1]](self.ba, text, intent).start()
             else:
-                self.skill_manager.intent_skill_list[intent[1]](self.ba, text, intent).start()
+                self.skill_manager.skills_list[intent[1]](self.ba, text, intent).start()
 

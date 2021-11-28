@@ -31,17 +31,39 @@ class HANlu:
         if "打开" in text:
             # open skill
             intent.append("open_skill")
-            intent.append(text[2:])
+            try:
+                skill_name = self.skill_manager.name_skills_list[text[2:]]
+            except KeyError:
+                self.log.add_log("HANlu: skill_name-%s does not exist, open_skill fail" % text[2:], 3)
+                intent = ["error", "skill_name_not_exist"]
+            else:
+                intent.append(skill_name)
         else:
             # other intents
             for group in self.skill_manager.keyword_intent_list.keys():
-                for keyword in group[0]:
-                    intent = self.skill_manager.keyword_intent_list[keyword]
-                    returns.append(intent)
+                # 意图组循环（以一个技能能处理的意图为一组）
+                if len(group[1]) > 1:
+                    multiple_intents = True
+                else:
+                    multiple_intents = False
 
-                    if intent == "call_skill":
-                        returns.append(self.skill_manager.name_skill_list[text[2:]])
-                    return returns
+                for i in range(0, len(group[0])):
+                    # 技能内意图匹配
+                    compared = True
+                    for word in group[0][i]:
+                        # 关键词组匹配
+                        if word not in text:
+                            compared = False
+                            break
+                    if compared:
+                        # the i intent was compared
+                        if multiple_intents:
+                            intent.append(group[1][i])
+                        else:
+                            intent.append(group[1][0])
+                        intent.append("")
+
+        return intent
 
         # returns = []
 
