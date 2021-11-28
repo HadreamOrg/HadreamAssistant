@@ -43,6 +43,8 @@ class HAConversation:
             intent = self.nlu.analyze_intent(text)
             if intent[0] == "open_skill":
                 self.skill_manager.name_skill_list[intent[1]](self.ba, text, intent).start()
+            elif intent[0] == "error":
+                self.player.play("%s.wav" % intent[1])
             else:
                 self.skill_manager.skills_list[intent[1]](self.ba, text, intent).start()
 

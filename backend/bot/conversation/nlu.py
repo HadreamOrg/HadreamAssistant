@@ -27,19 +27,20 @@ class HANlu:
         :param text: 文本
         :return: str
         """
-        intent = []
+        intent = [0, 0, 0, 0] # intent["operation", "intent_name", "handle_skill", "slot]
         if "打开" in text:
             # open skill
-            intent.append("open_skill")
+            intent[0] = "open_skill"
+            intent[1] = "launch"
             try:
                 skill_name = self.skill_manager.name_skills_list[text[2:]]
             except KeyError:
                 self.log.add_log("HANlu: skill_name-%s does not exist, open_skill fail" % text[2:], 3)
-                intent = ["error", "skill_name_not_exist"]
+                intent = ["error", "skill_name_not_exist", None, None]
             else:
-                intent.append(skill_name)
+                intent[2] = skill_name
         else:
-            # other intents
+            # 原生意图识别（包含词槽）
             for group in self.skill_manager.keyword_intent_list.keys():
                 # 意图组循环（以一个技能能处理的意图为一组）
                 if len(group[1]) > 1:
@@ -58,10 +59,10 @@ class HANlu:
                     if compared:
                         # the i intent was compared
                         if multiple_intents:
-                            intent.append(group[1][i])
+                            intent[1] = group[1][i]
                         else:
-                            intent.append(group[1][0])
-                        intent.append("")
+                            intent[1] = group[1][0]
+                        intent[2] = group[-1]
 
         return intent
 
