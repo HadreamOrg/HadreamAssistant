@@ -17,27 +17,19 @@ class HASkillManager:
         from backend.bot.skill.skills.orgin.notion import HASkillNotion
         from backend.bot.skill.skills.orgin.music import HASkillMusicPlayer
 
-        # self.keyword_intent_list ={
-        #     "闹钟": "clock",
-        #     "打开": "call_skill",
-        #     "天气": "weather",
-        #     "翻译": "translate",
-        #     "搜索": "search",
-        #     "聊天": "talk",
-        #     "闲聊": "talk",
-        #     "关机": "shutdown",
-        #     "重启": "reboot",
-        #     "怎么走": "map",
-        #     "订": "book",
-        #     "新闻": "news",
-        #     "笑话": "joke",
-        #     "播放": "play"
-        # }
         self.name_skill_list = {
             "智能家居": "hass",
             "音乐播放器": "kugou_music",
             "航班查询": "flight_searcher"
         }
+        self.keyword_intent_list = [
+            (
+                [["订", "闹钟"], ["订", "时钟"], ["提醒"]], ["set_alarm"], "alarm"),
+            (
+                [["查", "天气"], ["如何", "天气"], ["怎样", "天气"]], ["get_weather"], "weather"),
+            (
+                [["音乐", "放"]], ["play_music"], "kugou_music")
+        ]
         self.intent_skills_list = {
             "notion": HASkillNotion,
             "alarm": HASkillAlarm,
@@ -47,7 +39,7 @@ class HASkillManager:
             "joke": HASkillTuling
         }
         self.skill_skills_list = {
-            "hass": HASkillHass,
+            # "hass": HASkillHass,
             "music_player": HASkillMusicPlayer,
             "notion": HASkillNotion,
             "alarm": HASkillAlarm
