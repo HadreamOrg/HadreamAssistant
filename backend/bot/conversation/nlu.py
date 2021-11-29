@@ -72,13 +72,13 @@ class HANlu:
         # returns.append("talk")
         # return returns
 
-    def skill_nlu(self, text, data):
+    def skill_nlu(self, text, skill):
 
         """
-        技能专用nlu
-        :param text: 要处理的文本
-        :param data: 对应识别典
-        :return:
+        技能内部意图识别
+        :param text: 文本
+        :param skill: 技能名称
+        :return: intent_name(str)
         """
         intent = None
         slot = None
@@ -90,6 +90,18 @@ class HANlu:
                 return intent, slot
 
         return intent, slot
+
+    def ask_slots(self, slot_name, slot_asking, slot_dict, retry_time=2):
+
+        """
+        询问词槽
+        :param slot_name: 词槽名称
+        :param slot_asking: 询问话术
+        :param slot_dict: 匹配字典
+        :param retyr_time: 重试次数
+        :type retry_time: int
+        :return dict{slot_name: target}
+        """
 
     # def xfyun_intent_analyze(self, text):
     #
