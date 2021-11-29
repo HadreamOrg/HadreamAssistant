@@ -27,21 +27,44 @@ class HANlu:
         :param text: 文本
         :return: str
         """
-        intent = []
+        intent = [0, 0, 0, 0] # intent["operation", "intent_name", "handle_skill", "slot]
         if "打开" in text:
             # open skill
-            intent.append("open_skill")
-            intent.append(text[2:])
+            intent[0] = "open_skill"
+            intent[1] = "launch"
+            try:
+                skill_name = self.skill_manager.name_skills_list[text[2:]]
+            except KeyError:
+                self.log.add_log("HANlu: skill_name-%s does not exist, open_skill fail" % text[2:], 3)
+                intent = ["error", "skill_name_not_exist", None, None]
+            else:
+                intent[2] = skill_name
         else:
-            # other intents
+            # 原生意图识别（包含词槽）
             for group in self.skill_manager.keyword_intent_list.keys():
-                for keyword in group[0]:
-                    intent = self.skill_manager.keyword_intent_list[keyword]
-                    returns.append(intent)
+                # 意图组循环（以一个技能能处理的意图为一组）
+                if len(group[1]) > 1:
+                    multiple_intents = True
+                else:
+                    multiple_intents = False
 
-                    if intent == "call_skill":
-                        returns.append(self.skill_manager.name_skill_list[text[2:]])
-                    return returns
+                for i in range(0, len(group[0])):
+                    # 技能内意图匹配
+                    compared = True
+                    for word in group[0][i]:
+                        # 关键词组匹配
+                        if word not in text:
+                            compared = False
+                            break
+                    if compared:
+                        # the i intent was compared
+                        if multiple_intents:
+                            intent[1] = group[1][i]
+                        else:
+                            intent[1] = group[1][0]
+                        intent[2] = group[-1]
+
+        return intent
 
         # returns = []
 
@@ -49,13 +72,13 @@ class HANlu:
         # returns.append("talk")
         # return returns
 
-    def skill_nlu(self, text, skill):
+    def skill_nlu(self, text, data):
 
         """
-        技能内部意图识别
-        :param text: 文本
-        :param skill: 技能名称
-        :return: intent_name(str)
+        技能专用nlu
+        :param text: 要处理的文本
+        :param data: 对应识别典
+        :return:
         """
         intent = None
         slot = None
@@ -67,18 +90,6 @@ class HANlu:
                 return intent, slot
 
         return intent, slot
-
-    def ask_slots(self, slot_name, slot_asking, slot_dict, retry_time=2):
-
-        """
-        询问词槽
-        :param slot_name: 词槽名称
-        :param slot_asking: 询问话术
-        :param slot_dict: 匹配字典
-        :param retyr_time: 重试次数
-        :type retry_time: int
-        :return dict{slot_name: target}
-        """
 
     # def xfyun_intent_analyze(self, text):
     #

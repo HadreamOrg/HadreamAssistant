@@ -17,7 +17,7 @@ class HASkillManager:
         from backend.bot.skill.skills.orgin.notion import HASkillNotion
         from backend.bot.skill.skills.orgin.music import HASkillMusicPlayer
 
-        self.name_skill_list = {
+        self.name_skills_list = {
             "智能家居": "hass",
             "音乐播放器": "kugou_music",
             "航班查询": "flight_searcher"
@@ -30,7 +30,7 @@ class HASkillManager:
             (
                 [["音乐", "放"]], ["play_music"], "kugou_music")
         ]
-        self.intent_skills_list = {
+        self.skills_list = {
             "notion": HASkillNotion,
             "alarm": HASkillAlarm,
             "weather": HASkillTuling,
