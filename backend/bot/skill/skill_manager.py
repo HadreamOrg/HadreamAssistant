@@ -20,16 +20,42 @@ class HASkillManager:
         self.name_skills_list = {
             "智能家居": "hass",
             "音乐播放器": "kugou_music",
-            "航班查询": "flight_searcher"
+            "航班查询": "flight_searcher",
+            "助理": "notion"
         }
+        # nlu识别意图和词槽的资料库
+        # [[关键词组]], [意图组], [意图对应词槽组], "技能名称"]
         self.keyword_intent_list = [
             (
-                [["订", "闹钟"], ["订", "时钟"], ["提醒"]], ["set_alarm"], "alarm"),
+                [["订", "闹钟"], ["订", "时钟"], ["提醒"]], ["set_alarm"], [[("date", "$date!"), ("time", "$time!")]], "alarm"),
             (
-                [["查", "天气"], ["如何", "天气"], ["怎样", "天气"]], ["get_weather"], "weather"),
+                [["查", "天气"], ["如何", "天气"], ["怎样", "天气"]], ["get_weather"], [[("location", "$city"), ("date", "$date")]], "weather"),
             (
-                [["音乐", "放"]], ["play_music"], "kugou_music")
+                [["音乐", "放"]], ["play_music"], [[]], "kugou_music"),
+            (
+                [
+                    ["订", "会议"],
+                    ["留言"]
+                ],
+                [
+                    "booking_meeting",
+                    ""
+                ],
+                [
+                    [("date", "$date!"), ("time", "$time!"), ("name", "*meeting_name"), ("attender", "$attender")],
+                    [""]
+                ],
+                "notion"
+            )
         ]
+        self.skill_skills_list = {
+            # "hass": HASkillHass,
+            "music_player": HASkillMusicPlayer,
+            "notion": HASkillNotion,
+            "alarm": HASkillAlarm
+            # "flight_searcher": HASkillFlightSearcher
+        }
+
         self.skills_list = {
             "notion": HASkillNotion,
             "alarm": HASkillAlarm,
@@ -37,11 +63,4 @@ class HASkillManager:
             "talk": HASkillTuling,
             "play_audio": HASkillMusicPlayer,
             "joke": HASkillTuling
-        }
-        self.skill_skills_list = {
-            # "hass": HASkillHass,
-            "music_player": HASkillMusicPlayer,
-            "notion": HASkillNotion,
-            "alarm": HASkillAlarm
-            # "flight_searcher": HASkillFlightSearcher
         }

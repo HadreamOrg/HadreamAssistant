@@ -5,6 +5,7 @@
 
 import time
 import requests
+import json
 import base64
 import hashlib
 
@@ -19,6 +20,7 @@ class HANlu:
 
         self.nlu_settings = self.setting["bot"]["conversation"]["nlu"]
         self.skill_manager = self.ba.skill_manager
+        self.nlp = self.ba.nlp
 
     def original_intent_analyze(self, text):
 
@@ -27,7 +29,9 @@ class HANlu:
         :param text: 文本
         :return: str
         """
-        intent = [0, 0, 0, 0] # intent["operation", "intent_name", "handle_skill", "slot]
+        intent = [0, 0, 0, 0] # intent["operation", "intent_name", "handle_skill", "slot"]
+        slot = {}
+
         if "打开" in text:
             # open skill
             intent[0] = "open_skill"
@@ -48,6 +52,7 @@ class HANlu:
                 else:
                     multiple_intents = False
 
+                last_one_index = len(group[0])
                 for i in range(0, len(group[0])):
                     # 技能内意图匹配
                     compared = True
@@ -60,17 +65,38 @@ class HANlu:
                         # the i intent was compared
                         if multiple_intents:
                             intent[1] = group[1][i]
+                            slot_group = group[2][i]
                         else:
                             intent[1] = group[1][0]
+                            slot_group = group[2][0]
                         intent[2] = group[-1]
 
+                        # 开始解析词槽
+                        for slot in slot_group:
+                            if "!" in slot[1]:
+                                ask = True
+                            else:
+                                ask = False
+                            nlp_result = self.nlp.analyze_text(text)
+
+                            if "$" in slot[1]:
+                                # dict mode
+                                slot_dict = json.load(open("./backend/data/json/skill_slots/%s.json" % slot[1].replace("$", "").replace("!", "")))
+                                
+                                
+                            elif "*" in slot[1]:
+                                # rule mode
+                                slot_rule = json.load(open("./backend/data/json/sklll_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
+
+                        break
+                    
+                    if i == last_one_index and not compared:
+                        compared = False
+                
+                if compared:
+                    break
+
         return intent
-
-        # returns = []
-
-        #
-        # returns.append("talk")
-        # return returns
 
     def skill_nlu(self, text, skill):
 
