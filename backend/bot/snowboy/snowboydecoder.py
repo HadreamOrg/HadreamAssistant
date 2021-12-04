@@ -2,7 +2,8 @@
 
 import collections
 import pyaudio
-import snowboy.snowboydetect
+# from . import snowboydetect
+import snowboydetect
 import time
 import wave
 import os
@@ -39,7 +40,8 @@ def no_alsa_error():
 
 class RingBuffer(object):
     """Ring buffer to hold audio from PortAudio"""
-    def __init__(self, size = 4096):
+
+    def __init__(self, size=4096):
         self._buf = collections.deque(maxlen=size)
 
     def extend(self, data):
@@ -56,6 +58,7 @@ class RingBuffer(object):
 def play_audio_file(fname=DETECT_DING):
     """Simple callback function to play a wave file. By default it plays
     a Ding sound.
+
     :param str fname: wave file name
     :return: None
     """
@@ -79,6 +82,7 @@ class HotwordDetector(object):
     """
     Snowboy decoder to detect whether a keyword specified by `decoder_model`
     exists in a microphone input stream.
+
     :param decoder_model: decoder model file path, a string or a list of strings
     :param resource: resource file path.
     :param sensitivity: decoder sensitivity, a float of a list of floats.
@@ -88,16 +92,12 @@ class HotwordDetector(object):
     :param audio_gain: multiply input volume by this factor.
     :param apply_frontend: applies the frontend processing algorithm if True.
     """
+
     def __init__(self, decoder_model,
                  resource=RESOURCE_FILE,
                  sensitivity=[],
                  audio_gain=1,
                  apply_frontend=False):
-
-        def audio_callback(in_data, frame_count, time_info, status):
-            self.ring_buffer.extend(in_data)
-            play_data = chr(0) * len(in_data)
-            return play_data, pyaudio.paContinue
 
         tm = type(decoder_model)
         ts = type(sensitivity)
@@ -107,14 +107,14 @@ class HotwordDetector(object):
             sensitivity = [sensitivity]
         model_str = ",".join(decoder_model)
 
-        self.detector = snowboy.snowboydetect.SnowboyDetect(
+        self.detector = snowboydetect.SnowboyDetect(
             resource_filename=resource.encode(), model_str=model_str.encode())
         self.detector.SetAudioGain(audio_gain)
         self.detector.ApplyFrontend(apply_frontend)
         self.num_hotwords = self.detector.NumHotwords()
 
         if len(decoder_model) > 1 and len(sensitivity) == 1:
-            sensitivity = sensitivity*self.num_hotwords
+            sensitivity = sensitivity * self.num_hotwords
         if len(sensitivity) != 0:
             assert self.num_hotwords == len(sensitivity), \
                 "number of hotwords in decoder_model (%d) and sensitivity " \
@@ -125,17 +125,6 @@ class HotwordDetector(object):
 
         self.ring_buffer = RingBuffer(
             self.detector.NumChannels() * self.detector.SampleRate() * 5)
-        with no_alsa_error():
-            self.audio = pyaudio.PyAudio()
-        self.stream_in = self.audio.open(
-            input=True, output=False,
-            format=self.audio.get_format_from_width(
-                self.detector.BitsPerSample() / 8),
-            channels=self.detector.NumChannels(),
-            rate=self.detector.SampleRate(),
-            frames_per_buffer=2048,
-            stream_callback=audio_callback)
-
 
     def start(self, detected_callback=play_audio_file,
               interrupt_check=lambda: False,
@@ -150,6 +139,7 @@ class HotwordDetector(object):
         function (single model) or a list of callback functions (multiple
         models). Every loop it also calls `interrupt_check` -- if it returns
         True, then breaks from the loop and return.
+
         :param detected_callback: a function or list of functions. The number of
                                   items must match the number of models in
                                   `decoder_model`.
@@ -168,6 +158,24 @@ class HotwordDetector(object):
         :param recording_timeout: limits the maximum length of a recording.
         :return: None
         """
+        self._running = True
+
+        def audio_callback(in_data, frame_count, time_info, status):
+            self.ring_buffer.extend(in_data)
+            play_data = chr(0) * len(in_data)
+            return play_data, pyaudio.paContinue
+
+        with no_alsa_error():
+            self.audio = pyaudio.PyAudio()
+        self.stream_in = self.audio.open(
+            input=True, output=False,
+            format=self.audio.get_format_from_width(
+                self.detector.BitsPerSample() / 8),
+            channels=self.detector.NumChannels(),
+            rate=self.detector.SampleRate(),
+            frames_per_buffer=2048,
+            stream_callback=audio_callback)
+
         if interrupt_check():
             logger.debug("detect voice return")
             return
@@ -185,7 +193,7 @@ class HotwordDetector(object):
         logger.debug("detecting...")
 
         state = "PASSIVE"
-        while True:
+        while self._running is True:
             if interrupt_check():
                 logger.debug("detect voice break")
                 break
@@ -261,9 +269,10 @@ class HotwordDetector(object):
 
     def terminate(self):
         """
-        Terminate audio stream. Users cannot call start() again to detect.
+        Terminate audio stream. Users can call start() again to detect.
         :return: None
         """
         self.stream_in.stop_stream()
         self.stream_in.close()
         self.audio.terminate()
+        self._running = False

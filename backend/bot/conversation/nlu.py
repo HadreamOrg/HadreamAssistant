@@ -1,13 +1,9 @@
 # coding=utf-8
 # author: Lan_zhijiang
-# description: old_xiaolan's nlu engine
-# date: 2020/10/3
+# description: HadreamAssistant's Nlu Engine
+# date: 2021/11/27
 
-import time
-import requests
 import json
-import base64
-import hashlib
 
 
 class HANlu:
@@ -16,9 +12,8 @@ class HANlu:
 
         self.ba = ba
         self.log = ba.log
-        self.setting = ba.setting
+        self.nlu_setting = ba.setting["bot"]["conversation"]["nlu"]
 
-        self.nlu_settings = self.setting["bot"]["conversation"]["nlu"]
         self.skill_manager = self.ba.skill_manager
         self.nlp = self.ba.nlp
 
@@ -82,7 +77,6 @@ class HANlu:
                             if "$" in slot[1]:
                                 # dict mode
                                 slot_dict = json.load(open("./backend/data/json/skill_slots/%s.json" % slot[1].replace("$", "").replace("!", "")))
-                                
                                 
                             elif "*" in slot[1]:
                                 # rule mode

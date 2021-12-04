@@ -10,16 +10,17 @@ import base64
 import urllib.parse
 
 
-class BaiduStt():
+class HAStt:
 
-    def __init__(self, log, setting):
+    def __init__(self, ba):
 
-        self.log = log
-        self.setting = setting
+        self.ba = ba
+        self.log = ba.log
+        self.stt_setting = ba.setting["bot"]["conversation"]["stt"]
+
+        self.app_key = self.stt_setting["appKey"]
+        self.secret_key = self.stt_setting["secretKey"]
         self.token = ""
-
-        self.app_key = setting["apiSettings"]["stt"]["appKey"]
-        self.secret_key = setting["apiSettings"]["stt"]["secretKey"]
 
         self.get_token()
 
@@ -27,7 +28,7 @@ class BaiduStt():
 
         """
         获取token
-        :return:
+        :return: str
         """
         url = 'http://openapi.baidu.com/oauth/2.0/token'
         param = {
@@ -44,7 +45,7 @@ class BaiduStt():
             self.token = token
             return token
         except requests.exceptions.HTTPError:
-            self.log.add_log("BaiduSstt: Get token http error!", 3)
+            self.log.add_log("HAStt: Cannot get token successfully", 3)
             return ""
         
     def start(self, fp="./data/audio/record.wav"):
@@ -57,7 +58,7 @@ class BaiduStt():
         try:
             wav_file = wave.open(fp, 'rb')
         except IOError:
-            self.log.add_log("BaiduStt: Can't find or open the file %s"%fp, 1)
+            self.log.add_log("HAStt: Can't find or open the file %s"%fp, 1)
             return []
         n_frames = wav_file.getnframes()
         frame_rate = wav_file.getframerate()
@@ -90,20 +91,20 @@ class BaiduStt():
                 text = r.json()['result'][0].encode('utf-8')
                 return text
         except requests.exceptions.HTTPError:
-            self.log.add_log('BaiduStt: Request failed with response: %r'%r.text, 1)
+            self.log.add_log('HAStt: Request failed with response: %r'%r.text, 1)
             return None
         except requests.exceptions.RequestException:
             print ('Request failed.')
             return None
         except ValueError as e:
-            print ('BaiduStt: Cannot parse response: %s'%e.args[0], 1)
+            print ('HAStt: Cannot parse response: %s'%e.args[0], 1)
             return None
         except KeyError:
-            self.log.add_log('BaiduStt: Cannot parse response', 1)
+            self.log.add_log('HAStt: Cannot parse response', 1)
             return None
         else:
             transcribed = []
             if text:
                 transcribed.append(text.upper())
-            self.log.add_log("BaiduStt: " + str(r.json()), 1)
+            self.log.add_log("HAStt: " + str(r.json()), 1)
         
