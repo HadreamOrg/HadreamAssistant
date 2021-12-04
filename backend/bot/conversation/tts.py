@@ -17,16 +17,13 @@ class HATts():
     def __init__(self, ba):
         
         self.ba = ba
-        self.setting = ba.setting
         self.log = ba.log
+        self.tts_setting = ba.setting["bot"]["conversation"]["tts"]
+        self.player = ba.player()
 
-        self.tts_engine = "baidu"
-        self.read_chunk = setting["playerSettings"]["readChunk"]
-        self.player = HAPlayer(self.ba)
         self.token = ""
-
-        self.app_key = self.setting["apiSettings"]["tts"]["appKey"]
-        self.secret_key = self.setting["apiSettings"]["tts"]["secretKey"]
+        self.app_key = self.tts_setting["appKey"]
+        self.secret_key = self.tts_setting["secretKey"]
 
         self.get_token()
         
@@ -47,32 +44,32 @@ class HATts():
             self.token = token
             return token
         except requests.exceptions.HTTPError:
-            self.log.add_log("BaiduTTS: Getting token http error! Status code: " + str(r.status_code), 3)
+            self.log.add_log("HATTS: Getting token http error! code-%s " % r.status_code, 3)
             return ""
 
-    def put_data(self, data):
-
-        """
-        将数据放入player的输出队列中（2号线程）
-        :param data: 要被放入的总数据
-        :return:
-        """
-        self.log.add_log("BaiduTts: Putting data start, put chunk data into player's queue", 1)
-
-        start = 0
-        end = self.read_chunk-1
-
-        c_data = data[start:end]
-        while c_data != b'':
-            self.log.add_log("BaiduTts: Send chunk to player's queue", 0, is_print=False)
-            self.player.put(c_data)
-            start = end + 1
-            end+=self.read_chunk
-            c_data = data[start:end]
-
-        for i in range(0, 2):
-            time.sleep(0.05)
-            self.player.put('')
+    # def put_data(self, data):
+    #
+    #     """
+    #     将数据放入player的输出队列中（2号线程）
+    #     :param data: 要被放入的总数据
+    #     :return:
+    #     """
+    #     self.log.add_log("BaiduTts: Putting data start, put chunk data into player's queue", 1)
+    #
+    #     start = 0
+    #     end = self.read_chunk-1
+    #
+    #     c_data = data[start:end]
+    #     while c_data != b'':
+    #         self.log.add_log("BaiduTts: Send chunk to player's queue", 0, is_print=False)
+    #         self.player.put(c_data)
+    #         start = end + 1
+    #         end+=self.read_chunk
+    #         c_data = data[start:end]
+    #
+    #     for i in range(0, 2):
+    #         time.sleep(0.05)
+    #         self.player.put('')
 
     def start(self, text, is_play=True):
 
@@ -88,8 +85,8 @@ class HATts():
             'lan': 'zh',
             'tok': self.token,
             'ctp': 1,
-            'cuid': 'xiaolan-client',
-            'per': 4,
+            'cuid': 'hadream_assistant',
+            'per': self.tts_setting["per"],
             'aue': 6
         }
 
@@ -103,18 +100,22 @@ class HATts():
         headers = dict((name.lower(), value) for name, value in f.headers.items())
 
         if "audio" in headers["content-type"]:
-            print("BaiduTts: tts requested success")
-            if is_play:
-                put_data_t = threading.Thread(target=self.put_data, args=(result_str,))
-                stream_out_t = threading.Thread(target=self.player.stream_output, args=())
-                put_data_t.start()
-                stream_out_t.start()
-            else:
-                with open("./data/audio/say.wav", "wb+") as f:
-                    f.write(result_str)
-                self.player.say()
-                return True
+            self.log.add_log("HATts: tts request succeed", 1)
+            with open("./data/audio/say.wav", "wb+") as f:
+                f.write(result_str)
+            self.player.say()
+            return True
+            # if is_play:
+            #     put_data_t = threading.Thread(target=self.put_data, args=(result_str,))
+            #     stream_out_t = threading.Thread(target=self.player.stream_output, args=())
+            #     put_data_t.start()
+            #     stream_out_t.start()
+            # else:
+            #     with open("./data/audio/say.wav", "wb+") as f:
+            #         f.write(result_str)
+            #     self.player.say()
+            #     return True
         else:
-            self.log.add_log("BaiduTTS: Tts network error! Respnse: ", 3)
-            print(result_str)
+            self.get_token()
+            self.log.add_log("HATTS: Tts meet an error! Response: %s" % str(result_str), 3)
             return False

@@ -42,6 +42,7 @@ class HANlu:
             # 原生意图识别（包含词槽）
             for group in self.skill_manager.keyword_intent_list.keys():
                 # 意图组循环（以一个技能能处理的意图为一组）
+                skill_compared = True
                 if len(group[1]) > 1:
                     multiple_intents = True
                 else:
@@ -50,14 +51,14 @@ class HANlu:
                 last_one_index = len(group[0])
                 for i in range(0, len(group[0])):
                     # 技能内意图匹配
-                    compared = True
+                    intent_compared = True
                     for word in group[0][i]:
                         # 关键词组匹配
                         if word not in text:
-                            compared = False
+                            intent_compared = False
                             break
-                    if compared:
-                        # the i intent was compared
+                    if intent_compared:
+                        # 第i个意图已经被匹配
                         if multiple_intents:
                             intent[1] = group[1][i]
                             slot_group = group[2][i]
@@ -67,27 +68,48 @@ class HANlu:
                         intent[2] = group[-1]
 
                         # 开始解析词槽
+                        nlp_result = self.nlp.analyze_text(text)
+                        nlp_result = self.nlp.lexer_result_process(nlp_result)
                         for slot in slot_group:
                             if "!" in slot[1]:
                                 ask = True
                             else:
                                 ask = False
-                            nlp_result = self.nlp.analyze_text(text)
 
+                            slot_result = {}
                             if "$" in slot[1]:
                                 # dict mode
                                 slot_dict = json.load(open("./backend/data/json/skill_slots/%s.json" % slot[1].replace("$", "").replace("!", "")))
-                                
+                                if slot_dict["canNlp"]:
+                                    try:
+                                        slot_result[slot[0]] = nlp_result[slot_dict["nlpCheckingParam"]][slot_dict["nlpCheckingContent"]]
+                                    except KeyError:
+                                        self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
+                                        slot_dict_content = slot_dict["content"]
+                                        compared = False
+                                        for content_group in slot_dict_content:
+                                            real_word = content_group[0]
+                                            for word in content_group:
+                                                if word in text:
+                                                    # 词槽存在
+                                                    compared = True
+                                                    break
+                                            if compared:
+                                                slot_result[slot[0]] = real_word
+                                                break
+                                        if not compared:
+                                            slot_result[slot[0]] = None
+
                             elif "*" in slot[1]:
                                 # rule mode
-                                slot_rule = json.load(open("./backend/data/json/sklll_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
+                                slot_rule = json.load(open("./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
 
                         break
                     
-                    if i == last_one_index and not compared:
-                        compared = False
-                
-                if compared:
+                    if i == last_one_index and not intent_compared:
+                        skill_compared = False
+
+                if skill_compared:
                     break
 
         return intent

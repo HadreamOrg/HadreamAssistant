@@ -35,11 +35,13 @@ class HASkillManager:
             (
                 [
                     ["订", "会议"],
-                    ["留言"]
+                    ["留言"],
+                    ["告诉"]
                 ],
                 [
                     "booking_meeting",
-                    ""
+                    "message",
+                    "message"
                 ],
                 [
                     [("date", "$date!"), ("time", "$time!"), ("name", "*meeting_name"), ("attender", "$attender")],

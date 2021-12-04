@@ -3,9 +3,6 @@
 # description: HadreamAssistant's Nlp Engine(Baidu Nlp API)
 # date: 2021/12/04
 
-# AK: EzSEdCoje0SVvCUsFmI7bLwG
-# SK: Zsyx4x9LiuzNMfhyAH2B4yCBluYCRnS2
-
 import urllib.parse
 import requests
 import json
@@ -58,14 +55,72 @@ class HANlp:
         """
         self.log.add_log("HANlp: start text lexer: text-%s" % text, 1)
 
-        url = "https://aip.baidubce.com/rpc/2.0/nlp/v1/lexer?charset=UTF-8&access_token="
+        url = "https://aip.baidubce.com/rpc/2.0/nlp/v1/lexer_custom?charset=UTF-8&access_token="
         headers = {"Content-Type": "application/json"}
         body = {"text": text}
         body = json.dumps(body)
 
-        r = requests.post(url+self.token,
-                          data=body,
-                          headers=headers)
+        def a():
+            r = requests.post(url+self.token,
+                              data=body,
+                              headers=headers)
 
-        if if token
+            if r.status_code == 200:
+                res = r.json()
+                if res["error_code"] == 110:
+                    self.get_token()
+                    result = a()
+                else:
+                    result = res
+                return result
+            else:
+                self.log.add_log("HANlp: text lexer meet an http error, code-%s" % r.status_code, 3)
+                return False
 
+        return a()
+
+    def ecnet(self, text):
+
+        """
+        文本纠错
+        :param text: 原始文本
+        :return:
+        """
+        self.log.add_log("HANlp: start text ecnet: text-%s" % text, 1)
+
+        url = "https://aip.baidubce.com/rpc/2.0/nlp/v1/ecnet?charset=UTF-8&access_token="
+        headers = {"Content-Type": "application/json"}
+        body = {"text": text}
+        body = json.dumps(body)
+
+        def a():
+            r = requests.post(url+self.token,
+                              data=body,
+                              headers=headers)
+
+            if r.status_code == 200:
+                res = r.json()
+                if res["error_code"] == 110:
+                    self.get_token()
+                    result = a()
+                else:
+                    result = res["item"]["correct_query"]
+                return result
+            else:
+                self.log.add_log("HANlp: text ecnet meet an http error, code-%s" % r.status_code, 3)
+                return False
+
+        return a()
+
+    def lexer_result_process(self, lexer_result):
+
+        """
+        对语法分析结果进行加工
+        :param lexer_result: 语法分析结果
+        :return: dict
+        """
+        self.log.add_log("HANlp: start lexer result process", 1)
+        result = {
+            "ne": {},
+            "pos": {}
+        }

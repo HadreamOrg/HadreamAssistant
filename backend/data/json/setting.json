@@ -1,0 +1,32 @@
+{
+  "bot": {
+    "conversation": {
+      "stt": {
+        "appKey": "TSFp0BKH547h7Agjf2WkV2Ll",
+        "secretKey": "c9RZ1ZLxPe6wQVWOUwjaWOLvM7EpXHwe"
+      },
+      "tts": {
+        "appKey": "TSFp0BKH547h7Agjf2WkV2Ll",
+        "secretKey": "c9RZ1ZLxPe6wQVWOUwjaWOLvM7EpXHwe",
+        "per": 5118
+      },
+      "nlp": {
+        "appKey": "EzSEdCoje0SVvCUsFmI7bLwG",
+        "secretKey": "Zsyx4x9LiuzNMfhyAH2B4yCBluYCRnS2"
+      },
+      "nlu": {
+
+      },
+      "recorder": {
+        "recordTime": 5,
+        "channel": 1,
+        "rate": 16000,
+        "chunk": 1024,
+        "outputPath": "./backend/data/audio/record.wav"
+      },
+      "player": {
+
+      }
+    }
+  }
+}

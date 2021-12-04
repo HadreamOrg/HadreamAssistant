@@ -32,7 +32,7 @@ class HAPlayer:
         :param data: 要被放入的块数据
         :return:
         """
-        self.log.add_log("Player: Receive data from tts, put in", 0, is_print=False)
+        self.log.add_log("HAPlayer: Receive data from tts, put in", 0, is_print=False)
         self.output_queue.put(data)
 
     def stream_output(self):
@@ -41,7 +41,7 @@ class HAPlayer:
         流式输出音频
         :return:
         """
-        self.log.add_log("Player: Stream output start", 1)
+        self.log.add_log("HAPlayer: Stream output start", 1)
         p = pyaudio.PyAudio()
 
         stream = p.open(

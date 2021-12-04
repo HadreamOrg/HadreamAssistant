@@ -13,8 +13,11 @@ from backend.bot.maintain.maintainer import HAMaintainer
 from backend.bot.skill.skill_manager import HASkillManager
 
 from backend.bot.conversation.conversation import HAConversation
+from backend.bot.conversation.stt import HAStt
 from backend.bot.conversation.tts import HATts
 from backend.bot.conversation.nlu import HANlu
+from backend.bot.conversation.nlp import HANlp
+from backend.bot.conversation.recorder import HARecorder
 from backend.bot.conversation.player import HAPlayer
 
 
@@ -31,6 +34,9 @@ class HABaseAbilities:
         self.player = HAPlayer(self)
         self.recorder = HARecorder(self)
         self.skill_manager = HASkillManager(self)
+        self.maintainer = HAMaintainer
+        self.snowboy = HASnowboy(self)
+        self.conversation = HAConversation(self)
 
 
 class HAInit:
@@ -41,9 +47,10 @@ class HAInit:
         self.setting = self.base_abilities.setting
         self.log = self.base_abilities.log
 
-        self.snowboy = HASnowboy(self.base_abilities)
-        self.conversation = HAConversation(self.base_abilities)
-        self.maintainer = HAMaintainer(self.base_abilities)
+        self.snowboy = self.base_abilities.snowboy
+        self.maintainer = self.base_abilities.maintainer
+        self.conversation = self.base_abilities.conversation
+        self.tts = self.base_abilities.tts
 
     def run(self):
 

@@ -5,14 +5,14 @@ import wave
 import pyaudio
 
 
-class XiaolanRecorder():
+class HARecorder():
 
-    def __init__(self, log, setting):
-        
-        self.log = log
-        self.setting = setting
+    def __init__(self, ba):
 
-        self.recorder_setting = setting["bot"]["conversation"]["recorder"]
+        self.ba = ba
+        self.log = ba.log
+        self.recorder_setting = ba.setting["bot"]["conversation"]["recorder"]
+
         self.format = pyaudio.paInt16
     
     def record(self, time=None):
@@ -32,7 +32,7 @@ class XiaolanRecorder():
                         input=True,
                         frames_per_buffer=self.recorder_setting["chunk"])
 
-        self.log.add_log("HARecorder: Start recording...", 1)
+        self.log.add_log("HARecorder: Start record...", 1)
 
         frames = []
         for i in range(0, int(self.recorder_setting["rate"] / self.recorder_setting["chunk"] * time)):

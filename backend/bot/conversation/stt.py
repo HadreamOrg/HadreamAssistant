@@ -17,6 +17,7 @@ class HAStt:
         self.ba = ba
         self.log = ba.log
         self.stt_setting = ba.setting["bot"]["conversation"]["stt"]
+        self.nlp = ba.nlp
 
         self.app_key = self.stt_setting["appKey"]
         self.secret_key = self.stt_setting["secretKey"]
@@ -48,7 +49,7 @@ class HAStt:
             self.log.add_log("HAStt: Cannot get token successfully", 3)
             return ""
         
-    def start(self, fp="./data/audio/record.wav"):
+    def start(self, fp="./backend/data/audio/record.wav"):
 
         """
         开始语音识别
@@ -68,43 +69,50 @@ class HAStt:
         if self.token == "":
             self.token = self.get_token()
 
-        data = {
-            "format": "wav",
-            "token": self.token,
-            "len": len(audio),
-            "rate": frame_rate,
-            "speech": base_data,
-            "cuid": 'b0-10-41-92-84-4d',
-            "channel": 1
-        }
-        
-        data = json.dumps(data)
-        
-        r = requests.post('http://vop.baidu.com/server_api',
-                          data=data,
-                          headers={'content-type': 'application/json'})
-        
-        try:
-            r.raise_for_status()
-            text = ""
-            if 'result' in r.json():
-                text = r.json()['result'][0].encode('utf-8')
-                return text
-        except requests.exceptions.HTTPError:
-            self.log.add_log('HAStt: Request failed with response: %r'%r.text, 1)
-            return None
-        except requests.exceptions.RequestException:
-            print ('Request failed.')
-            return None
-        except ValueError as e:
-            print ('HAStt: Cannot parse response: %s'%e.args[0], 1)
-            return None
-        except KeyError:
-            self.log.add_log('HAStt: Cannot parse response', 1)
-            return None
-        else:
-            transcribed = []
-            if text:
-                transcribed.append(text.upper())
-            self.log.add_log("HAStt: " + str(r.json()), 1)
-        
+        def a():
+            data = {
+                "format": "wav",
+                "token": self.token,
+                "len": len(audio),
+                "rate": frame_rate,
+                "speech": base_data,
+                "dev_pid": 80001,
+                "cuid": 'b0-10-41-92-84-4d',
+                "channel": 1
+            }
+
+            data = json.dumps(data)
+
+            r = requests.post('http://vop.baidu.com/server_api',
+                              data=data,
+                              headers={'content-type': 'application/json'})
+
+            try:
+                r.raise_for_status()
+                if r.status_code == 200:
+                    res = r.json()
+                    if res["err_no"] == 3302:
+                        self.get_token()
+                        text = a()
+                    elif res["err_no"] == 0:
+                        text = r.json()['result'][0].encode('utf-8')
+                        text = self.nlp.ecnet(text)
+                        self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
+                    else:
+                        self.log.add_log("HAStt: we meet problem, code-%s" % res["err_no"], 1)
+                        text = None
+                    return text
+            except requests.exceptions.HTTPError:
+                self.log.add_log('HAStt: Request failed with response: %r'%r.text, 1)
+                return None
+            except requests.exceptions.RequestException:
+                self.log.add_log('HAStt: Request failed', 1)
+                return None
+            except ValueError as e:
+                self.log.add_log('HAStt: Cannot parse response: %s'%e.args[0], 1)
+                return None
+            except KeyError:
+                self.log.add_log('HAStt: Cannot parse response', 1)
+                return None
+
+        return a()
