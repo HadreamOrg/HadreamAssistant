@@ -2,8 +2,8 @@
 
 import collections
 import pyaudio
-# from . import snowboydetect
-import snowboydetect
+from . import snowboydetect
+# import snowboydetect
 import time
 import wave
 import os
@@ -17,8 +17,8 @@ logger.setLevel(logging.INFO)
 TOP_DIR = os.path.dirname(os.path.abspath(__file__))
 
 RESOURCE_FILE = os.path.join(TOP_DIR, "resources/common.res")
-DETECT_DING = os.path.join(TOP_DIR, "resources/ding.wav")
-DETECT_DONG = os.path.join(TOP_DIR, "resources/dong.wav")
+DETECT_DING = os.path.join(TOP_DIR, "resources/start_recording.wav")
+DETECT_DONG = os.path.join(TOP_DIR, "resources/stop_recording.wav")
 
 def py_error_handler(filename, line, function, err, fmt):
     pass

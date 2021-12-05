@@ -8,7 +8,7 @@ import datetime
 import os
 
 
-class HALog():
+class HALog:
 
     def __init__(self):
 
@@ -22,7 +22,7 @@ class HALog():
         获取log文件路径
         :return:
         """
-        basic_path = "./data/log/"
+        basic_path = "./backend/data/logs/"
         log_file_name = self.get_date() + ".txt"
         if os.path.exists(basic_path + log_file_name) is False:
             create_log_file = open(basic_path + log_file_name, "w")

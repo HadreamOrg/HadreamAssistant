@@ -19,7 +19,7 @@ class HATts():
         self.ba = ba
         self.log = ba.log
         self.tts_setting = ba.setting["bot"]["conversation"]["tts"]
-        self.player = ba.player()
+        self.player = ba.player
 
         self.token = ""
         self.app_key = self.tts_setting["appKey"]
@@ -101,7 +101,7 @@ class HATts():
 
         if "audio" in headers["content-type"]:
             self.log.add_log("HATts: tts request succeed", 1)
-            with open("./data/audio/say.wav", "wb+") as f:
+            with open("./backend/data/audio/say.wav", "wb+") as f:
                 f.write(result_str)
             self.player.say()
             return True

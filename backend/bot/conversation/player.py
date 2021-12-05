@@ -68,7 +68,7 @@ class HAPlayer:
         :return:
         """
         try:
-            wf = wave.open(fp)
+            wf = wave.open(fp, "rb")
         except wave.Error:
             self.log.add_log("HAPlayer: Cannot open the file", 3)
             return
@@ -83,10 +83,12 @@ class HAPlayer:
         )
 
         data = wf.readframes(1024)
-        while data != "":
+        while len(data) > 0:
+            print(data)
             stream.write(data)
             data = wf.readframes(1024)
 
+        print("!!!!!!!!!!!")
         stream.stop_stream()
         stream.close()
         p.terminate()
@@ -98,7 +100,8 @@ class HAPlayer:
         :return:
         """
         self.log.add_log("HAPlayer: Now playing say.wav", 1)
-        self.play(r"./data/audio/say.wav")
+        self.play(r"./backend/data/audio/say.wav")
+        return
 
     def ding(self):
 
@@ -106,8 +109,8 @@ class HAPlayer:
         播放ding.wav
         :return:
         """
-        self.log.add_log("HAPlayer: Now playing ding.wav", 1)
-        self.play(r"./data/audio/ding.wav")
+        self.log.add_log("HAPlayer: Now playing start_recording.wav", 1)
+        self.play(r"./backend/data/audio/start_recording.wav")
 
     def dong(self):
 
@@ -115,8 +118,8 @@ class HAPlayer:
         播放dong.wav
         :return:
         """
-        self.log.add_log("HAPlayer: Now playing dong.wav", 1)
-        self.play(r"./data/audio/dong.wav")
+        self.log.add_log("HAPlayer: Now playing stop_recording.wav", 1)
+        self.play(r"./backend/data/audio/stop_recording.wav")
 
     def start_recording(self):
 
@@ -125,7 +128,7 @@ class HAPlayer:
         :return:
         """
         self.log.add_log("HAPlayer: Now playing start_recording", 1)
-        self.play(r"./data/audio/start_recording.wav")
+        self.play(r"./backend/data/audio/start_recording.wav")
 
     def stop_recording(self):
 
@@ -134,7 +137,7 @@ class HAPlayer:
         :return:
         """
         self.log.add_log("HAPlayer: Now playing stop_recording", 1)
-        self.play(r"./data/audio/stop_recording.wav")
+        self.play(r"./backend/data/audio/stop_recording.wav")
 
     def format_converter(self, fp, ori, goal):
 

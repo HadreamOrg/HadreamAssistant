@@ -27,16 +27,17 @@ class HABaseAbilities:
 
         self.setting = json.load(open("./backend/data/json/setting.json", "r", encoding="utf-8"))
         self.log = HALog()
-        self.tts = HATts(self)
-        self.stt = HAStt(self)
-        self.nlp = HANlp(self)
-        self.nlu = HANlu(self)
+        self.skill_manager = HASkillManager(self)
         self.player = HAPlayer(self)
         self.recorder = HARecorder(self)
-        self.skill_manager = HASkillManager(self)
-        self.maintainer = HAMaintainer
+        self.nlp = HANlp(self)
+        self.nlu = HANlu(self)
+        self.stt = HAStt(self)
+        self.tts = HATts(self)
         self.snowboy = HASnowboy(self)
         self.conversation = HAConversation(self)
+        self.maintainer = HAMaintainer
+
 
 
 class HAInit:
@@ -70,18 +71,19 @@ class HAInit:
         self.log.add_log("HABackendInit: HadreamAssistant start ", 1)
         self.log.add_log("HABackendInit: start self check", 1)
 
-        self.log.add_log("HABackendInit: play the welcome speech(online tts) ", 1)
-        self.tts.start("你好啊!~ 这里是小蓝，你可以叫我小蓝同学~")
+        # self.log.add_log("HABackendInit: play the welcome speech(online tts) ", 1)
+        # self.tts.start("你好啊!~ 这里是小蓝，你可以叫我小蓝同学~")
 
-        self.log.add_log("HABackendInit: Start pulseaudio", 1)
-        os.system("pulseaudio --start")
+        # self.log.add_log("HABackendInit: Start pulseaudio", 1)
+        # os.system("pulseaudio --start")
 
         self.log.add_log("HABackendInit: Run snowboy awaken engine in a thread", 1)
 
-        snowboy_thread = threading.Thread(target=self.snowboy.run, args=(self.callback(),))
+        snowboy_thread = threading.Thread(target=self.snowboy.run, args=(self.callback,))
         maintainer_thread = threading.Thread(target=self.maintainer.run, args=())
         snowboy_thread.run()
         maintainer_thread.run()
+        # self.snowboy.run(self.callback)
 
     def callback(self):
 
@@ -89,7 +91,7 @@ class HAInit:
         唤醒回调函数
         :return:
         """
-        self.log.add_log("HAInit: Detected hotword from snowboy", 1)
+        self.log.add_log("HAInit: Detected awaken from snowboy", 1)
         self.conversation.new_conversation()
 
     # def conversation(self):

@@ -11,7 +11,8 @@ class HASnowboy:
     def __init__(self, ba):
 
         self.ba = ba
-        self.setting = ba.setting
+        self.log = ba.log
+        self.snowboy_setting = ba.setting["bot"]["snowboy"]
 
     def run(self, callback):
 
@@ -20,10 +21,16 @@ class HASnowboy:
         :param callback: 回调函数
         :return:
         """
-        detector = snowboydecoder.HotwordDetector(
-            self.setting["conversation"]["bot"]["snowboy"]["hotword"],
-            sensitivity=self.setting["conversation"]["bot"]["snowboy"]["sensitivity"],
-            audio_gain=1)
-        detector.start(callback)
+        self.log.add_log("HASnowboy: snowboy is now running...", 1)
+        detector = snowboydecoder.HotwordDetector("/home/pi/HadreamAssistant/backend/bot/snowboy/hotword/snowboy.umdl",
+                                                  sensitivity=0.5)
+
+        detector.start(
+            detected_callback=callback,
+            sleep_time=0.03)
+        # detector.start(callback)
+
+        # detector.terminate()
+
 
 # awaken()

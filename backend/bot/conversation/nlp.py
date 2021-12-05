@@ -124,3 +124,25 @@ class HANlp:
             "ne": {},
             "pos": {}
         }
+
+        items = lexer_result["items"]
+        for item in items:
+            now_item_info = {
+                "offset": int(item["byte_offset"] / 3),
+                "length": int(item["byte_length"] / 3),
+                "content": item["item"],
+                "basic_words": item["basic_words"],
+                "ne": item["ne"],
+                "pos": item["pos"]
+            }
+            if item["ne"] != "":
+                try:
+                    result["ne"][item["ne"]].append(now_item_info)
+                except KeyError:
+                    result["ne"][item["ne"]] = [now_item_info]
+            if item["pos"] != "":
+                try:
+                    result["pos"][item["pos"]].append(now_item_info)
+                except KeyError:
+                    result["pos"][item["pos"]] = [now_item_info]
+
