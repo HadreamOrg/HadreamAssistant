@@ -71,11 +71,11 @@ class HAInit:
         self.log.add_log("HABackendInit: HadreamAssistant start ", 1)
         self.log.add_log("HABackendInit: start self check", 1)
 
-        # self.log.add_log("HABackendInit: play the welcome speech(online tts) ", 1)
-        # self.tts.start("你好啊!~ 这里是小蓝，你可以叫我小蓝同学~")
+        self.log.add_log("HABackendInit: play the welcome speech(online tts) ", 1)
+        self.tts.start("你好啊!~ 这里是小蓝，你可以叫我小蓝同学~")
 
-        # self.log.add_log("HABackendInit: Start pulseaudio", 1)
-        # os.system("pulseaudio --start")
+        self.log.add_log("HABackendInit: Start pulseaudio", 1)
+        os.system("pulseaudio --start")
 
         self.log.add_log("HABackendInit: Run snowboy awaken engine in a thread", 1)
 

@@ -84,11 +84,9 @@ class HAPlayer:
 
         data = wf.readframes(1024)
         while len(data) > 0:
-            print(data)
             stream.write(data)
             data = wf.readframes(1024)
 
-        print("!!!!!!!!!!!")
         stream.stop_stream()
         stream.close()
         p.terminate()
