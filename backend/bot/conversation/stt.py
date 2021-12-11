@@ -92,7 +92,8 @@ class HAStt:
                 res = r.json()
                 if res["err_no"] == 3302:
                     self.get_token()
-                    text = a()
+                    self.log.add_log("HAStt: token is invalid", 3)
+                    text = None
                 elif res["err_no"] == 0:
                     text = r.json()['result'][0].encode('utf-8')
                     text = self.nlp.ecnet(text)

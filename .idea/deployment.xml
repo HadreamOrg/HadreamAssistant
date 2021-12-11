@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="raspberrypi">
+  <component name="PublishConfigData" autoUpload="Always" serverName="rasp-1">
     <serverData>
       <paths name="hadream">
         <serverdata>
@@ -16,10 +16,20 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="raspberrypi">
+      <paths name="rasp-1">
         <serverdata>
           <mappings>
             <mapping deploy="/HadreamAssistant" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/venv" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="rasp-2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/pi/develop" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
