@@ -86,11 +86,30 @@ class HAStt:
                           data=data,
                           headers={'content-type': 'application/json'})
 
-        print(r.json())
-        if r.status_code == 200:
-            res = r.json()
-            text = res['result'][0].encode('utf-8')
-            text = self.nlp.ecnet(text)
-            self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
-            print(text)
-            return text
+        try:
+            r.raise_for_status()
+            if r.status_code == 200:
+                res = r.json()
+                if res["err_no"] == 3302:
+                    self.get_token()
+                    text = a()
+                elif res["err_no"] == 0:
+                    text = r.json()['result'][0].encode('utf-8')
+                    text = self.nlp.ecnet(text)
+                    self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
+                else:
+                    self.log.add_log("HAStt: we meet problem, code-%s" % res["err_no"], 1)
+                    text = None
+                return text
+        except requests.exceptions.HTTPError:
+            self.log.add_log('HAStt: Request failed with response: %r'%r.text, 1)
+            return None
+        except requests.exceptions.RequestException:
+            self.log.add_log('HAStt: Request failed', 1)
+            return None
+        except ValueError as e:
+            self.log.add_log('HAStt: Cannot parse response: %s'%e.args[0], 1)
+            return None
+        except KeyError:
+            self.log.add_log('HAStt: Cannot parse response', 1)
+            return None

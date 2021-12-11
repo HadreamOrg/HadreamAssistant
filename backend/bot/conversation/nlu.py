@@ -98,7 +98,7 @@ class HANlu:
                                                 slot_result[slot[0]] = real_word
                                                 break
                                         if not compared:
-                                            slot_result[slot[0]] = Noneswig
+                                            slot_result[slot[0]] = None
 
 
                             elif "*" in slot[1]:

@@ -1,5 +1,10 @@
 import json
-import requests
+import requests 
+import pyaudio
+import json
+import wave
+import base64
+import urllib.parse
 
 url = "https://aip.baidubce.com/rpc/2.0/nlp/v1/lexer_custom?charset=UTF-8&access_token="
 headers = {"Content-Type": "application/json"}
@@ -19,44 +24,47 @@ def a():
     else:
         return False
 
+def b():
+
+    p = pyaudio.PyAudio()
+        stream = p.open(format=self.format,
+                        channels=self.recorder_setting["channel"],
+                        rate=self.recorder_setting["rate"],
+                        input=True,
+                        frames_per_buffer=self.recorder_setting["chunk"])
+
+        print("start record")
+
+        frames = []
+        for i in range(0, int(self.recorder_setting["rate"] / self.recorder_setting["chunk"] * time)):
+            data = stream.read(self.recorder_setting["chunk"])
+            frames.append(data)
+
+        print("record stop")
+
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+
+        wf = wave.open("./record.wav", 'wb')
+        wf.setnchannels(1)
+        wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
+        wf.setframerate(16000)
+        wf.writeframes(b''.join(frames))
+        wf.close()
+
+    fp = "./record.wav"
+    try:
+        wav_file = wave.open(fp, 'rb')
+    except IOError:
+        print("IO ERROR")
+    n_frames = wav_file.getnframes()
+    frame_rate = wav_file.getframerate()
+    audio = wav_file.readframes(n_frames)
+
+    
+
 
 if __name__ == "__main__":
     print(a())
-
-import snowboydecoder
-import sys
-import signal
-
-interrupted = False
-
-
-def signal_handler(signal, frame):
-    global interrupted
-    interrupted = True
-
-
-def interrupt_callback():
-    global interrupted
-    return interrupted
-
-if len(sys.argv) == 1:
-    print("Error: need to specify model name")
-    print("Usage: python demo.py your.model")
-    sys.exit(-1)
-
-model = sys.argv[1]
-
-# capture SIGINT signal, e.g., Ctrl+C
-signal.signal(signal.SIGINT, signal_handler)
-
-detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
-print('Listening... Press Ctrl+C to exit')
-
-# main loop
-detector.start(detected_callback=snowboydecoder.play_audio_file,
-               interrupt_check=interrupt_callback,
-               sleep_time=0.03)
-
-detector.terminate()
-
 
