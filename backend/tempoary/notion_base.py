@@ -52,7 +52,7 @@ class HANotionBase:
 
         return code, res
 
-    def create_filter(self, filter_type, property_name, property_type, property_condition, property_value):
+    def create_filter_object(self, filter_type, property_name, property_type, property_condition, property_value):
 
         """
         创建一个过滤器
@@ -84,33 +84,41 @@ class HANotionBase:
             result = None
         return result
 
-    def create_sort(self):
+    def create_sort_object(self):
 
         """
         创建排序器
         :return:
         """
 
-    def create_rich_text(self):
+    def create_rich_text_object(self):
 
         """
         创建一个富文本对象 list
         :return: list
         """
 
-    def create_property_schema(self, operations, names, values):
+    def create_property_schema_object(self, names, operations, values, options=None):
 
         """
         创建property schema object
         :param operations: 操作 remove/rename/type/value
         :param names: id/name
         :param values:
+        :param options: multi-select select options
         :type operations list
         :type names list
         :type values list
+        type
+          "title", "rich_text", "number", "select", "multi_select", "date", "people",
+          "files", "checkbox", "url", "email", "phone_number", "formula", "relation", "rollup",
+          "created_time", "created_by", "last_edited_time", "last_edited_by"
         :return:
         """
         self.log.add_log("HANotionBase: create an property schema object", 1)
+        if options is None:
+            options = {}
+
         result = {}
         for i in range(0, len(operations)):
             operation = operations[i]
@@ -119,14 +127,19 @@ class HANotionBase:
                 result[name] = None
             elif operation == "rename":
                 result[name] = {"name": values[i]}
-            elif operation == ""
+            elif operation == "type":
+                result[name] = {values[i]: options}
+            elif operation == "value":
+                result[name] = values[i]
+
+    def create_property_value_object(self, names, types, ):
 
     '''Database operations'''
-    def analyze_database(self, database):
+    def analyze_database_object(self, database_object):
 
         """
         分析database object
-        :param database: database数据
+        :param database_object: database数据
         :return: dict
         """
 
@@ -171,7 +184,7 @@ class HANotionBase:
             self.log.add_log("HANotionBase: database-%s does not exist" % database_id, 3)
             return res
         else:
-            self.log.add_log("HANotionBase: query_database failed", 3)
+            self.log.add_log("HANotionBase: query_database failed, code-%s" % code, 3)
             return False
 
     def update_database(self, database_id, id_type, title, properties):
@@ -205,10 +218,73 @@ class HANotionBase:
             self.log.add_log("HANotionBase: database-%s does not exist" % database_id, 3)
             return res
         else:
-            self.log.add_log("HANotionBase: update_database failed", 3)
+            self.log.add_log("HANotionBase: update_database failed, code-%s" % code, 3)
             return False
 
     '''Page operations'''
+    def analyze_page_object(self, page_object):
+
+        """
+        分析page object
+        :param page_object: page数据
+        :return: dict
+        """
+
+    def query_page(self, page_id):
+
+        """
+        获取page
+        :param page_id:
+        :return:
+        """
+        self.log.add_log("HANotionBase: query page-%s's info" % page_id)
+
+        url = "https://api.notion.com/v1/pages/%s" % page_id
+
+        code, res = self.request("GET", url)
+
+        if code == 200:
+            self.log.add_log("HANotionBase: query_page success", 1)
+            return res
+        elif code == 404:
+            self.log.add_log("HANotionBase: page does not exist", 3)
+            return res
+        else:
+            self.log.add_log("HANotionBase: query page failed, code-%s" % code, 3)
+            return False
+
+    def create_page(self, parent, properties, children=None, icon=None, cover=None):
+
+        """
+        创建一个页面
+        :param parent: 父级对象
+        :param properties: 页面性质 dict
+        :param children: 子对象 list
+        :param icon:
+        :param cover:
+        :type properties dict
+        :type children list
+        :return:
+        """
+        self.log.add_log("HANotionBase: create a page")
+        url = "https://api.notion.com/v1/pages/"
+
+        body = {
+            "parent": parent,
+            "properties": properties
+        }
+        if children
+        code, res = self.request("POST", url, body)
+
+        if code == 200:
+            self.log.add_log("HANotionBase: query_page success", 1)
+            return res
+        elif code == 404:
+            self.log.add_log("HANotionBase: page does not exist", 3)
+            return res
+        else:
+            self.log.add_log("HANotionBase: query page failed, code-%s" % code, 3)
+            return False
 
     '''Block operations'''
 
