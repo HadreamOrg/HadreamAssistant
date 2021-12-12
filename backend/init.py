@@ -6,6 +6,7 @@
 import json
 import os
 import threading
+import keyboard
 
 from backend.data.log import HALog
 from backend.bot.snowboy.snowboy import HASnowboy
@@ -39,7 +40,6 @@ class HABaseAbilities:
         self.maintainer = HAMaintainer
 
 
-
 class HAInit:
 
     def __init__(self):
@@ -52,6 +52,9 @@ class HAInit:
         self.maintainer = self.base_abilities.maintainer
         self.conversation = self.base_abilities.conversation
         self.tts = self.base_abilities.tts
+
+        self.awake = False
+        self.interface_mode = 1
 
     def run(self):
 
@@ -79,6 +82,7 @@ class HAInit:
 
         self.log.add_log("HABackendInit: Run snowboy awaken engine in a thread", 1)
 
+        keyboard_thread = threading.Thread(target=self.keyboard_awake, args=())
         snowboy_thread = threading.Thread(target=self.snowboy.run, args=(self.callback,))
         maintainer_thread = threading.Thread(target=self.maintainer.run, args=())
         snowboy_thread.run()
@@ -91,8 +95,32 @@ class HAInit:
         唤醒回调函数
         :return:
         """
-        self.log.add_log("HAInit: Detected awaken from snowboy", 1)
-        self.conversation.new_conversation()
+        self.log.add_log("HAInit: Detected awaken from snowboy/keyboard", 1)
+        if not self.awake:
+            self.awake = True
+            self.conversation.new_conversation(self.interface_mode)
+            self.awake = False
+        else:
+            self.log.add_log("HAInit: conversation is under process, awaken was locked, miss the awaken", 1)
+
+    def keyboard_awake(self):
+
+        """
+        键盘按键唤醒
+        :return:
+        """
+        while True:
+            keyboard.wait("enter")
+            self.log.add_log("HAInit: 'enter' was pressed, please mode: 1-voice, 0-text", 1)
+            a = input("chose your interface mode")
+            if a == "1":
+                self.interface_mode = 1
+                self.callback()
+            elif a == "0":
+                self.interface_mode = 0
+                self.callback()
+            else:
+                self.log.add_log("HAInit: wrong mode-%s chosen, you should chose between 0 and 1", 2)
 
     # def conversation(self):
     #

@@ -21,7 +21,7 @@ class HASkillManager:
             "智能家居": "hass",
             "音乐播放器": "kugou_music",
             "航班查询": "flight_searcher",
-            "助理": "notion"
+            "助理": "tempoary"
         }
         # nlu识别意图和词槽的资料库
         # [[关键词组]], [意图组], [意图对应词槽组], "技能名称"]
@@ -47,19 +47,19 @@ class HASkillManager:
                     [("date", "$date!"), ("time", "$time!"), ("name", "*meeting_name"), ("attender", "$attender")],
                     [""]
                 ],
-                "notion"
+                "tempoary"
             )
         ]
         self.skill_skills_list = {
             # "hass": HASkillHass,
             "music_player": HASkillMusicPlayer,
-            "notion": HASkillNotion,
+            "tempoary": HASkillNotion,
             "alarm": HASkillAlarm
             # "flight_searcher": HASkillFlightSearcher
         }
 
         self.skills_list = {
-            "notion": HASkillNotion,
+            "tempoary": HASkillNotion,
             "alarm": HASkillAlarm,
             "weather": HASkillTuling,
             "talk": HASkillTuling,
