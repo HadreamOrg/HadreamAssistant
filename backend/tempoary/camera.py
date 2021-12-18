@@ -24,7 +24,7 @@ class HACamera:
 
         self.cv2_camera = cv2.VideoCapture(self.camera_id)
 
-    def capture_image_fswebcam(self, fp="./backend/data/image/capture.jpg", display=False):
+    def capture_image_fswebcam(self, fp="./backend/data/image/capture.jpg", display=True):
 
         """
         拍照(fswebcam办法) 无法指定拍照设备
@@ -44,7 +44,7 @@ class HACamera:
 
         return fp
 
-    def capture_image_cv(self, fp="./backend/data/image/capture.jpg", display=False):
+    def capture_image_cv(self, fp="./backend/data/image/capture.jpg", display=True):
 
         """
         拍照(opencv办法) 可以指定拍照设备

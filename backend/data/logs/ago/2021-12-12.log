@@ -1,0 +1,19 @@
+
+[INFO] 16:49:23 HAInit: Detected awaken from snowboy .
+[INFO] 16:49:23 HAConversation: start new conversation .
+[INFO] 16:49:23 HAConversation: start recording command .
+[INFO] 16:49:23 HAPlayer: Playing start_recording .
+[INFO] 16:49:23 HAPlayer: start_recording play end .
+[INFO] 16:49:23 HARecorder: start vad record(record_with_vad module) .
+[INFO] 16:49:28 HAPlayer: Playing stop_recording .
+[INFO] 16:49:28 HAPlayer: stop_recording play end .
+[INFO] 16:49:28 HAConversation: start speech to text .
+[INFO] 16:49:28 HAStt: start speech to text .
+[INFO] 16:49:29 HAStt: stt request time cost 1.158436 .
+[INFO] 16:49:29 HANlp: start text ecnet: text-买噶。 .
+[INFO] 16:49:29 HAStt: speech recognition result(after text fixing): 买噶。 .
+[INFO] 16:49:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 16:49:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 16:49:30 HATts: tts request succeed .
+[INFO] 16:49:30 HAPlayer: Playing say.wav .
+[INFO] 16:49:31 HAPlayer: say.wav play end .

@@ -22,8 +22,8 @@ class HASnowboy:
         :return:
         """
         self.log.add_log("HASnowboy: snowboy is now running...", 1)
-        detector = snowboydecoder.HotwordDetector("/home/pi/HadreamAssistant/backend/bot/snowboy/hotword/snowboy.umdl",
-                                                  sensitivity=0.5)
+        detector = snowboydecoder.HotwordDetector(self.snowboy_setting["hotword"],
+                                                  sensitivity=self.snowboy_setting["sensitivity"])
 
         detector.start(
             detected_callback=callback,

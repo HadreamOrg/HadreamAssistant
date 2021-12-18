@@ -1,0 +1,11 @@
+{
+  "integrationToken": "secret_J8mtDNnr5K8Kzww7Al2v9YlwG9e9wO2zYBTiU8GualS",
+  "latestApiVersion": "2021-08-16",
+  "boardIdList": {
+    "taskBoard": "f0a443331671439ea5960def29bceb45",
+    "projectBoard": "0d3edfb2fe5b4072ae7fe3cc0b8d6ebb",
+    "meetingBoard": "c31a321e518a4c0ea840e4dc099de1b8",
+    "messageBoard": "51beee923674427daf163f7ee621c222",
+    "personnelBoard": "f8d6b78b7a8e4241899651c760b573a7"
+  }
+}

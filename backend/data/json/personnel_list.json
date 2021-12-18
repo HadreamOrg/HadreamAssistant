@@ -1,0 +1,520 @@
+{
+    "person": {
+        "yyh": {
+            "name": "袁翊闳",
+            "id": "yyh",
+            "department": "wtb",
+            "class": 9,
+            "character": "admin"
+        },
+        "lpy": {
+            "name": "李佩瑜",
+            "id": "lpy",
+            "department": "wtb",
+            "class": 6,
+            "character": "minister"
+        },
+        "xlk": {
+            "name": "徐麟凯",
+            "id": "xlk",
+            "department": "wtb",
+            "class": 17,
+            "character": "deputy_minister"
+        },
+        "tyn": {
+            "name": "童颖楠",
+            "id": "tyn",
+            "department": "wtb",
+            "class": 18,
+            "character": "manager"
+        },
+        "lc": {
+            "name": "李畅",
+            "id": "lc",
+            "department": "zxt",
+            "class": 23,
+            "character": "minister"
+        },
+        "ljj": {
+            "name": "卢俊杰",
+            "id": "ljj",
+            "department": "zxt",
+            "class": 8,
+            "character": "deputy_minister"
+        },
+        "ysy": {
+            "name": "杨诗语",
+            "id": "ysy",
+            "department": "zxt",
+            "class": 6,
+            "character": "deputy_minister"
+        },
+        "lj": {
+            "name": "刘娇",
+            "id": "lf",
+            "department": "zzb",
+            "class": 6,
+            "character": "deputy_minister"
+        },
+        "cqy": {
+            "name": "陈麒宇",
+            "id": "cqy",
+            "department": "zzb",
+            "class": 16,
+            "character": "minister"
+        },
+        "hyl": {
+            "name": "黄奕霖",
+            "id": "hyl",
+            "department": "jjb",
+            "class": 21,
+            "character": "minister"
+        },
+        "csf": {
+            "name": "陈世峰",
+            "id": "csf",
+            "department": "teacher",
+            "class": null,
+            "character": "teacher"
+        },
+        "xby": {
+            "name": "肖必勇",
+            "id": "xby",
+            "department": "teacher",
+            "class": null,
+            "character": "teacher"
+        },
+        "wf": {
+            "name": "王芳",
+            "id": "wf",
+            "department": "teacher",
+            "class": null,
+            "character": "teacher"
+        },
+        "lmj": {
+            "name": "李明君",
+            "id": "lmj",
+            "department": "wtb",
+            "class": 9,
+            "character": "manager"
+        },
+        "lhx": {
+            "name": "梁宏熙",
+            "id": "lhx",
+            "department": "wtb",
+            "class": 27,
+            "character": "manager"
+        },
+        "chz": {
+            "name": "蔡怀漳",
+            "id": "chz",
+            "department": "wtb",
+            "class": 15,
+            "character": "manager"
+        },
+        "wjl": {
+            "name": "万嘉丽",
+            "id": "wjl",
+            "department": "xxb",
+            "class": 24,
+            "character": "minister"
+        },
+        "tsm": {
+            "name": "谭思敏",
+            "id": "tsm",
+            "department": "wtb",
+            "class": 15,
+            "character": "manager"
+        },
+        "zec": {
+            "name": "张二橱",
+            "id": "zec",
+            "department": "msc",
+            "class": 4,
+            "character": "minister"
+        },
+        "lxt": {
+            "name": "李晓峒",
+            "id": "lxt",
+            "department": "msc",
+            "class": 15,
+            "character": "deputy_ministart"
+        },
+        "zql": {
+            "name": "朱倩兰",
+            "id": "zql",
+            "department": "msc",
+            "class": 26,
+            "character": "manager"
+        },
+        "hzl": {
+            "name": "胡轶琳",
+            "id": "hzl",
+            "department": "msc",
+            "class": 26,
+            "character": "manager"
+        },
+        "lzy": {
+            "name": "林梓滢",
+            "id": "lzy",
+            "department": "msc",
+            "class": 23,
+            "character": "manager"
+        },
+        "cbj": {
+            "name": "陈柏君",
+            "id": "cbj",
+            "department": "zzb",
+            "class": 25,
+            "character": "member"
+        },
+        "zcx": {
+            "name": "祝彩馨",
+            "id": "zcx",
+            "department": "zzb",
+            "class": 1,
+            "character": "member"
+        },
+        "hjj": {
+            "name": "何俊杰",
+            "id": "hhj",
+            "department": "zzb",
+            "class": 22,
+            "character": "member"
+        },
+        "lya": {
+            "name": "梁雨岸",
+            "id": "lya",
+            "department": "zzb",
+            "class": 23,
+            "character": "member"
+        },
+        "czm": {
+            "name": "陈志铭",
+            "id": "czm",
+            "department": "zzb",
+            "class": 11,
+            "character": "member"
+        },
+        "cyf": {
+            "name": "陈宇飞",
+            "id": "cyf",
+            "department": "zzb",
+            "class": 6,
+            "character": "member"
+        },
+        "fjn": {
+            "name": "范璟娜",
+            "id": "fjn",
+            "department": "zzb",
+            "class": 4,
+            "character": "member"
+        },
+        "smy": {
+            "name": "司马钰",
+            "id": "smy",
+            "department": "jjb",
+            "class": 2,
+            "character": "deputy_minister"
+        },
+        "zmy": {
+            "name": "赵梦盈",
+            "id": "zmy",
+            "department": "jjb",
+            "class": 8,
+            "character": "manager"
+        },
+        "lsq": {
+            "name": "龙诗琪",
+            "id": "lsq",
+            "department": "jjb",
+            "class": 9,
+            "character": "member"
+        },
+        "hwj": {
+            "name": "胡伟坚",
+            "id": "hwj",
+            "department": "jjb",
+            "class": 20,
+            "character": "member"
+        },
+        "ljh": {
+            "name": "李锦辉",
+            "id": "ljh",
+            "department": "jjb",
+            "class": 16,
+            "character": "member"
+        },
+        "zs": {
+            "name": "曾山",
+            "id": "zs",
+            "department": "jjb",
+            "class": 16,
+            "character": "manager"
+        },
+        "mgz": {
+            "name": "麦国臻",
+            "id": "mgz",
+            "department": "jjb",
+            "class": 15,
+            "character": "member"
+        },
+        "cly": {
+            "name": "蔡丽莹",
+            "id": "cly",
+            "department": "jjb",
+            "class": 2,
+            "character": "member"
+        },
+        "myh": {
+            "name": "毛颖慧",
+            "id": "myh",
+            "department": "jjb",
+            "class": 12,
+            "character": "member"
+        },
+        "zjh": {
+            "name": "庄洁卉",
+            "id": "zjh",
+            "department": "scb",
+            "class": 2,
+            "character": "member"
+        },
+        "wgq": {
+            "name": "王冠桥",
+            "id": "wgq",
+            "department": "jjb",
+            "class": 3,
+            "character": "member"
+        },
+        "ldq": {
+            "name": "李达祺",
+            "id": "ldq",
+            "department": "jjb",
+            "class": 10,
+            "character": "member"
+        },
+        "hxm": {
+            "name": "胡学铭",
+            "id": "hxm",
+            "department": "jjb",
+            "class": 18,
+            "character": "manager"
+        },
+        "xwy": {
+            "name": "鲜汶言",
+            "id": "xwy",
+            "department": "jjb",
+            "class": 13,
+            "character": "member"
+        },
+        "szh": {
+            "name": "佘卓浩",
+            "id": "szh",
+            "department": "jjb",
+            "class": 13,
+            "character": "member"
+        },
+        "lms": {
+            "name": "梁敏思",
+            "id": "lms",
+            "department": "jjb",
+            "class": 26,
+            "character": "manager"
+        },
+        "hsx": {
+            "name": "黄思欣",
+            "id": "hsx",
+            "department": "xxb",
+            "class": 4,
+            "character": "deputy_minister"
+        },
+        "lry": {
+            "name": "徐睿勇",
+            "id": "lry",
+            "department": "xxb",
+            "class": 19,
+            "character": "manager"
+        },
+        "lmy": {
+            "name": "黎明宇",
+            "id": "lmy",
+            "department": "shwsb",
+            "class": 12,
+            "character": "member"
+        },
+        "jpc": {
+            "name": "蒋朴澄",
+            "id": "jpc",
+            "department": "shwsb",
+            "class": 15,
+            "character": "deputy_manager"
+        },
+        "ozy": {
+            "name": "欧兆莹",
+            "id": "ozy",
+            "department": "shwsb",
+            "class": 26,
+            "character": "member"
+        },
+        "thy": {
+            "name": "覃航宇",
+            "id": "thy",
+            "department": "shwsb",
+            "class": 4,
+            "character": "member"
+        },
+        "ctq": {
+            "name": "崔天琪",
+            "id": "ctq",
+            "department": "shwsb",
+            "class": 26,
+            "character": "member"
+        },
+        "lyh": {
+            "name": "李苑华",
+            "id": "lyh",
+            "department": "shwsb",
+            "class": 26,
+            "character": "member"
+        },
+        "lyt": {
+            "name": "李映潼",
+            "id": "lyt",
+            "department": "qyb",
+            "class": 13,
+            "character": "minister"
+        },
+        "fjy": {
+            "name": "范静奕",
+            "id": "fjy",
+            "department": "qyb",
+            "class": 2,
+            "character": "deputy_minister"
+        },
+        "zyy": {
+            "name": "邹易媛",
+            "id": "zyy",
+            "department": "qyb",
+            "class": 13,
+            "character": "member"
+        },
+        "wjd": {
+            "name": "王俊迪",
+            "id": "wjd",
+            "department": "qyb",
+            "class": 18,
+            "character": "member"
+        },
+        "hjm": {
+            "name": "黄佳铭",
+            "id": "hjm",
+            "department": "qyb",
+            "class": 7,
+            "character": "member"
+        },
+        "cjy": {
+            "name": "蔡嘉仪",
+            "id": "cjy",
+            "department": "qyb",
+            "class": 12,
+            "character": "member"
+        },
+        "xzs": {
+            "name": "许沚珊",
+            "id": "xzs",
+            "department": "qyb",
+            "class": 6,
+            "character": "member"
+        },
+        "zzx": {
+            "name": "张兆熙",
+            "id": "zzx",
+            "department": "scb",
+            "class": 24,
+            "character": "minister"
+        },
+        "yzx": {
+            "name": "余紫暄",
+            "id": "yzx",
+            "department": "scb",
+            "class": 26,
+            "character": "deputy_minister"
+        },
+        "hjh": {
+            "name": "胡建豪",
+            "id": "hjh",
+            "department": "scb",
+            "class": 13,
+            "character": "member"
+        },
+        "zzt": {
+            "name": "张子潼",
+            "id": "zzt",
+            "department": "scb",
+            "class": 26,
+            "character": "member"
+        },
+        "kyc": {
+            "name": "孔昱程",
+            "id": "kyc",
+            "department": "scb",
+            "class": 14,
+            "character": "member"
+        },
+        "cbl": {
+            "name": "蔡帛伶",
+            "id": "cbl",
+            "department": "scb",
+            "class": 4,
+            "character": "member"
+        },
+        "lyl": {
+            "name": "李逸朗",
+            "id": "lyl",
+            "department": "scb",
+            "class": 18,
+            "character": "member"
+        },
+        "jy": {
+            "name": "蒋映",
+            "id": "jy",
+            "department": "scb",
+            "class": 8,
+            "character": "member"
+        }
+    },
+    "department": {
+        "wtb": [
+            "lpy",
+            "xlk",
+            "yyh",
+            "lhx",
+            "tyn",
+            "lmj",
+            "wjl",
+            "tsm"
+        ],
+        "jjb": [
+            "hyl",
+            "zs"
+        ],
+        "shwsb": [],
+        "zzb": [],
+        "xcb": [],
+        "qyb": [],
+        "msc": [],
+        "xxb": [],
+        "zxt": [
+            "lc",
+            "ljj",
+            "ysy"
+        ],
+        "sj": [],
+        "teacher": []
+    },
+    "nickname": [
+        [["袁一泓"], "yyh"],
+        [["李佩瑜"], "lpy"]
+    ]
+}

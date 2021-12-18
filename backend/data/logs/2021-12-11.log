@@ -1,0 +1,742 @@
+
+[INFO] 09:57:27 HAInit: Detected awaken from snowboy .
+[INFO] 09:57:27 HAConversation: start new conversation .
+[INFO] 09:57:27 HAConversation: start recording command .
+[INFO] 09:57:27 HAPlayer: Playing start_recording .
+[INFO] 09:57:27 HAPlayer: start_recording play end .
+[INFO] 09:57:27 HARecorder: start vad record(record_with_vad module) .
+[INFO] 09:57:38 HAPlayer: Playing stop_recording .
+[INFO] 09:57:38 HAPlayer: stop_recording play end .
+[INFO] 09:57:38 HAConversation: start speech to text .
+[INFO] 09:57:38 HAStt: start speech to text .
+[INFO] 09:57:40 HAStt: stt request time cost 1.533759 .
+[INFO] 09:57:40 HANlp: start text ecnet: text-升旗你是要去那个海城站的是斯诺克财经战升完旗之后去拍照吧，他下一站在录音。 .
+[INFO] 09:57:40 HAStt: speech recognition result(after text fixing): 升旗你是要去哪个海城站的是斯诺克财经战升完旗之后去拍照吧，他下一站在录音。 .
+[INFO] 09:57:40 HAConversation: start recognizing the intent and slots .
+[DEBUG] 09:57:40 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 09:57:41 HATts: tts request succeed .
+[INFO] 09:57:41 HAPlayer: Playing say.wav .
+[INFO] 09:57:43 HAPlayer: say.wav play end .
+[INFO] 09:57:47 HAInit: Detected awaken from snowboy .
+[INFO] 09:57:47 HAConversation: start new conversation .
+[INFO] 09:57:47 HAConversation: start recording command .
+[INFO] 09:57:47 HAPlayer: Playing start_recording .
+[INFO] 09:57:48 HAPlayer: start_recording play end .
+[INFO] 09:57:48 HARecorder: start vad record(record_with_vad module) .
+[INFO] 09:57:56 HAPlayer: Playing stop_recording .
+[INFO] 09:57:57 HAPlayer: stop_recording play end .
+[INFO] 09:57:57 HAConversation: start speech to text .
+[INFO] 09:57:57 HAStt: start speech to text .
+[INFO] 09:57:57 HAStt: stt request time cost 0.789396 .
+[INFO] 09:57:57 HANlp: start text ecnet: text-拿出来钉钉审核录音，当没有人说话的时候，当已经没有人说话的时候，他就会停止录音。 .
+[INFO] 09:57:58 HAStt: speech recognition result(after text fixing): 拿出来钉钉审核录音，当没有人说话的时候，当已经没有人说话的时候，他就会停止录音。 .
+[INFO] 09:57:58 HAConversation: start recognizing the intent and slots .
+[DEBUG] 09:57:58 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 09:57:59 HATts: tts request succeed .
+[INFO] 09:57:59 HAPlayer: Playing say.wav .
+[INFO] 09:58:03 HAPlayer: say.wav play end .
+[INFO] 10:05:15 HAInit: Detected awaken from snowboy .
+[INFO] 10:05:15 HAConversation: start new conversation .
+[INFO] 10:05:15 HAConversation: start recording command .
+[INFO] 10:05:15 HAPlayer: Playing start_recording .
+[INFO] 10:05:15 HAPlayer: start_recording play end .
+[INFO] 10:05:15 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:05:26 HAPlayer: Playing stop_recording .
+[INFO] 10:05:26 HAPlayer: stop_recording play end .
+[INFO] 10:05:26 HAConversation: start speech to text .
+[INFO] 10:05:26 HAStt: start speech to text .
+[INFO] 10:05:27 HAStt: stt request time cost 0.918888 .
+[INFO] 10:05:27 HANlp: start text ecnet: text-帮我预约一个会议，迪加尼克，然后大可以后面军君就跟在后面，或者说你们就这样子，你这涉及你要不要看？ .
+[INFO] 10:05:28 HAStt: speech recognition result(after text fixing): 帮我预约一个会议，迪加尼克，然后大可以后面军君就跟在后面，或者说你们就这样子，你这涉及你要不要看？ .
+[INFO] 10:05:28 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:05:28 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:05:29 HATts: tts request succeed .
+[INFO] 10:05:29 HAPlayer: Playing say.wav .
+[INFO] 10:05:30 HAPlayer: say.wav play end .
+[INFO] 10:06:16 HABackendInit: HadreamAssistant start  .
+[INFO] 10:06:16 HABackendInit: start self check .
+[INFO] 10:06:16 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:06:17 HATts: tts request succeed .
+[INFO] 10:06:17 HAPlayer: Playing say.wav .
+[INFO] 10:06:22 HAPlayer: say.wav play end .
+[INFO] 10:06:22 HABackendInit: Start pulseaudio .
+[INFO] 10:06:22 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:06:22 HASnowboy: snowboy is now running... .
+[INFO] 10:06:24 HAInit: Detected awaken from snowboy .
+[INFO] 10:06:24 HAConversation: start new conversation .
+[INFO] 10:06:24 HAConversation: start recording command .
+[INFO] 10:06:24 HAPlayer: Playing start_recording .
+[INFO] 10:06:24 HAPlayer: start_recording play end .
+[INFO] 10:06:24 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:06:28 HAPlayer: Playing stop_recording .
+[INFO] 10:06:28 HAPlayer: stop_recording play end .
+[INFO] 10:06:28 HAConversation: start speech to text .
+[INFO] 10:06:28 HAStt: start speech to text .
+[INFO] 10:06:28 HAStt: stt request time cost 0.455621 .
+[INFO] 10:06:28 HANlp: start text ecnet: text-帮我预约一个会议。 .
+[INFO] 10:06:29 HAStt: speech recognition result(after text fixing): 帮我预约一个会议。 .
+[INFO] 10:06:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:06:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:06:30 HATts: tts request succeed .
+[INFO] 10:06:30 HAPlayer: Playing say.wav .
+[INFO] 10:06:32 HAPlayer: say.wav play end .
+[INFO] 10:08:03 HABackendInit: HadreamAssistant start  .
+[INFO] 10:08:03 HABackendInit: start self check .
+[INFO] 10:08:03 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:08:04 HATts: tts request succeed .
+[INFO] 10:08:04 HAPlayer: Playing say.wav .
+[INFO] 10:08:08 HAPlayer: say.wav play end .
+[INFO] 10:08:08 HABackendInit: Start pulseaudio .
+[INFO] 10:08:08 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:08:08 HASnowboy: snowboy is now running... .
+[INFO] 10:08:10 HAInit: Detected awaken from snowboy .
+[INFO] 10:08:10 HAConversation: start new conversation .
+[INFO] 10:08:10 HAConversation: start recording command .
+[INFO] 10:08:10 HAPlayer: Playing start_recording .
+[INFO] 10:08:10 HAPlayer: start_recording play end .
+[INFO] 10:08:10 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:08:13 HAPlayer: Playing stop_recording .
+[INFO] 10:08:13 HAPlayer: stop_recording play end .
+[INFO] 10:08:13 HAConversation: start speech to text .
+[INFO] 10:08:13 HAStt: start speech to text .
+[INFO] 10:08:14 HAStt: stt request time cost 0.499864 .
+[INFO] 10:08:14 HANlp: start text ecnet: text-帮我预约一个会议。 .
+[INFO] 10:08:14 HAStt: speech recognition result(after text fixing): 帮我预约一个会议。 .
+[INFO] 10:08:14 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:08:14 HANlu: analyze result: [0, 'book_meetingcancel_meeting', 'notion', 0] .
+[INFO] 10:08:14 HASkillNotion: start search handle_func, intent-book_meetingcancel_meeting .
+[ERROR] 10:08:14 HASkillNotion: intent-book_meetingcancel_meeting was not found! .
+[INFO] 10:12:21 HABackendInit: HadreamAssistant start  .
+[INFO] 10:12:21 HABackendInit: start self check .
+[INFO] 10:12:21 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:12:22 HATts: tts request succeed .
+[INFO] 10:12:22 HAPlayer: Playing say.wav .
+[INFO] 10:12:27 HAPlayer: say.wav play end .
+[INFO] 10:12:27 HABackendInit: Start pulseaudio .
+[INFO] 10:12:27 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:12:27 HASnowboy: snowboy is now running... .
+[INFO] 10:12:29 HAInit: Detected awaken from snowboy .
+[INFO] 10:12:29 HAConversation: start new conversation .
+[INFO] 10:12:29 HAConversation: start recording command .
+[INFO] 10:12:29 HAPlayer: Playing start_recording .
+[INFO] 10:12:29 HAPlayer: start_recording play end .
+[INFO] 10:12:29 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:12:40 HAPlayer: Playing stop_recording .
+[INFO] 10:12:40 HAPlayer: stop_recording play end .
+[INFO] 10:12:40 HAConversation: start speech to text .
+[INFO] 10:12:40 HAStt: start speech to text .
+[INFO] 10:12:41 HAStt: stt request time cost 0.789725 .
+[INFO] 10:12:41 HANlp: start text ecnet: text-帮我预约一个会议，什么意思啊嗯。 .
+[INFO] 10:12:41 HAStt: speech recognition result(after text fixing): 帮我预约一个会议，什么意思啊嗯。 .
+[INFO] 10:12:41 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:12:41 HANlu: analyze result: [0, 'book_meetingcancel_meeting', 'notion', 0] .
+[INFO] 10:12:41 HASkillNotion: start search handle_func, intent-book_meetingcancel_meeting .
+[ERROR] 10:12:41 HASkillNotion: intent-book_meetingcancel_meeting was not found! .
+[INFO] 10:15:25 HABackendInit: HadreamAssistant start  .
+[INFO] 10:15:25 HABackendInit: start self check .
+[INFO] 10:15:25 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:15:26 HATts: tts request succeed .
+[INFO] 10:15:26 HAPlayer: Playing say.wav .
+[INFO] 10:15:30 HAPlayer: say.wav play end .
+[INFO] 10:15:30 HABackendInit: Start pulseaudio .
+[INFO] 10:15:30 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:15:30 HASnowboy: snowboy is now running... .
+[INFO] 10:15:33 HAInit: Detected awaken from snowboy .
+[INFO] 10:15:33 HAConversation: start new conversation .
+[INFO] 10:15:33 HAConversation: start recording command .
+[INFO] 10:15:33 HAPlayer: Playing start_recording .
+[INFO] 10:15:33 HAPlayer: start_recording play end .
+[INFO] 10:15:33 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:15:36 HAPlayer: Playing stop_recording .
+[INFO] 10:15:36 HAPlayer: stop_recording play end .
+[INFO] 10:15:36 HAConversation: start speech to text .
+[INFO] 10:15:36 HAStt: start speech to text .
+[INFO] 10:15:37 HAStt: stt request time cost 0.506743 .
+[INFO] 10:15:37 HANlp: start text ecnet: text-帮我预约一个会议。 .
+[INFO] 10:15:37 HAStt: speech recognition result(after text fixing): 帮我预约一个会议。 .
+[INFO] 10:15:37 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:15:37 HANlu: analyze result: [0, 'book_meetingcancel_meeting', 'notion', 0] .
+[INFO] 10:15:37 HASkillNotion: start search handle_func, intent-book_meetingcancel_meeting .
+[INFO] 10:15:37 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:15:38 HATts: tts request succeed .
+[INFO] 10:15:38 HAPlayer: Playing say.wav .
+[INFO] 10:15:42 HAPlayer: say.wav play end .
+[INFO] 10:15:42 HAPlayer: Playing start_recording .
+[INFO] 10:15:42 HAPlayer: start_recording play end .
+[INFO] 10:15:42 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:15:53 HAPlayer: Playing stop_recording .
+[INFO] 10:15:53 HAPlayer: stop_recording play end .
+[INFO] 10:15:55 HATts: tts request succeed .
+[INFO] 10:15:55 HAPlayer: Playing say.wav .
+[INFO] 10:16:00 HAPlayer: say.wav play end .
+[INFO] 10:17:28 HABackendInit: HadreamAssistant start  .
+[INFO] 10:17:28 HABackendInit: start self check .
+[INFO] 10:17:28 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:17:29 HATts: tts request succeed .
+[INFO] 10:17:29 HAPlayer: Playing say.wav .
+[INFO] 10:17:34 HAPlayer: say.wav play end .
+[INFO] 10:17:34 HABackendInit: Start pulseaudio .
+[INFO] 10:17:34 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:17:34 HASnowboy: snowboy is now running... .
+[INFO] 10:17:36 HAInit: Detected awaken from snowboy .
+[INFO] 10:17:36 HAConversation: start new conversation .
+[INFO] 10:17:36 HAConversation: start recording command .
+[INFO] 10:17:36 HAPlayer: Playing start_recording .
+[INFO] 10:17:36 HAPlayer: start_recording play end .
+[INFO] 10:17:36 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:17:47 HAPlayer: Playing stop_recording .
+[INFO] 10:17:47 HAPlayer: stop_recording play end .
+[INFO] 10:17:47 HAConversation: start speech to text .
+[INFO] 10:17:47 HAStt: start speech to text .
+[INFO] 10:17:48 HAStt: stt request time cost 0.786298 .
+[INFO] 10:17:48 HANlp: start text ecnet: text-帮我预约一个会议吗？真看不到，过的很好，这是七班，就是看不到我的，因为什么？ .
+[INFO] 10:17:49 HAStt: speech recognition result(after text fixing): 帮我预约一个会议吗？真看不到，过的很好，这是七班，就是看不到我的，因为什么？ .
+[INFO] 10:17:49 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:17:49 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:17:49 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:17:49 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:17:49 HATts: tts request succeed .
+[INFO] 10:17:49 HAPlayer: Playing say.wav .
+[INFO] 10:17:52 HAPlayer: say.wav play end .
+[INFO] 10:19:43 HABackendInit: HadreamAssistant start  .
+[INFO] 10:19:43 HABackendInit: start self check .
+[INFO] 10:19:43 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:19:44 HATts: tts request succeed .
+[INFO] 10:19:44 HAPlayer: Playing say.wav .
+[INFO] 10:19:48 HAPlayer: say.wav play end .
+[INFO] 10:19:48 HABackendInit: Start pulseaudio .
+[INFO] 10:19:48 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:19:48 HASnowboy: snowboy is now running... .
+[INFO] 10:19:50 HAInit: Detected awaken from snowboy .
+[INFO] 10:19:50 HAConversation: start new conversation .
+[INFO] 10:19:50 HAConversation: start recording command .
+[INFO] 10:19:50 HAPlayer: Playing start_recording .
+[INFO] 10:19:50 HAPlayer: start_recording play end .
+[INFO] 10:19:50 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:20:01 HAPlayer: Playing stop_recording .
+[INFO] 10:20:01 HAPlayer: stop_recording play end .
+[INFO] 10:20:01 HAConversation: start speech to text .
+[INFO] 10:20:01 HAStt: start speech to text .
+[INFO] 10:20:02 HAStt: stt request time cost 0.854665 .
+[INFO] 10:20:02 HANlp: start text ecnet: text-帮我预订一个周四晚党员活动室的会议。 .
+[INFO] 10:20:02 HAStt: speech recognition result(after text fixing): 帮我预订一个周四晚党员活动室的会议。 .
+[INFO] 10:20:02 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:20:02 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:20:02 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:20:02 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:20:04 HATts: tts request succeed .
+[INFO] 10:20:04 HAPlayer: Playing say.wav .
+[INFO] 10:20:15 HAPlayer: say.wav play end .
+[INFO] 10:20:15 HAPlayer: Playing start_recording .
+[INFO] 10:20:16 HAPlayer: start_recording play end .
+[INFO] 10:20:16 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:20:27 HAPlayer: Playing stop_recording .
+[INFO] 10:20:27 HAPlayer: stop_recording play end .
+[INFO] 10:20:28 HATts: tts request succeed .
+[INFO] 10:20:28 HAPlayer: Playing say.wav .
+[INFO] 10:20:30 HAPlayer: say.wav play end .
+[INFO] 10:21:21 HABackendInit: HadreamAssistant start  .
+[INFO] 10:21:21 HABackendInit: start self check .
+[INFO] 10:21:21 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:21:22 HATts: tts request succeed .
+[INFO] 10:21:22 HAPlayer: Playing say.wav .
+[INFO] 10:21:27 HAPlayer: say.wav play end .
+[INFO] 10:21:27 HABackendInit: Start pulseaudio .
+[INFO] 10:21:27 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:21:27 HASnowboy: snowboy is now running... .
+[INFO] 10:21:38 HAInit: Detected awaken from snowboy .
+[INFO] 10:21:38 HAConversation: start new conversation .
+[INFO] 10:21:38 HAConversation: start recording command .
+[INFO] 10:21:38 HAPlayer: Playing start_recording .
+[INFO] 10:21:38 HAPlayer: start_recording play end .
+[INFO] 10:21:38 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:21:49 HAPlayer: Playing stop_recording .
+[INFO] 10:21:49 HAPlayer: stop_recording play end .
+[INFO] 10:21:49 HAConversation: start speech to text .
+[INFO] 10:21:49 HAStt: start speech to text .
+[INFO] 10:21:50 HAStt: stt request time cost 0.808053 .
+[INFO] 10:21:50 HANlp: start text ecnet: text-帮我预定一个周四晚的，我都试了会议表述看这个表述很咸。 .
+[INFO] 10:21:51 HAStt: speech recognition result(after text fixing): 帮我预定一个周四晚的，我都试了会议表述看这个表述很咸。 .
+[INFO] 10:21:51 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:21:51 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:21:52 HATts: tts request succeed .
+[INFO] 10:21:52 HAPlayer: Playing say.wav .
+[INFO] 10:21:54 HAPlayer: say.wav play end .
+[INFO] 10:23:16 HAInit: Detected awaken from snowboy .
+[INFO] 10:23:16 HAConversation: start new conversation .
+[INFO] 10:23:16 HAConversation: start recording command .
+[INFO] 10:23:16 HAPlayer: Playing start_recording .
+[INFO] 10:23:16 HAPlayer: start_recording play end .
+[INFO] 10:23:16 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:23:27 HAPlayer: Playing stop_recording .
+[INFO] 10:23:27 HAPlayer: stop_recording play end .
+[INFO] 10:23:27 HAConversation: start speech to text .
+[INFO] 10:23:27 HAStt: start speech to text .
+[INFO] 10:23:28 HAStt: stt request time cost 0.748519 .
+[INFO] 10:23:28 HANlp: start text ecnet: text-他不理我，你把部位给你，你发给我一次都不会什么鬼，这样好像。 .
+[INFO] 10:23:29 HAStt: speech recognition result(after text fixing): 他不理我，你把部位给你，你发给我一次都不会什么鬼，这样好像。 .
+[INFO] 10:23:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:23:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:23:30 HATts: tts request succeed .
+[INFO] 10:23:30 HAPlayer: Playing say.wav .
+[INFO] 10:23:35 HAPlayer: say.wav play end .
+[INFO] 10:25:17 HAInit: Detected awaken from snowboy .
+[INFO] 10:25:17 HAConversation: start new conversation .
+[INFO] 10:25:17 HAConversation: start recording command .
+[INFO] 10:25:17 HAPlayer: Playing start_recording .
+[INFO] 10:25:17 HAPlayer: start_recording play end .
+[INFO] 10:25:17 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:25:28 HAPlayer: Playing stop_recording .
+[INFO] 10:25:28 HAPlayer: stop_recording play end .
+[INFO] 10:25:28 HAConversation: start speech to text .
+[INFO] 10:25:28 HAStt: start speech to text .
+[INFO] 10:25:29 HAStt: stt request time cost 0.634757 .
+[INFO] 10:25:29 HANlp: start text ecnet: text-周四晚，党员活动室开个会。 .
+[INFO] 10:25:29 HAStt: speech recognition result(after text fixing): 周四晚，党员活动室开个会。 .
+[INFO] 10:25:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:25:29 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:25:29 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:25:29 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:25:31 HATts: tts request succeed .
+[INFO] 10:25:31 HAPlayer: Playing say.wav .
+[INFO] 10:25:43 HAPlayer: say.wav play end .
+[INFO] 10:25:43 HAPlayer: Playing start_recording .
+[INFO] 10:25:43 HAPlayer: start_recording play end .
+[INFO] 10:25:43 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:25:54 HAPlayer: Playing stop_recording .
+[INFO] 10:25:54 HAPlayer: stop_recording play end .
+[INFO] 10:25:55 HATts: tts request succeed .
+[INFO] 10:25:55 HAPlayer: Playing say.wav .
+[INFO] 10:25:58 HAPlayer: say.wav play end .
+[INFO] 10:26:14 HAInit: Detected awaken from snowboy .
+[INFO] 10:26:14 HAConversation: start new conversation .
+[INFO] 10:26:14 HAConversation: start recording command .
+[INFO] 10:26:14 HAPlayer: Playing start_recording .
+[INFO] 10:26:15 HAPlayer: start_recording play end .
+[INFO] 10:26:15 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:26:20 HAPlayer: Playing stop_recording .
+[INFO] 10:26:21 HAPlayer: stop_recording play end .
+[INFO] 10:26:21 HAConversation: start speech to text .
+[INFO] 10:26:21 HAStt: start speech to text .
+[INFO] 10:26:21 HAStt: stt request time cost 0.462727 .
+[INFO] 10:26:21 HANlp: start text ecnet: text-周四玩导游不都是开个会？ .
+[INFO] 10:26:21 HAStt: speech recognition result(after text fixing): 周四玩导游不都是开个会？ .
+[INFO] 10:26:21 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:26:21 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:26:21 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:26:21 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:26:23 HATts: tts request succeed .
+[INFO] 10:26:23 HAPlayer: Playing say.wav .
+[INFO] 10:26:35 HAPlayer: say.wav play end .
+[INFO] 10:26:35 HAPlayer: Playing start_recording .
+[INFO] 10:26:36 HAPlayer: start_recording play end .
+[INFO] 10:26:36 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:26:46 HAPlayer: Playing stop_recording .
+[INFO] 10:26:47 HAPlayer: stop_recording play end .
+[INFO] 10:26:47 HATts: tts request succeed .
+[INFO] 10:26:47 HAPlayer: Playing say.wav .
+[INFO] 10:26:51 HAPlayer: say.wav play end .
+[INFO] 10:29:15 HAInit: Detected awaken from snowboy .
+[INFO] 10:29:15 HAConversation: start new conversation .
+[INFO] 10:29:15 HAConversation: start recording command .
+[INFO] 10:29:15 HAPlayer: Playing start_recording .
+[INFO] 10:29:15 HAPlayer: start_recording play end .
+[INFO] 10:29:15 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:29:17 HAPlayer: Playing stop_recording .
+[INFO] 10:29:17 HAPlayer: stop_recording play end .
+[INFO] 10:29:17 HAConversation: start speech to text .
+[INFO] 10:29:17 HAStt: start speech to text .
+[INFO] 10:29:18 HAStt: stt request time cost 0.622770 .
+[INFO] 10:29:18 HANlp: start text ecnet: text-那你怎么办？ .
+[INFO] 10:29:18 HAStt: speech recognition result(after text fixing): 那你怎么办？ .
+[INFO] 10:29:18 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:29:18 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:29:20 HATts: tts request succeed .
+[INFO] 10:29:20 HAPlayer: Playing say.wav .
+[INFO] 10:29:27 HAPlayer: say.wav play end .
+[INFO] 10:29:29 HAInit: Detected awaken from snowboy .
+[INFO] 10:29:29 HAConversation: start new conversation .
+[INFO] 10:29:29 HAConversation: start recording command .
+[INFO] 10:29:29 HAPlayer: Playing start_recording .
+[INFO] 10:29:30 HAPlayer: start_recording play end .
+[INFO] 10:29:30 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:29:41 HAPlayer: Playing stop_recording .
+[INFO] 10:29:41 HAPlayer: stop_recording play end .
+[INFO] 10:29:41 HAConversation: start speech to text .
+[INFO] 10:29:41 HAStt: start speech to text .
+[INFO] 10:29:42 HAStt: stt request time cost 0.593190 .
+[INFO] 10:29:42 HANlp: start text ecnet: text-周四晚，党员活动室开个会，嗯。 .
+[INFO] 10:29:42 HAStt: speech recognition result(after text fixing): 周四晚，党员活动室开个会，嗯。 .
+[INFO] 10:29:42 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:29:42 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:29:42 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:29:42 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:29:44 HATts: tts request succeed .
+[INFO] 10:29:44 HAPlayer: Playing say.wav .
+[INFO] 10:29:56 HAPlayer: say.wav play end .
+[INFO] 10:29:56 HAPlayer: Playing start_recording .
+[INFO] 10:29:56 HAPlayer: start_recording play end .
+[INFO] 10:29:56 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:30:07 HAPlayer: Playing stop_recording .
+[INFO] 10:30:07 HAPlayer: stop_recording play end .
+[INFO] 10:30:08 HATts: tts request succeed .
+[INFO] 10:30:08 HAPlayer: Playing say.wav .
+[INFO] 10:30:11 HAPlayer: say.wav play end .
+[INFO] 10:50:15 HAInit: Detected awaken from snowboy .
+[INFO] 10:50:15 HAConversation: start new conversation .
+[INFO] 10:50:15 HAConversation: start recording command .
+[INFO] 10:50:15 HAPlayer: Playing start_recording .
+[INFO] 10:50:15 HAPlayer: start_recording play end .
+[INFO] 10:50:15 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:50:26 HAPlayer: Playing stop_recording .
+[INFO] 10:50:26 HAPlayer: stop_recording play end .
+[INFO] 10:50:26 HAConversation: start speech to text .
+[INFO] 10:50:26 HAStt: start speech to text .
+[INFO] 10:50:27 HAStt: stt request time cost 0.998913 .
+[INFO] 10:50:27 HANlp: start text ecnet: text-No，不玩那我自己来，但是你现在还在讲嘛，现在还。 .
+[INFO] 10:50:28 HAStt: speech recognition result(after text fixing): No，不玩那我自己来，但是你现在还在讲嘛，现在还。 .
+[INFO] 10:50:28 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:50:28 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:50:29 HATts: tts request succeed .
+[INFO] 10:50:29 HAPlayer: Playing say.wav .
+[INFO] 10:50:31 HAPlayer: say.wav play end .
+[INFO] 10:52:59 HAInit: Detected awaken from snowboy .
+[INFO] 10:52:59 HAConversation: start new conversation .
+[INFO] 10:52:59 HAConversation: start recording command .
+[INFO] 10:52:59 HAPlayer: Playing start_recording .
+[INFO] 10:53:00 HAPlayer: start_recording play end .
+[INFO] 10:53:00 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:53:10 HAPlayer: Playing stop_recording .
+[INFO] 10:53:11 HAPlayer: stop_recording play end .
+[INFO] 10:53:11 HAConversation: start speech to text .
+[INFO] 10:53:11 HAStt: start speech to text .
+[INFO] 10:53:12 HAStt: stt request time cost 0.871634 .
+[INFO] 10:53:12 HANlp: start text ecnet: text-他们还有。 .
+[INFO] 10:53:12 HAStt: speech recognition result(after text fixing): 他们还有。 .
+[INFO] 10:53:12 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:53:12 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:53:14 HATts: tts request succeed .
+[INFO] 10:53:14 HAPlayer: Playing say.wav .
+[INFO] 10:53:19 HAPlayer: say.wav play end .
+[INFO] 10:53:29 HAInit: Detected awaken from snowboy .
+[INFO] 10:53:29 HAConversation: start new conversation .
+[INFO] 10:53:29 HAConversation: start recording command .
+[INFO] 10:53:29 HAPlayer: Playing start_recording .
+[INFO] 10:53:29 HAPlayer: start_recording play end .
+[INFO] 10:53:29 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:53:40 HAPlayer: Playing stop_recording .
+[INFO] 10:53:40 HAPlayer: stop_recording play end .
+[INFO] 10:53:40 HAConversation: start speech to text .
+[INFO] 10:53:40 HAStt: start speech to text .
+[INFO] 10:53:41 HAStt: stt request time cost 0.873162 .
+[INFO] 10:53:41 HANlp: start text ecnet: text-能，不过你挺有创意才是木头到了老师哦，反正说然后你才能换个名字。 .
+[INFO] 10:53:41 HAStt: speech recognition result(after text fixing): 能，不过你挺有创意才是木头到了老师哦，反正说然后你才能换个名字。 .
+[INFO] 10:53:41 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:53:41 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 10:53:42 HATts: tts request succeed .
+[INFO] 10:53:42 HAPlayer: Playing say.wav .
+[INFO] 10:53:45 HAPlayer: say.wav play end .
+[INFO] 10:53:56 HAInit: Detected awaken from snowboy .
+[INFO] 10:53:56 HAConversation: start new conversation .
+[INFO] 10:53:56 HAConversation: start recording command .
+[INFO] 10:53:56 HAPlayer: Playing start_recording .
+[INFO] 10:53:56 HAPlayer: start_recording play end .
+[INFO] 10:53:56 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:54:07 HAPlayer: Playing stop_recording .
+[INFO] 10:54:07 HAPlayer: stop_recording play end .
+[INFO] 10:54:07 HAConversation: start speech to text .
+[INFO] 10:54:07 HAStt: start speech to text .
+[INFO] 10:54:08 HAStt: stt request time cost 0.901726 .
+[INFO] 10:54:08 HANlp: start text ecnet: text-好吧，开个会没办法啊，有人在讲话，很傻。 .
+[INFO] 10:54:09 HAStt: speech recognition result(after text fixing): 好吧，开个会没办法啊，有人在讲话，很傻。 .
+[INFO] 10:54:09 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:54:09 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:54:09 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:54:09 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:54:10 HATts: tts request succeed .
+[INFO] 10:54:10 HAPlayer: Playing say.wav .
+[INFO] 10:54:22 HAPlayer: say.wav play end .
+[INFO] 10:54:22 HAPlayer: Playing start_recording .
+[INFO] 10:54:23 HAPlayer: start_recording play end .
+[INFO] 10:54:23 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:54:33 HAPlayer: Playing stop_recording .
+[INFO] 10:54:34 HAPlayer: stop_recording play end .
+[INFO] 10:54:34 HATts: tts request succeed .
+[INFO] 10:54:34 HAPlayer: Playing say.wav .
+[INFO] 10:54:37 HAPlayer: say.wav play end .
+[INFO] 10:55:22 HAInit: Detected awaken from snowboy .
+[INFO] 10:55:22 HAConversation: start new conversation .
+[INFO] 10:55:22 HAConversation: start recording command .
+[INFO] 10:55:22 HAPlayer: Playing start_recording .
+[INFO] 10:55:22 HAPlayer: start_recording play end .
+[INFO] 10:55:22 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:55:26 HAPlayer: Playing stop_recording .
+[INFO] 10:55:27 HAPlayer: stop_recording play end .
+[INFO] 10:55:27 HAConversation: start speech to text .
+[INFO] 10:55:27 HAStt: start speech to text .
+[INFO] 10:55:27 HAStt: stt request time cost 0.366123 .
+[INFO] 10:55:27 HANlp: start text ecnet: text-周四晚等于活动室开个会。 .
+[INFO] 10:55:27 HAStt: speech recognition result(after text fixing): 周四晚等于活动室开个会。 .
+[INFO] 10:55:27 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:55:27 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:55:27 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:55:27 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:55:30 HATts: tts request succeed .
+[INFO] 10:55:30 HAPlayer: Playing say.wav .
+[INFO] 10:55:42 HAPlayer: say.wav play end .
+[INFO] 10:55:42 HAPlayer: Playing start_recording .
+[INFO] 10:55:42 HAPlayer: start_recording play end .
+[INFO] 10:55:42 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:55:45 HAPlayer: Playing stop_recording .
+[INFO] 10:55:45 HAPlayer: stop_recording play end .
+[INFO] 10:55:46 HATts: tts request succeed .
+[INFO] 10:55:46 HAPlayer: Playing say.wav .
+[INFO] 10:55:49 HAPlayer: say.wav play end .
+[INFO] 10:57:31 HAInit: Detected awaken from snowboy .
+[INFO] 10:57:31 HAConversation: start new conversation .
+[INFO] 10:57:31 HAConversation: start recording command .
+[INFO] 10:57:31 HAPlayer: Playing start_recording .
+[INFO] 10:57:31 HAPlayer: start_recording play end .
+[INFO] 10:57:31 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:57:38 HAPlayer: Playing stop_recording .
+[INFO] 10:57:38 HAPlayer: stop_recording play end .
+[INFO] 10:57:38 HAConversation: start speech to text .
+[INFO] 10:57:38 HAStt: start speech to text .
+[INFO] 10:57:38 HAStt: stt request time cost 0.547848 .
+[INFO] 10:57:38 HANlp: start text ecnet: text-周五晚上开个会。 .
+[INFO] 10:57:39 HAStt: speech recognition result(after text fixing): 周五晚上开个会。 .
+[INFO] 10:57:39 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:57:39 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:57:39 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:57:39 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:57:40 HATts: tts request succeed .
+[INFO] 10:57:40 HAPlayer: Playing say.wav .
+[INFO] 10:57:52 HAPlayer: say.wav play end .
+[INFO] 10:57:52 HAPlayer: Playing start_recording .
+[INFO] 10:57:53 HAPlayer: start_recording play end .
+[INFO] 10:57:53 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:58:03 HAPlayer: Playing stop_recording .
+[INFO] 10:58:04 HAPlayer: stop_recording play end .
+[INFO] 10:58:04 HATts: tts request succeed .
+[INFO] 10:58:04 HAPlayer: Playing say.wav .
+[INFO] 10:58:08 HAPlayer: say.wav play end .
+[INFO] 10:58:45 HABackendInit: HadreamAssistant start  .
+[INFO] 10:58:45 HABackendInit: start self check .
+[INFO] 10:58:45 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 10:58:46 HATts: tts request succeed .
+[INFO] 10:58:46 HAPlayer: Playing say.wav .
+[INFO] 10:58:50 HAPlayer: say.wav play end .
+[INFO] 10:58:50 HABackendInit: Start pulseaudio .
+[INFO] 10:58:51 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 10:58:51 HASnowboy: snowboy is now running... .
+[INFO] 10:58:52 HAInit: Detected awaken from snowboy .
+[INFO] 10:58:52 HAConversation: start new conversation .
+[INFO] 10:58:52 HAConversation: start recording command .
+[INFO] 10:58:52 HAPlayer: Playing start_recording .
+[INFO] 10:58:53 HAPlayer: start_recording play end .
+[INFO] 10:58:53 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:58:57 HAPlayer: Playing stop_recording .
+[INFO] 10:58:58 HAPlayer: stop_recording play end .
+[INFO] 10:58:58 HAConversation: start speech to text .
+[INFO] 10:58:58 HAStt: start speech to text .
+[INFO] 10:58:58 HAStt: stt request time cost 0.646016 .
+[INFO] 10:58:58 HANlp: start text ecnet: text-帮我预约一个周四晚上的会议。 .
+[INFO] 10:58:59 HAStt: speech recognition result(after text fixing): 帮我预约一个周四晚上的会议。 .
+[INFO] 10:58:59 HAConversation: start recognizing the intent and slots .
+[DEBUG] 10:58:59 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 10:58:59 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 10:58:59 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 10:59:00 HATts: tts request succeed .
+[INFO] 10:59:00 HAPlayer: Playing say.wav .
+[INFO] 10:59:04 HAPlayer: say.wav play end .
+[INFO] 10:59:04 HAPlayer: Playing start_recording .
+[INFO] 10:59:05 HAPlayer: start_recording play end .
+[INFO] 10:59:05 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:59:08 HAPlayer: Playing stop_recording .
+[INFO] 10:59:08 HAPlayer: stop_recording play end .
+[INFO] 10:59:09 HATts: tts request succeed .
+[INFO] 10:59:09 HAPlayer: Playing say.wav .
+[INFO] 10:59:15 HAPlayer: say.wav play end .
+[INFO] 11:25:09 HABackendInit: HadreamAssistant start  .
+[INFO] 11:25:09 HABackendInit: start self check .
+[INFO] 11:25:09 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 11:25:10 HATts: tts request succeed .
+[INFO] 11:25:10 HAPlayer: Playing say.wav .
+[INFO] 11:25:15 HAPlayer: say.wav play end .
+[INFO] 11:25:15 HABackendInit: Start pulseaudio .
+[INFO] 11:25:15 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 11:25:15 HASnowboy: snowboy is now running... .
+[INFO] 11:25:17 HAInit: Detected awaken from snowboy .
+[INFO] 11:25:17 HAConversation: start new conversation .
+[INFO] 11:25:17 HAConversation: start recording command .
+[INFO] 11:25:17 HAPlayer: Playing start_recording .
+[INFO] 11:25:17 HAPlayer: start_recording play end .
+[INFO] 11:25:17 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:25:22 HAPlayer: Playing stop_recording .
+[INFO] 11:25:22 HAPlayer: stop_recording play end .
+[INFO] 11:25:22 HAConversation: start speech to text .
+[INFO] 11:25:22 HAStt: start speech to text .
+[INFO] 11:25:22 HAStt: stt request time cost 0.438894 .
+[INFO] 11:25:22 HANlp: start text ecnet: text-我想听歌。 .
+[INFO] 11:25:23 HAStt: speech recognition result(after text fixing): 我想听歌。 .
+[INFO] 11:25:23 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:25:23 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 11:25:24 HATts: tts request succeed .
+[INFO] 11:25:24 HAPlayer: Playing say.wav .
+[INFO] 11:25:25 HAPlayer: say.wav play end .
+[INFO] 11:50:11 HABackendInit: HadreamAssistant start  .
+[INFO] 11:50:11 HABackendInit: start self check .
+[INFO] 11:50:11 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 11:50:12 HATts: tts request succeed .
+[INFO] 11:50:12 HAPlayer: Playing say.wav .
+[INFO] 11:50:17 HAPlayer: say.wav play end .
+[INFO] 11:50:17 HABackendInit: Start pulseaudio .
+[INFO] 11:50:17 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 11:50:17 HASnowboy: snowboy is now running... .
+[INFO] 11:51:11 HAInit: Detected awaken from snowboy .
+[INFO] 11:51:11 HAConversation: start new conversation .
+[INFO] 11:51:11 HAConversation: start recording command .
+[INFO] 11:51:11 HAPlayer: Playing start_recording .
+[INFO] 11:51:11 HAPlayer: start_recording play end .
+[INFO] 11:51:11 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:51:22 HAPlayer: Playing stop_recording .
+[INFO] 11:51:22 HAPlayer: stop_recording play end .
+[INFO] 11:51:22 HAConversation: start speech to text .
+[INFO] 11:51:22 HAStt: start speech to text .
+[INFO] 11:51:23 HAStt: stt request time cost 0.793834 .
+[INFO] 11:51:23 HANlp: start text ecnet: text-帮我预约一个周四晚在党员活动室的会议。 .
+[INFO] 11:51:23 HAStt: speech recognition result(after text fixing): 帮我预约一个周四晚在党员活动室的会议。 .
+[INFO] 11:51:23 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:51:23 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 11:51:23 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 11:51:23 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 11:51:25 HATts: tts request succeed .
+[INFO] 11:51:25 HAPlayer: Playing say.wav .
+[INFO] 11:51:29 HAPlayer: say.wav play end .
+[INFO] 11:51:29 HAPlayer: Playing start_recording .
+[INFO] 11:51:29 HAPlayer: start_recording play end .
+[INFO] 11:51:29 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:51:38 HAPlayer: Playing stop_recording .
+[INFO] 11:51:39 HAPlayer: stop_recording play end .
+[INFO] 11:51:40 HATts: tts request succeed .
+[INFO] 11:51:40 HAPlayer: Playing say.wav .
+[INFO] 11:51:46 HAPlayer: say.wav play end .
+[INFO] 11:54:09 HAInit: Detected awaken from snowboy .
+[INFO] 11:54:09 HAConversation: start new conversation .
+[INFO] 11:54:09 HAConversation: start recording command .
+[INFO] 11:54:09 HAPlayer: Playing start_recording .
+[INFO] 11:54:09 HAPlayer: start_recording play end .
+[INFO] 11:54:09 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:54:20 HAPlayer: Playing stop_recording .
+[INFO] 11:54:20 HAPlayer: stop_recording play end .
+[INFO] 11:54:20 HAConversation: start speech to text .
+[INFO] 11:54:20 HAStt: start speech to text .
+[INFO] 11:54:21 HAStt: stt request time cost 0.855654 .
+[INFO] 11:54:21 HANlp: start text ecnet: text-要不OK，对对对对对对对对对对对，本来。 .
+[INFO] 11:54:21 HAStt: speech recognition result(after text fixing): 要不OK，对对对对对对对对对对对，本来。 .
+[INFO] 11:54:21 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:54:21 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 11:54:23 HATts: tts request succeed .
+[INFO] 11:54:23 HAPlayer: Playing say.wav .
+[INFO] 11:54:27 HAPlayer: say.wav play end .
+[INFO] 11:54:50 HAInit: Detected awaken from snowboy .
+[INFO] 11:54:50 HAConversation: start new conversation .
+[INFO] 11:54:50 HAConversation: start recording command .
+[INFO] 11:54:50 HAPlayer: Playing start_recording .
+[INFO] 11:54:50 HAPlayer: start_recording play end .
+[INFO] 11:54:50 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:54:57 HAPlayer: Playing stop_recording .
+[INFO] 11:54:57 HAPlayer: stop_recording play end .
+[INFO] 11:54:57 HAConversation: start speech to text .
+[INFO] 11:54:57 HAStt: start speech to text .
+[INFO] 11:54:58 HAStt: stt request time cost 0.394899 .
+[INFO] 11:54:58 HANlp: start text ecnet: text-帮我预约一个周四晚上在党员活动室的会议。 .
+[INFO] 11:54:58 HAStt: speech recognition result(after text fixing): 帮我预约一个周四晚上在党员活动室的会议。 .
+[INFO] 11:54:58 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:54:58 HANlu: analyze result: [0, 'book_meeting', 'notion', 0] .
+[INFO] 11:54:58 HASkillNotion: start search handle_func, intent-book_meeting .
+[INFO] 11:54:58 HASkillNotion: start intent_handler-book_meeting .
+[INFO] 11:54:59 HATts: tts request succeed .
+[INFO] 11:54:59 HAPlayer: Playing say.wav .
+[INFO] 11:55:03 HAPlayer: say.wav play end .
+[INFO] 11:55:03 HAPlayer: Playing start_recording .
+[INFO] 11:55:03 HAPlayer: start_recording play end .
+[INFO] 11:55:03 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:55:11 HAPlayer: Playing stop_recording .
+[INFO] 11:55:11 HAPlayer: stop_recording play end .
+[INFO] 11:55:12 HATts: tts request succeed .
+[INFO] 11:55:12 HAPlayer: Playing say.wav .
+[INFO] 11:55:18 HAPlayer: say.wav play end .
+[INFO] 11:57:36 HAInit: Detected awaken from snowboy .
+[INFO] 11:57:36 HAConversation: start new conversation .
+[INFO] 11:57:36 HAConversation: start recording command .
+[INFO] 11:57:36 HAPlayer: Playing start_recording .
+[INFO] 11:57:36 HAPlayer: start_recording play end .
+[INFO] 11:57:36 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:57:47 HAPlayer: Playing stop_recording .
+[INFO] 11:57:47 HAPlayer: stop_recording play end .
+[INFO] 11:57:47 HAConversation: start speech to text .
+[INFO] 11:57:47 HAStt: start speech to text .
+[INFO] 11:57:48 HAStt: stt request time cost 0.842319 .
+[INFO] 11:57:48 HANlp: start text ecnet: text-你这个口音真的是搞笑对啊，我是不是没有连接通看过哦哦，要拍。 .
+[INFO] 11:57:49 HAStt: speech recognition result(after text fixing): 你这个口音真的是搞笑对啊，我是不是没有连接通看过哦哦，要拍。 .
+[INFO] 11:57:49 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:57:49 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 11:57:50 HATts: tts request succeed .
+[INFO] 11:57:50 HAPlayer: Playing say.wav .
+[INFO] 11:57:52 HAPlayer: say.wav play end .
+[INFO] 11:58:55 HAInit: Detected awaken from snowboy .
+[INFO] 11:58:55 HAConversation: start new conversation .
+[INFO] 11:58:55 HAConversation: start recording command .
+[INFO] 11:58:55 HAPlayer: Playing start_recording .
+[INFO] 11:58:56 HAPlayer: start_recording play end .
+[INFO] 11:58:56 HARecorder: start vad record(record_with_vad module) .
+[INFO] 11:59:06 HAPlayer: Playing stop_recording .
+[INFO] 11:59:07 HAPlayer: stop_recording play end .
+[INFO] 11:59:07 HAConversation: start speech to text .
+[INFO] 11:59:07 HAStt: start speech to text .
+[INFO] 11:59:07 HAStt: stt request time cost 0.669041 .
+[INFO] 11:59:07 HANlp: start text ecnet: text-我想听音乐。 .
+[INFO] 11:59:08 HAStt: speech recognition result(after text fixing): 我想听音乐。 .
+[INFO] 11:59:08 HAConversation: start recognizing the intent and slots .
+[DEBUG] 11:59:08 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 11:59:08 XiaolanSkillMusicPlayer: Start .
+[INFO] 11:59:09 HATts: tts request succeed .
+[INFO] 11:59:09 HAPlayer: Playing say.wav .
+[INFO] 11:59:12 HAPlayer: say.wav play end .
+[INFO] 12:08:47 HAInit: Detected awaken from snowboy .
+[INFO] 12:08:47 HAConversation: start new conversation .
+[INFO] 12:08:47 HAConversation: start recording command .
+[INFO] 12:08:47 HAPlayer: Playing start_recording .
+[INFO] 12:08:48 HAPlayer: start_recording play end .
+[INFO] 12:08:48 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:08:58 HAPlayer: Playing stop_recording .
+[INFO] 12:08:59 HAPlayer: stop_recording play end .
+[INFO] 12:08:59 HAConversation: start speech to text .
+[INFO] 12:08:59 HAStt: start speech to text .
+[INFO] 12:09:00 HAStt: stt request time cost 0.887209 .
+[INFO] 12:09:00 HANlp: start text ecnet: text-哇哦，我真的快疯了，看你社团了啊。 .
+[INFO] 12:09:00 HAStt: speech recognition result(after text fixing): 哇哦，我真的快疯了，看你社团了啊。 .
+[INFO] 12:09:00 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:09:00 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 12:09:01 HATts: tts request succeed .
+[INFO] 12:09:01 HAPlayer: Playing say.wav .
+[INFO] 12:09:03 HAPlayer: say.wav play end .
+[INFO] 12:14:56 HAInit: Detected awaken from snowboy .
+[INFO] 12:14:56 HAConversation: start new conversation .
+[INFO] 12:14:56 HAConversation: start recording command .
+[INFO] 12:14:56 HAPlayer: Playing start_recording .
+[INFO] 12:14:57 HAPlayer: start_recording play end .
+[INFO] 12:14:57 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:15:07 HAPlayer: Playing stop_recording .
+[INFO] 12:15:08 HAPlayer: stop_recording play end .
+[INFO] 12:15:08 HAConversation: start speech to text .
+[INFO] 12:15:08 HAStt: start speech to text .
+[INFO] 12:15:08 HAStt: stt request time cost 0.857658 .
+[INFO] 12:15:08 HANlp: start text ecnet: text-赞唉，发出来你可以给吴悦爸爸打个电话嘛，问一下他现在？ .
+[INFO] 12:15:09 HAStt: speech recognition result(after text fixing): 赞唉，发出来你可以给吴悦爸爸打个电话吗，问一下他现在？ .
+[INFO] 12:15:09 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:15:09 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 12:15:10 HATts: tts request succeed .
+[INFO] 12:15:10 HAPlayer: Playing say.wav .
+[INFO] 12:15:12 HAPlayer: say.wav play end .

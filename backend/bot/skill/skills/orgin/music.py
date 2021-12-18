@@ -5,6 +5,7 @@
 
 import requests
 import urllib.parse
+import threading
 
 
 class HASkillMusicPlayer:
@@ -15,6 +16,7 @@ class HASkillMusicPlayer:
         self.setting = ba.setting
         self.text = text
         self.nlu_result = nlu_result
+        self.intent = nlu_result[1]
 
         self.tts = ba.tts
         self.player = ba.player
@@ -22,6 +24,8 @@ class HASkillMusicPlayer:
         self.nlu = ba.nlu
         self.player = ba.player
         self.recorder = ba.recorder
+
+        self.playing = False
 
         self.play_list = {}
 
@@ -43,8 +47,34 @@ class HASkillMusicPlayer:
         """
         self.log.add_log("XiaolanSkillMusicPlayer: Start", 1)
 
-        self.tts.start("请问你要听什么音乐呢？")
-        self.main()
+        # self.tts.start("请问你要听什么音乐呢？")
+        # self.main()
+        if self.intent == "play_music":
+            self.play_c418()
+        elif self.intent == "pause":
+            self.pause()
+        elif self.intent == "resume":
+            self.player.pause = False
+
+    def play_c418(self):
+
+        """
+        播放c418
+        :return:
+        """
+        self.playing = True
+        self.tts.start("好的，这就为你播放C418")
+        player_thread = threading.Thread(target=self.player.basic_play, args=("./backend/data/audio/c418.wav",))
+        player_thread.start()
+        return
+
+    def pause(self):
+
+        """
+        暂停播放
+        :return:
+        """
+        self.player.stop = True
 
     def conversation(self):
 
@@ -52,9 +82,9 @@ class HASkillMusicPlayer:
         对话（减少重复代码）
         :return:
         """
-        self.player.ding()
+        self.player.start_recording()
         self.recorder.record()
-        self.player.dong()
+        self.player.stop_recording()
 
         text = self.stt.start()
 

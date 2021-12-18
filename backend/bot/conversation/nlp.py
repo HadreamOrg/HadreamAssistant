@@ -67,10 +67,13 @@ class HANlp:
 
             if r.status_code == 200:
                 res = r.json()
-                if res["error_code"] == 110:
-                    self.get_token()
-                    result = a()
-                else:
+                try:
+                    if res["error_code"] == 110:
+                        self.get_token()
+                        result = a()
+                    else:
+                        result = False
+                except KeyError:
                     result = res
                 return result
             else:
@@ -86,6 +89,7 @@ class HANlp:
         :param text: 原始文本
         :return:
         """
+        text = str(text, "utf-8")
         self.log.add_log("HANlp: start text ecnet: text-%s" % text, 1)
 
         url = "https://aip.baidubce.com/rpc/2.0/nlp/v1/ecnet?charset=UTF-8&access_token="
@@ -100,11 +104,16 @@ class HANlp:
 
             if r.status_code == 200:
                 res = r.json()
-                if res["error_code"] == 110:
-                    self.get_token()
-                    result = a()
-                else:
+                try:
+                    if res["error_code"] == 110:
+                        self.get_token()
+                        result = a()
+                    else:
+                        self.log.add_log("HANlp: ecnet meet an error, res-%s" % res, 3)
+                        result = text
+                except KeyError:
                     result = res["item"]["correct_query"]
+                    
                 return result
             else:
                 self.log.add_log("HANlp: text ecnet meet an http error, code-%s" % r.status_code, 3)
@@ -145,4 +154,6 @@ class HANlp:
                     result["pos"][item["pos"]].append(now_item_info)
                 except KeyError:
                     result["pos"][item["pos"]] = [now_item_info]
+
+        return result
 

@@ -1,0 +1,85 @@
+
+[INFO] 09:15:06 HAInit: Detected awaken from snowboy .
+[INFO] 09:15:06 HAConversation: start new conversation .
+[INFO] 09:15:06 HAConversation: start recording command .
+[INFO] 09:15:06 HAPlayer: Now playing start_recording .
+[INFO] 09:15:07 HARecorder: start vad record(record_with_vad module) .
+[INFO] 09:15:17 HAPlayer: Now playing stop_recording .
+[INFO] 09:15:18 HAConversation: start speech to text .
+[INFO] 09:15:18 HAStt: start speech to text .
+[INFO] 09:15:19 HAStt: stt request time cost 1.383615 .
+[INFO] 09:15:19 HANlp: start text ecnet: text-他们的这个学习方法，然后王宇和语数英爱，但我们全班排名啊，总分呢总分她那三个小孩。 .
+[INFO] 09:15:19 HAStt: speech recognition result(after text fixing): 他们的这个学习方法，然后王宇和语数英爱，但我们全班排名啊，总分呢总分她那三个小孩。 .
+[INFO] 09:15:19 HAConversation: start recognizing the intent and slots .
+[INFO] 09:15:21 HATts: tts request succeed .
+[INFO] 09:15:21 HAPlayer: Now playing say.wav .
+[INFO] 10:15:58 HAInit: Detected awaken from snowboy .
+[INFO] 10:15:58 HAConversation: start new conversation .
+[INFO] 10:15:58 HAConversation: start recording command .
+[INFO] 10:15:58 HAPlayer: Now playing start_recording .
+[INFO] 10:15:59 HARecorder: start vad record(record_with_vad module) .
+[INFO] 10:16:09 HAPlayer: Now playing stop_recording .
+[INFO] 10:16:10 HAConversation: start speech to text .
+[INFO] 10:16:10 HAStt: start speech to text .
+[INFO] 10:16:11 HAStt: stt request time cost 1.536930 .
+[INFO] 10:16:11 HANlp: start text ecnet: text-刚刚听见了，我听见了，我听他听了一声，他是谁都可以跟他说吗？不远也可以吗？谁都可以？以后谁都可以，但是如果你要操作相应的我。 .
+[INFO] 10:16:12 HAStt: speech recognition result(after text fixing): 刚刚听见了，我听见了，我听他听了一声，他是谁都可以跟他说吗？不远也可以吗？谁都可以？以后谁都可以，但是如果你要操作相应的我。 .
+[INFO] 10:16:12 HAConversation: start recognizing the intent and slots .
+[INFO] 10:16:13 HATts: tts request succeed .
+[INFO] 10:16:13 HAPlayer: Now playing say.wav .
+[INFO] 16:03:18 HAInit: Detected awaken from snowboy .
+[INFO] 16:03:18 HAConversation: start new conversation .
+[INFO] 16:03:18 HAConversation: start recording command .
+[INFO] 16:03:18 HAPlayer: Now playing start_recording .
+[INFO] 16:03:19 HARecorder: start vad record(record_with_vad module) .
+[INFO] 16:03:29 HAPlayer: Now playing stop_recording .
+[INFO] 16:03:30 HAConversation: start speech to text .
+[INFO] 16:03:30 HAStt: start speech to text .
+[INFO] 16:03:31 HAStt: stt request time cost 1.479325 .
+[INFO] 16:03:31 HANlp: start text ecnet: text-哦，我只不过挺严厉的，真没研究，白金太吵了，他一直。 .
+[INFO] 16:03:32 HAStt: speech recognition result(after text fixing): 哦，我只不过挺严厉的，真没研究，白金太吵了，他一直。 .
+[INFO] 16:03:32 HAConversation: start recognizing the intent and slots .
+[INFO] 16:03:33 HATts: tts request succeed .
+[INFO] 16:03:33 HAPlayer: Now playing say.wav .
+[INFO] 16:03:49 HAInit: Detected awaken from snowboy .
+[INFO] 16:03:49 HAConversation: start new conversation .
+[INFO] 16:03:49 HAConversation: start recording command .
+[INFO] 16:03:49 HAPlayer: Now playing start_recording .
+[INFO] 16:03:49 HARecorder: start vad record(record_with_vad module) .
+[INFO] 16:04:00 HAPlayer: Now playing stop_recording .
+[INFO] 16:04:00 HAConversation: start speech to text .
+[INFO] 16:04:00 HAStt: start speech to text .
+[INFO] 16:04:01 HAStt: stt request time cost 1.146137 .
+[INFO] 16:04:01 HANlp: start text ecnet: text-嗯嗯嗯，来设置明显。 .
+[INFO] 16:04:02 HAStt: speech recognition result(after text fixing): 嗯嗯嗯，来设置明显。 .
+[INFO] 16:04:02 HAConversation: start recognizing the intent and slots .
+[INFO] 16:04:03 HATts: tts request succeed .
+[INFO] 16:04:03 HAPlayer: Now playing say.wav .
+[INFO] 20:45:07 HAInit: Detected awaken from snowboy .
+[INFO] 20:45:07 HAConversation: start new conversation .
+[INFO] 20:45:07 HAConversation: start recording command .
+[INFO] 20:45:07 HAPlayer: Now playing start_recording .
+[INFO] 20:45:08 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:45:13 HAPlayer: Now playing stop_recording .
+[INFO] 20:45:13 HAConversation: start speech to text .
+[INFO] 20:45:13 HAStt: start speech to text .
+[INFO] 20:45:14 HAStt: stt request time cost 1.241169 .
+[INFO] 20:45:14 HANlp: start text ecnet: text-哎，好吧，给我唱首歌听听吧！ .
+[INFO] 20:45:15 HAStt: speech recognition result(after text fixing): 哎，好吧，给我唱首歌听听吧！ .
+[INFO] 20:45:15 HAConversation: start recognizing the intent and slots .
+[INFO] 20:45:16 HATts: tts request succeed .
+[INFO] 20:45:16 HAPlayer: Now playing say.wav .
+[INFO] 20:56:41 HAInit: Detected awaken from snowboy .
+[INFO] 20:56:41 HAConversation: start new conversation .
+[INFO] 20:56:41 HAConversation: start recording command .
+[INFO] 20:56:41 HAPlayer: Now playing start_recording .
+[INFO] 20:56:41 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:56:52 HAPlayer: Now playing stop_recording .
+[INFO] 20:56:52 HAConversation: start speech to text .
+[INFO] 20:56:52 HAStt: start speech to text .
+[INFO] 20:56:53 HAStt: stt request time cost 0.817872 .
+[INFO] 20:56:53 HANlp: start text ecnet: text-陪我聊天，记性啊我我只听说过他好像不怎么样？是连骂。 .
+[INFO] 20:56:57 HAStt: speech recognition result(after text fixing): 陪我聊天，记性啊我我只听说过他好像不怎么样？是连骂。 .
+[INFO] 20:56:57 HAConversation: start recognizing the intent and slots .
+[INFO] 20:56:58 HATts: tts request succeed .
+[INFO] 20:56:58 HAPlayer: Now playing say.wav .

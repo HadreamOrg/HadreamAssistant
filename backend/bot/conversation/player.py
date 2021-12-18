@@ -18,10 +18,7 @@ class HAPlayer:
         self.log = ba.log
         self.setting = ba.setting
 
-        self.player_status = {
-            "playing": False,
-            "pausing": False
-        }
+        self.stop = False
 
         self.output_queue = queue.Queue(8)
 
@@ -51,7 +48,7 @@ class HAPlayer:
             output=True)
 
         c_data = self.output_queue.get()
-        while c_data != '':
+        while c_data != b'':
             stream.write(c_data)
             c_data = self.output_queue.get()
 
@@ -60,7 +57,7 @@ class HAPlayer:
 
         p.terminate()
 
-    def play(self, fp):
+    def basic_play(self, fp):
 
         """
         基本play
@@ -83,9 +80,11 @@ class HAPlayer:
         )
 
         data = wf.readframes(1024)
-        while len(data) > 0:
+        while data != b'' and not self.stop:
             stream.write(data)
             data = wf.readframes(1024)
+
+        self.stop = False
 
         stream.stop_stream()
         stream.close()
@@ -97,27 +96,9 @@ class HAPlayer:
         播放say.wav
         :return:
         """
-        self.log.add_log("HAPlayer: Now playing say.wav", 1)
-        self.play(r"./backend/data/audio/say.wav")
-        return
-
-    def ding(self):
-
-        """
-        播放ding.wav
-        :return:
-        """
-        self.log.add_log("HAPlayer: Now playing start_recording.wav", 1)
-        self.play(r"./backend/data/audio/start_recording.wav")
-
-    def dong(self):
-
-        """
-        播放dong.wav
-        :return:
-        """
-        self.log.add_log("HAPlayer: Now playing stop_recording.wav", 1)
-        self.play(r"./backend/data/audio/stop_recording.wav")
+        self.log.add_log("HAPlayer: Playing say.wav", 1)
+        self.basic_play(r"./backend/data/audio/say.wav")
+        self.log.add_log("HAPlayer: say.wav play end", 1)
 
     def start_recording(self):
 
@@ -125,8 +106,9 @@ class HAPlayer:
         播放开始录音提示音
         :return:
         """
-        self.log.add_log("HAPlayer: Now playing start_recording", 1)
-        self.play(r"./backend/data/audio/start_recording.wav")
+        self.log.add_log("HAPlayer: Playing start_recording", 1)
+        self.basic_play(r"./backend/data/audio/start_recording.wav")
+        self.log.add_log("HAPlayer: start_recording play end", 1)
 
     def stop_recording(self):
 
@@ -134,8 +116,9 @@ class HAPlayer:
         播放录音结束提示音
         :return:
         """
-        self.log.add_log("HAPlayer: Now playing stop_recording", 1)
-        self.play(r"./backend/data/audio/stop_recording.wav")
+        self.log.add_log("HAPlayer: Playing stop_recording", 1)
+        self.basic_play(r"./backend/data/audio/stop_recording.wav")
+        self.log.add_log("HAPlayer: stop_recording play end", 1)
 
     def format_converter(self, fp, ori, goal):
 

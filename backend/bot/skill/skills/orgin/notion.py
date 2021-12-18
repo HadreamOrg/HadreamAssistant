@@ -1,7 +1,7 @@
 # coding=utf-8
 # author: Lan_zhijiang
-# description: skill: tuling-robot
-# date: 2020/10/4
+# description: skill: notion_helper
+# date: 2021/12/7
 
 import json
 import requests
@@ -14,49 +14,67 @@ class HASkillNotion:
         self.log = ba.log
         self.setting = ba.setting
         self.tts = ba.tts
+        self.stt = ba.stt
+        self.recorder = ba.recorder
         self.player = ba.player
 
         self.text = text
         self.nlu_result = nlu_result
+        self.intent = nlu_result[1]
+        self.slot = nlu_result[3]
 
-    def start(self, api_key=None):
+    def start(self):
 
         """
-        请求tuling
-        :param api_key: apikey
+        启动技能
+        :return:
+        """
+        self.log.add_log("HASkillNotion: start search handle_func, intent-%s" % self.intent, 1)
+        intent_mapping_list = [
+            ["book_meeting", self.book_meeting],
+            ["message", self.message],
+        ]
+        intent_found = False
+        for intent_func in intent_mapping_list:
+            if intent_func[0] == self.intent:
+                intent_found = True
+                intent_func[1]()
+
+        if not intent_found:
+            self.log.add_log("HASkillNotion: intent-%s was not found!" % self.intent, 3)
+            self.player.play("./backend/data/audio/skill_intent_not_found.wav")
+            return False
+        # self.book_meeting()
+
+    def launch(self):
+
+        """
+        欢迎(默认意图)
         :return:
         """
 
-        data = json.load(open("./data/json/tuling_request_template.json", "r", encoding="utf-8"))
-        data["perception"]["inputText"]["text"] = self.text
-        data["userInfo"]["userId"] = str(self.tuling_user_id.encode("GBK"), "utf-8")
+    def book_meeting(self):
 
-        if api_key is None:
-            case = 0
-            data["userInfo"]["apiKey"] = str(self.tuling_api_key.encode("GBK"), "utf-8")
-        else:
-            case = 1
-            data["userInfo"]["apiKey"] = str(api_key.encode("GBK"), "utf-8")
+        """
+        预定会议
+        :return:
+        """
+        self.log.add_log("HASkillNotion: start intent_handler-book_meeting", 1)
+        self.tts.start("好的，请说一下会议名称和参会人信息")
+        self.player.start_recording()
+        self.recorder.record()
+        self.player.stop_recording()
+        self.tts.start("主持人已经默认设置为你，李佩瑜同学。会议已预约")
+        # self.tts.start("很遗憾，本周四晚的党员活动室已经被文体部的李佩瑜同学预定了，要召开名为合唱比赛的会议。是否要对他留言请求交换呢？")
+        # self.player.start_recording()
+        # self.recorder.record()
+        # self.player.stop_recording()
+        # self.tts.start("好的~不用谢，有需要再叫我哦~")
 
-        try:
-            result = requests.post('http://openapi.tuling123.com/openapi/api/v2',
-                                   data=json.dumps(data))
-        except TypeError:
-            self.log.add_log("XialanSkillTuling: request type error", 3)
-            self.tts.start("出了点小错误，请检查后台")
-            return
+    def message(self):
 
-        try:
-            text = result.json()["results"][-1]["values"]["text"]
-        except KeyError:
-            self.log.add_log("XialanSkillTuling: Can not find text in response", 3)
-            self.tts.start("出了点小错误，请检查后台")
-            return
+        """
+        留言
+        :return:
+        """
 
-        if "请求" in text and "超限制" in text:
-            if case == 0:
-                self.start(api_key=self.setting["apiSettings"]["tuling"]["apiKey"][1]) # c88026c156ec49099510625329f9b79d
-            elif case == 1:
-                self.start(api_key=self.setting["apiSettings"]["tuling"]["apiKey"][2]) # 1f39526b070d4f2791b4c3347033f191
-        else:
-            self.tts.start(text)

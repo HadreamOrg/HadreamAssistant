@@ -10,11 +10,12 @@ import os
 
 class HALog:
 
-    def __init__(self):
+    def __init__(self, thread_name):
 
         self.logLevelList = [
            "DEBUG", "INFO", "WARNING", "ERROR", "FATAL"
         ]
+        self.thread_name = thread_name
 
     def get_log_file_path(self):
 
@@ -22,14 +23,17 @@ class HALog:
         获取log文件路径
         :return:
         """
-        basic_path = "./backend/data/logs/"
-        log_file_name = self.get_date() + ".txt"
-        if os.path.exists(basic_path + log_file_name) is False:
-            create_log_file = open(basic_path + log_file_name, "w")
-            create_log_file.close()
+        dir_path = "./backend/data/logs/%s" % self.get_date()
+        log_file_name = self.thread_name + "_thread" + ".log"
+        file_path = dir_path + "/" + log_file_name
+        if os.path.exists(dir_path) is False:
+            os.mkdir(dir_path)
+            if os.path.exists(file_path):
+                create_log_file = open(file_path, "w")
+                create_log_file.close()
         else:
             pass
-        return basic_path + log_file_name
+        return file_path
 
     def get_time_stamp(self):
 

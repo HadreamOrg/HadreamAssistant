@@ -1,0 +1,10 @@
+{
+  "name": "meeting_name",
+  "mode": "sentence_mode",
+  "content": [
+    "名为$的会议",
+    "叫$的会议",
+    "会议的名称是$",
+    "会议的名称为$"
+  ]
+}

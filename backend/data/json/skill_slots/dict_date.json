@@ -1,0 +1,10 @@
+{
+  "dictName": "date",
+  "description": "日期字典，包括年月日以及星期几",
+  "canNlp": true,
+  "nlpItemType": "ne",
+  "nlpItemType2": "TIME",
+  "content": [
+    ["#"]
+  ]
+}

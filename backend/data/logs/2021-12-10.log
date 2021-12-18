@@ -1,0 +1,208 @@
+
+[INFO] 12:24:24 HAInit: Detected awaken from snowboy .
+[INFO] 12:24:24 HAConversation: start new conversation .
+[INFO] 12:24:24 HAConversation: start recording command .
+[INFO] 12:24:24 HAPlayer: Playing start_recording .
+[INFO] 12:24:24 HAPlayer: start_recording play end .
+[INFO] 12:24:24 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:24:27 HAPlayer: Playing stop_recording .
+[INFO] 12:24:28 HAPlayer: stop_recording play end .
+[INFO] 12:24:28 HAConversation: start speech to text .
+[INFO] 12:24:28 HAStt: start speech to text .
+[INFO] 12:24:29 HAStt: stt request time cost 1.117167 .
+[INFO] 12:24:29 HANlp: start text ecnet: text-给我放首歌听。 .
+[INFO] 12:24:29 HAStt: speech recognition result(after text fixing): 给我放首歌听。 .
+[INFO] 12:24:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:24:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 12:24:30 HATts: tts request succeed .
+[INFO] 12:24:30 HAPlayer: Playing say.wav .
+[INFO] 12:24:33 HAPlayer: say.wav play end .
+[INFO] 12:25:20 HAInit: Detected awaken from snowboy .
+[INFO] 12:25:20 HAConversation: start new conversation .
+[INFO] 12:25:20 HAConversation: start recording command .
+[INFO] 12:25:20 HAPlayer: Playing start_recording .
+[INFO] 12:25:21 HAPlayer: start_recording play end .
+[INFO] 12:25:21 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:25:23 HAPlayer: Playing stop_recording .
+[INFO] 12:25:23 HAPlayer: stop_recording play end .
+[INFO] 12:25:23 HAConversation: start speech to text .
+[INFO] 12:25:23 HAStt: start speech to text .
+[INFO] 12:25:24 HAStt: stt request time cost 0.468988 .
+[INFO] 12:25:24 HANlp: start text ecnet: text-我想听音乐。 .
+[INFO] 12:25:24 HAStt: speech recognition result(after text fixing): 我想听音乐。 .
+[INFO] 12:25:24 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:25:24 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 12:25:24 XiaolanSkillMusicPlayer: Start .
+[INFO] 12:25:25 HATts: tts request succeed .
+[INFO] 12:25:25 HAPlayer: Playing say.wav .
+[INFO] 12:25:28 HAPlayer: say.wav play end .
+[INFO] 12:31:31 HAInit: Detected awaken from snowboy .
+[INFO] 12:31:31 HAConversation: start new conversation .
+[INFO] 12:31:31 HAConversation: start recording command .
+[INFO] 12:31:31 HAPlayer: Playing start_recording .
+[INFO] 12:31:31 HAPlayer: start_recording play end .
+[INFO] 12:31:31 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:31:34 HAPlayer: Playing stop_recording .
+[INFO] 12:31:34 HAPlayer: stop_recording play end .
+[INFO] 12:31:34 HAConversation: start speech to text .
+[INFO] 12:31:34 HAStt: start speech to text .
+[INFO] 12:31:34 HAStt: stt request time cost 0.515848 .
+[INFO] 12:31:34 HANlp: start text ecnet: text-我想听音乐。 .
+[INFO] 12:31:35 HAStt: speech recognition result(after text fixing): 我想听音乐。 .
+[INFO] 12:31:35 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:31:35 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 12:31:35 XiaolanSkillMusicPlayer: Start .
+[INFO] 12:31:36 HATts: tts request succeed .
+[INFO] 12:31:36 HAPlayer: Playing say.wav .
+[INFO] 12:31:39 HAPlayer: say.wav play end .
+[INFO] 12:38:34 HAInit: Detected awaken from snowboy .
+[INFO] 12:38:34 HAConversation: start new conversation .
+[INFO] 12:38:34 HAConversation: start recording command .
+[INFO] 12:38:34 HAPlayer: Playing start_recording .
+[INFO] 12:38:34 HAPlayer: start_recording play end .
+[INFO] 12:38:34 HARecorder: start vad record(record_with_vad module) .
+[INFO] 12:38:36 HAPlayer: Playing stop_recording .
+[INFO] 12:38:36 HAPlayer: stop_recording play end .
+[INFO] 12:38:36 HAConversation: start speech to text .
+[INFO] 12:38:36 HAStt: start speech to text .
+[INFO] 12:38:37 HAStt: stt request time cost 0.483221 .
+[INFO] 12:38:37 HANlp: start text ecnet: text-拜拜。 .
+[ERROR] 12:38:37 HANlp: ecnet meet an error, res-{'log_id': 7200666384901052554, 'error_code': 282002, 'error_msg': 'input encoding error'} .
+[INFO] 12:38:37 HAStt: speech recognition result(after text fixing): 拜拜。 .
+[INFO] 12:38:37 HAConversation: start recognizing the intent and slots .
+[DEBUG] 12:38:37 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 12:38:38 HATts: tts request succeed .
+[INFO] 12:38:38 HAPlayer: Playing say.wav .
+[INFO] 12:38:41 HAPlayer: say.wav play end .
+[INFO] 15:11:53 HAInit: Detected awaken from snowboy .
+[INFO] 15:11:53 HAConversation: start new conversation .
+[INFO] 15:11:53 HAConversation: start recording command .
+[INFO] 15:11:53 HAPlayer: Playing start_recording .
+[INFO] 15:11:54 HAPlayer: start_recording play end .
+[INFO] 15:11:54 HARecorder: start vad record(record_with_vad module) .
+[INFO] 15:12:04 HAPlayer: Playing stop_recording .
+[INFO] 15:12:05 HAPlayer: stop_recording play end .
+[INFO] 15:12:05 HAConversation: start speech to text .
+[INFO] 15:12:05 HAStt: start speech to text .
+[INFO] 15:12:06 HAStt: stt request time cost 1.333146 .
+[INFO] 15:12:06 HANlp: start text ecnet: text-给我讲个笑话。 .
+[INFO] 15:12:06 HAStt: speech recognition result(after text fixing): 给我讲个笑话。 .
+[INFO] 15:12:06 HAConversation: start recognizing the intent and slots .
+[DEBUG] 15:12:06 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 15:12:10 HATts: tts request succeed .
+[INFO] 15:12:10 HAPlayer: Playing say.wav .
+[INFO] 15:12:35 HAPlayer: say.wav play end .
+[INFO] 20:33:09 HAInit: Detected awaken from snowboy .
+[INFO] 20:33:10 HAConversation: start new conversation .
+[INFO] 20:33:10 HAConversation: start recording command .
+[INFO] 20:33:10 HAPlayer: Playing start_recording .
+[INFO] 20:33:10 HAPlayer: start_recording play end .
+[INFO] 20:33:10 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:33:21 HAPlayer: Playing stop_recording .
+[INFO] 20:33:21 HAPlayer: stop_recording play end .
+[INFO] 20:33:21 HAConversation: start speech to text .
+[INFO] 20:33:21 HAStt: start speech to text .
+[INFO] 20:33:22 HAStt: stt request time cost 1.473433 .
+[INFO] 20:33:22 HANlp: start text ecnet: text-现在新鲜的摄影集，我听音乐，两个人在一起，哎呀，干嘛？ .
+[INFO] 20:33:23 HAStt: speech recognition result(after text fixing): 现在新鲜的摄影集，我听音乐，两个人在一起，哎呀，干嘛？ .
+[INFO] 20:33:23 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:33:23 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 20:33:23 XiaolanSkillMusicPlayer: Start .
+[INFO] 20:33:24 HATts: tts request succeed .
+[INFO] 20:33:24 HAPlayer: Playing say.wav .
+[INFO] 20:33:27 HAPlayer: say.wav play end .
+[INFO] 20:41:55 HAInit: Detected awaken from snowboy .
+[INFO] 20:41:55 HAConversation: start new conversation .
+[INFO] 20:41:55 HAConversation: start recording command .
+[INFO] 20:41:55 HAPlayer: Playing start_recording .
+[INFO] 20:41:56 HAPlayer: start_recording play end .
+[INFO] 20:41:56 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:42:06 HAPlayer: Playing stop_recording .
+[INFO] 20:42:07 HAPlayer: stop_recording play end .
+[INFO] 20:42:07 HAConversation: start speech to text .
+[INFO] 20:42:07 HAStt: start speech to text .
+[INFO] 20:42:07 HAStt: stt request time cost 0.755448 .
+[INFO] 20:42:07 HANlp: start text ecnet: text-我想听歌来听歌来录视频能听没事，还是自己放就行了，还是随便，反正叫他站起来就像。 .
+[INFO] 20:42:08 HAStt: speech recognition result(after text fixing): 我想听歌来听歌来录视频能听没事，还是自己放就行了，还是随便，反正叫他站起来就像。 .
+[INFO] 20:42:08 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:42:08 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 20:42:09 HATts: tts request succeed .
+[INFO] 20:42:09 HAPlayer: Playing say.wav .
+[INFO] 20:42:12 HAPlayer: say.wav play end .
+[INFO] 20:42:54 HAInit: Detected awaken from snowboy .
+[INFO] 20:42:54 HAConversation: start new conversation .
+[INFO] 20:42:54 HAConversation: start recording command .
+[INFO] 20:42:54 HAPlayer: Playing start_recording .
+[INFO] 20:42:54 HAPlayer: start_recording play end .
+[INFO] 20:42:54 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:43:05 HAPlayer: Playing stop_recording .
+[INFO] 20:43:05 HAPlayer: stop_recording play end .
+[INFO] 20:43:05 HAConversation: start speech to text .
+[INFO] 20:43:05 HAStt: start speech to text .
+[INFO] 20:43:06 HAStt: stt request time cost 0.743613 .
+[INFO] 20:43:06 HANlp: start text ecnet: text-我想听音乐，很快滑到牛奶，肉肉肉麻应该他也许。 .
+[INFO] 20:43:06 HAStt: speech recognition result(after text fixing): 我想听音乐，很快滑到牛奶，肉肉肉麻应该他也许。 .
+[INFO] 20:43:06 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:43:06 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 20:43:06 XiaolanSkillMusicPlayer: Start .
+[INFO] 20:43:07 HATts: tts request succeed .
+[INFO] 20:43:07 HAPlayer: Playing say.wav .
+[INFO] 20:43:11 HAPlayer: say.wav play end .
+[INFO] 20:44:22 HAInit: Detected awaken from snowboy .
+[INFO] 20:44:22 HAConversation: start new conversation .
+[INFO] 20:44:22 HAConversation: start recording command .
+[INFO] 20:44:22 HAPlayer: Playing start_recording .
+[INFO] 20:44:22 HAPlayer: start_recording play end .
+[INFO] 20:44:22 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:44:33 HAPlayer: Playing stop_recording .
+[INFO] 20:44:33 HAPlayer: stop_recording play end .
+[INFO] 20:44:33 HAConversation: start speech to text .
+[INFO] 20:44:33 HAStt: start speech to text .
+[INFO] 20:44:34 HAStt: stt request time cost 0.944449 .
+[INFO] 20:44:34 HANlp: start text ecnet: text-啊，我想知道这播放音乐我累了是吧，那家伙。 .
+[INFO] 20:44:35 HAStt: speech recognition result(after text fixing): 啊，我想知道这播放音乐我累了是吧，那家伙。 .
+[INFO] 20:44:35 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:44:35 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 20:44:35 XiaolanSkillMusicPlayer: Start .
+[INFO] 20:44:35 HATts: tts request succeed .
+[INFO] 20:44:35 HAPlayer: Playing say.wav .
+[INFO] 20:44:39 HAPlayer: say.wav play end .
+[INFO] 20:45:14 HAInit: Detected awaken from snowboy .
+[INFO] 20:45:14 HAConversation: start new conversation .
+[INFO] 20:45:14 HAConversation: start recording command .
+[INFO] 20:45:14 HAPlayer: Playing start_recording .
+[INFO] 20:45:14 HAPlayer: start_recording play end .
+[INFO] 20:45:14 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:45:25 HAPlayer: Playing stop_recording .
+[INFO] 20:45:25 HAPlayer: stop_recording play end .
+[INFO] 20:45:25 HAConversation: start speech to text .
+[INFO] 20:45:25 HAStt: start speech to text .
+[ERROR] 20:46:15 HAStt: stt http response http code : 500 .
+[INFO] 20:46:15 HAConversation: text is unclear, speak text_none .
+[INFO] 20:50:30 HABackendInit: HadreamAssistant start  .
+[INFO] 20:50:30 HABackendInit: start self check .
+[INFO] 20:50:30 HABackendInit: play the welcome speech(online tts)  .
+[INFO] 20:50:30 HATts: tts request succeed .
+[INFO] 20:50:30 HAPlayer: Playing say.wav .
+[INFO] 20:50:35 HAPlayer: say.wav play end .
+[INFO] 20:50:35 HABackendInit: Start pulseaudio .
+[INFO] 20:50:35 HABackendInit: Run snowboy awaken engine in a thread .
+[INFO] 20:50:35 HASnowboy: snowboy is now running... .
+[INFO] 21:58:45 HAInit: Detected awaken from snowboy .
+[INFO] 21:58:45 HAConversation: start new conversation .
+[INFO] 21:58:45 HAConversation: start recording command .
+[INFO] 21:58:45 HAPlayer: Playing start_recording .
+[INFO] 21:58:45 HAPlayer: start_recording play end .
+[INFO] 21:58:45 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:58:56 HAPlayer: Playing stop_recording .
+[INFO] 21:58:56 HAPlayer: stop_recording play end .
+[INFO] 21:58:56 HAConversation: start speech to text .
+[INFO] 21:58:56 HAStt: start speech to text .
+[INFO] 21:58:58 HAStt: stt request time cost 1.448497 .
+[INFO] 21:58:58 HANlp: start text ecnet: text-切都为非我说工作都觉得不行，都有人对你想放松就不行。 .
+[INFO] 21:58:58 HAStt: speech recognition result(after text fixing): 切都为非我说工作都觉得不行，都有人对你想放松就不行。 .
+[INFO] 21:58:58 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:58:58 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:58:59 HATts: tts request succeed .
+[INFO] 21:58:59 HAPlayer: Playing say.wav .
+[INFO] 21:59:02 HAPlayer: say.wav play end .

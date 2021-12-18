@@ -6,16 +6,12 @@
 import requests
 import urllib.request
 import urllib.parse
-import threading
-import time
-
-from backend.bot.conversation.player import HAPlayer
 
 
 class HATts():
 
     def __init__(self, ba):
-        
+
         self.ba = ba
         self.log = ba.log
         self.tts_setting = ba.setting["bot"]["conversation"]["tts"]

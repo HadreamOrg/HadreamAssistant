@@ -51,9 +51,12 @@ class HAConversation:
             self.log.add_log("HAConversation: start recognizing the intent and slots", 1)
             intent = self.nlu.analyze_intent(text)
             if intent[0] == "open_skill":
+                if intent[2] is None:
+                    self.log.add_log("HAConversation: open_skill failed, skill_name is None", 3)
+                    return
                 self.skill_manager.name_skill_list[intent[2]](self.ba, text, intent).start()
             elif intent[0] == "error":
-                self.player.baisc_play("./backend/data/audio/%s.wav" % intent[1])
+                self.player.baisc_play("./backend/data/audio/%s.wav" % intent[2])
             else:
                 self.skill_manager.skills_list[intent[2]](self.ba, text, intent).start()
 

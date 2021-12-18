@@ -18,10 +18,12 @@
 
       },
       "recorder": {
-        "recordTime": 5,
-        "channel": 1,
-        "rate": 16000,
-        "chunk": 1024,
+        "time_recorder": {
+          "recordTime": 5,
+          "channel": 1,
+          "rate": 16000,
+          "chunk": 1024
+        },
         "outputPath": "./backend/data/audio/record.wav"
       },
       "player": {
@@ -29,8 +31,37 @@
       }
     },
     "snowboy": {
-      "hotword": "./backend/bot/snowboy/hotword/snowboy.umdl",
-      "sensitivity": 0.5
+      "hotword": "./backend/bot/snowboy/hotword/xiaolan_tongxue.pmdl",
+      "sensitivity": 0.7
+    },
+    "skill": {
+      "orgin": {
+        "tuling": {
+          "apiKey": [
+            "869429e05ea142ef9e3784f8e7965d1c",
+            "c88026c156ec49099510625329f9b79d",
+            "1f39526b070d4f2791b4c3347033f191"
+          ],
+          "userId": "167031"
+        }
+      }
+    },
+    "ai": {
+      "faceReg": {
+        "appKey": "s6zYbMuLgvl6oWr1wEHTnGXW",
+        "secretKey": "H3HH76qFIqWTiR9HMxBfWlBW59zcdwAj"
+      }
+    },
+    "maintain": {
+
+    }
+  },
+  "device": {
+    "camera": {
+      "cameraId": 0,
+      "photoResolution": "1920x1090",
+      "videoResolution": "1920x1080",
+      "videoFps": 30.0
     }
   }
 }

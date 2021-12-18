@@ -7,7 +7,7 @@ import json
 import requests
 
 
-class HASkillTuling():
+class HASkillTuling:
 
     def __init__(self, ba, text, nlu_result):
 
@@ -19,8 +19,8 @@ class HASkillTuling():
         self.text = text
         self.nlu_result = nlu_result
 
-        self.tuling_api_key = self.setting["skillSettings"]["tuling"]["apiKey"][0] # 869429e05ea142ef9e3784f8e7965d1c
-        self.tuling_user_id = self.setting["skillSettings"]["tuling"]["userId"] # "167031"
+        self.tuling_api_key = self.setting["bot"]["skill"]["orgin"]["tuling"]["apiKey"][0] # 869429e05ea142ef9e3784f8e7965d1c
+        self.tuling_user_id = self.setting["bot"]["skill"]["orgin"]["tuling"]["userId"] # "167031"
 
     def start(self, api_key=None):
 
@@ -29,8 +29,7 @@ class HASkillTuling():
         :param api_key: apikey
         :return:
         """
-
-        data = json.load(open("./data/json/tuling_request_template.json", "r", encoding="utf-8"))
+        data = json.load(open("./backend/data/json/tuling_request_template.json", "r", encoding="utf-8"))
         data["perception"]["inputText"]["text"] = self.text
         data["userInfo"]["userId"] = str(self.tuling_user_id.encode("GBK"), "utf-8")
 
@@ -58,8 +57,8 @@ class HASkillTuling():
 
         if "请求" in text and "超限制" in text:
             if case == 0:
-                self.start(api_key=self.setting["apiSettings"]["tuling"]["apiKey"][1]) # c88026c156ec49099510625329f9b79d
+                self.start(api_key=self.setting["bot"]["skill"]["orgin"]["tuling"]["apiKey"][1]) # c88026c156ec49099510625329f9b79d
             elif case == 1:
-                self.start(api_key=self.setting["apiSettings"]["tuling"]["apiKey"][2]) # 1f39526b070d4f2791b4c3347033f191
+                self.start(api_key=self.setting["bot"]["skill"]["orgin"]["tuling"]["apiKey"][2]) # 1f39526b070d4f2791b4c3347033f191
         else:
             self.tts.start(text)

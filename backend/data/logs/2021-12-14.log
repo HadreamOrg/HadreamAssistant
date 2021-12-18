@@ -1,0 +1,2469 @@
+
+[INFO] 18:14:29 HABackendInit: HadreamAssistant start  .
+[INFO] 18:14:29 HABackendInit: start self check .
+[INFO] 18:14:29 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:14:33 HABackendInit: Start pulseaudio .
+[INFO] 18:14:34 HABackendInit: Start three threads .
+[INFO] 18:14:34 HASnowboy: snowboy is now running... .
+[INFO] 18:14:34 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:14:34 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:14:34 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:17:29 HABackendInit: HadreamAssistant start  .
+[INFO] 18:17:29 HABackendInit: start self check .
+[INFO] 18:17:29 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:17:33 HABackendInit: Start pulseaudio .
+[INFO] 18:17:33 HABackendInit: Start three threads .
+[INFO] 18:17:33 HASnowboy: snowboy is now running... .
+[ERROR] 18:17:33 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:17:33 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:17:33 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:17:33 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:17:33 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:18:39 HABackendInit: HadreamAssistant start  .
+[INFO] 18:18:39 HABackendInit: start self check .
+[INFO] 18:18:39 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:18:43 HABackendInit: Start pulseaudio .
+[INFO] 18:18:43 HABackendInit: Start three threads .
+[INFO] 18:18:43 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:18:43 HASnowboy: snowboy is now running... .
+[ERROR] 18:18:43 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:18:43 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:18:43 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:18:43 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:18:43 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:18:43 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:18:44 HACamera: image captured .
+[WARNING] 18:18:44 HAAiFaceReg: Sorry! We don't support this type of img data! .
+[INFO] 18:21:45 HABackendInit: HadreamAssistant start  .
+[INFO] 18:21:45 HABackendInit: start self check .
+[INFO] 18:21:45 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:21:49 HABackendInit: Start pulseaudio .
+[INFO] 18:21:49 HABackendInit: Start three threads .
+[INFO] 18:21:49 HASnowboy: snowboy is now running... .
+[ERROR] 18:21:49 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:21:49 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:21:49 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:21:49 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:21:49 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:21:50 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:21:50 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:21:50 HACamera: image captured .
+[WARNING] 18:21:50 HAAiFaceReg: Sorry! We don't support this type of img data! .
+[INFO] 18:21:50 HAAiFaceReg: start identifying face .
+[INFO] 18:22:50 HABackendInit: HadreamAssistant start  .
+[INFO] 18:22:50 HABackendInit: start self check .
+[INFO] 18:22:50 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:22:55 HABackendInit: Start pulseaudio .
+[INFO] 18:22:55 HABackendInit: Start three threads .
+[INFO] 18:22:55 HASnowboy: snowboy is now running... .
+[ERROR] 18:22:55 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:22:55 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:22:55 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:22:55 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:22:55 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:22:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:22:55 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:22:56 HACamera: image captured .
+[INFO] 18:22:56 HAAiFaceReg: start identifying face .
+[ERROR] 18:23:01 HANotionMaintainer: picture don't have a face .
+[INFO] 18:23:02 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:23:02 HACamera: image captured .
+[INFO] 18:23:02 HAAiFaceReg: start identifying face .
+[ERROR] 18:23:02 HANotionMaintainer: picture don't have a face .
+[INFO] 18:23:03 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:23:03 HACamera: image captured .
+[INFO] 18:23:03 HAAiFaceReg: start identifying face .
+[INFO] 18:29:30 HABackendInit: HadreamAssistant start  .
+[INFO] 18:29:30 HABackendInit: start self check .
+[INFO] 18:29:30 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:29:35 HABackendInit: Start pulseaudio .
+[INFO] 18:29:35 HABackendInit: Start three threads .
+[INFO] 18:29:35 HASnowboy: snowboy is now running... .
+[INFO] 18:29:35 HANotionMaintainer: start the notion maintainer .
+[ERROR] 18:29:35 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:29:35 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:29:35 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:29:35 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:29:35 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:29:35 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:36 HACamera: image captured .
+[INFO] 18:29:36 HAAiFaceReg: start identifying face .
+[INFO] 18:29:41 HAAiFaceReg: face identify success .
+[ERROR] 18:29:41 HANotionMaintainer: picture don't have a face .
+[INFO] 18:29:42 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:42 HACamera: image captured .
+[INFO] 18:29:42 HAAiFaceReg: start identifying face .
+[INFO] 18:29:42 HAAiFaceReg: face identify success .
+[ERROR] 18:29:42 HANotionMaintainer: picture don't have a face .
+[INFO] 18:29:43 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:43 HACamera: image captured .
+[INFO] 18:29:43 HAAiFaceReg: start identifying face .
+[INFO] 18:29:43 HAAiFaceReg: face identify success .
+[ERROR] 18:29:43 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:29:43 HANotionMaintainer: person identifying failed .
+[INFO] 18:29:45 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:29:45 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:45 HACamera: image captured .
+[INFO] 18:29:45 HAAiFaceReg: start identifying face .
+[INFO] 18:29:46 HAAiFaceReg: face identify success .
+[ERROR] 18:29:46 HANotionMaintainer: picture don't have a face .
+[INFO] 18:29:46 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:46 HACamera: image captured .
+[INFO] 18:29:46 HAAiFaceReg: start identifying face .
+[INFO] 18:29:47 HAAiFaceReg: face identify success .
+[ERROR] 18:29:47 HANotionMaintainer: picture don't have a face .
+[INFO] 18:29:47 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:29:47 HACamera: image captured .
+[INFO] 18:29:47 HAAiFaceReg: start identifying face .
+[INFO] 18:29:48 HAAiFaceReg: face identify success .
+[ERROR] 18:29:48 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:29:48 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:27 HABackendInit: HadreamAssistant start  .
+[INFO] 18:31:27 HABackendInit: start self check .
+[INFO] 18:31:27 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:31:31 HABackendInit: Start pulseaudio .
+[INFO] 18:31:31 HABackendInit: Start three threads .
+[INFO] 18:31:31 HASnowboy: snowboy is now running... .
+[ERROR] 18:31:31 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:31:31 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:31:31 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:31:31 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:31:31 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:31:31 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:31 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:31 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:32 HACamera: image captured .
+[INFO] 18:31:32 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:38 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 515058984798, 'timestamp': 1639477897, 'cached': 0, 'result': None} .
+[ERROR] 18:31:38 HANotionMaintainer: picture don't have a face .
+[INFO] 18:31:39 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:31:39 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:39 HACamera: image captured .
+[INFO] 18:31:39 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:40 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 3525656594847, 'timestamp': 1639477899, 'cached': 0, 'result': None} .
+[ERROR] 18:31:40 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:31:40 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:42 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:42 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:42 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:42 HACamera: image captured .
+[INFO] 18:31:42 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:42 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8945556525101, 'timestamp': 1639477902, 'cached': 0, 'result': None} .
+[ERROR] 18:31:42 HANotionMaintainer: picture don't have a face .
+[INFO] 18:31:44 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:31:44 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:44 HACamera: image captured .
+[INFO] 18:31:44 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:44 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2555451584894, 'timestamp': 1639477904, 'cached': 0, 'result': None} .
+[ERROR] 18:31:44 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:31:44 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:46 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:46 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:46 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:46 HACamera: image captured .
+[INFO] 18:31:46 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:46 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2011584201201, 'timestamp': 1639477906, 'cached': 0, 'result': None} .
+[ERROR] 18:31:46 HANotionMaintainer: picture don't have a face .
+[INFO] 18:31:48 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:31:48 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:48 HACamera: image captured .
+[INFO] 18:31:48 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:48 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8999659400115, 'timestamp': 1639477908, 'cached': 0, 'result': None} .
+[ERROR] 18:31:48 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:31:48 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:50 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:50 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:50 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:50 HACamera: image captured .
+[INFO] 18:31:50 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:51 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 6500125451599, 'timestamp': 1639477911, 'cached': 0, 'result': None} .
+[ERROR] 18:31:51 HANotionMaintainer: picture don't have a face .
+[INFO] 18:31:52 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:31:52 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:52 HACamera: image captured .
+[INFO] 18:31:52 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:53 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9455057994751, 'timestamp': 1639477913, 'cached': 0, 'result': None} .
+[ERROR] 18:31:53 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:31:53 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:55 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:55 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:55 HACamera: image captured .
+[INFO] 18:31:55 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:55 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2505557925948, 'timestamp': 1639477915, 'cached': 0, 'result': None} .
+[ERROR] 18:31:55 HANotionMaintainer: picture don't have a face .
+[INFO] 18:31:57 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:31:57 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:57 HACamera: image captured .
+[INFO] 18:31:57 HAAiFaceReg: start identifying face .
+[ERROR] 18:31:57 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1599257920115, 'timestamp': 1639477917, 'cached': 0, 'result': None} .
+[ERROR] 18:31:57 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:31:57 HANotionMaintainer: person identifying failed .
+[INFO] 18:31:59 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:31:59 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:31:59 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:31:59 HACamera: image captured .
+[INFO] 18:31:59 HAAiFaceReg: start identifying face .
+[ERROR] 18:32:00 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 4535001844599, 'timestamp': 1639477919, 'cached': 0, 'result': None} .
+[ERROR] 18:32:00 HANotionMaintainer: picture don't have a face .
+[INFO] 18:32:01 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:32:01 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:32:01 HACamera: image captured .
+[INFO] 18:32:01 HAAiFaceReg: start identifying face .
+[ERROR] 18:32:01 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1545892019494, 'timestamp': 1639477921, 'cached': 0, 'result': None} .
+[ERROR] 18:32:01 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:32:01 HANotionMaintainer: person identifying failed .
+[INFO] 18:32:04 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:32:04 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:32:04 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:32:04 HACamera: image captured .
+[INFO] 18:32:04 HAAiFaceReg: start identifying face .
+[ERROR] 18:32:04 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2520199550015, 'timestamp': 1639477924, 'cached': 0, 'result': None} .
+[ERROR] 18:32:04 HANotionMaintainer: picture don't have a face .
+[INFO] 18:32:06 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:32:06 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:32:06 HACamera: image captured .
+[INFO] 18:32:06 HAAiFaceReg: start identifying face .
+[ERROR] 18:32:06 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9994201201793, 'timestamp': 1639477926, 'cached': 0, 'result': None} .
+[ERROR] 18:32:06 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:32:06 HANotionMaintainer: person identifying failed .
+[INFO] 18:32:08 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:32:08 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:32:08 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:32:08 HACamera: image captured .
+[INFO] 18:32:08 HAAiFaceReg: start identifying face .
+[INFO] 18:32:08 HAAiFaceReg: face identify success .
+[INFO] 18:32:08 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:32:50 HABackendInit: HadreamAssistant start  .
+[INFO] 18:32:50 HABackendInit: start self check .
+[INFO] 18:32:50 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:32:55 HABackendInit: Start pulseaudio .
+[INFO] 18:32:55 HABackendInit: Start three threads .
+[ERROR] 18:32:55 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:32:55 HASnowboy: snowboy is now running... .
+[INFO] 18:32:55 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:32:55 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:32:55 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:32:55 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:32:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:32:55 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:32:55 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:32:56 HACamera: image captured .
+[INFO] 18:32:56 HAAiFaceReg: start identifying face .
+[INFO] 18:33:01 HAAiFaceReg: face identify success .
+[INFO] 18:33:01 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:33:01 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:33:01 HANotionMaintainer: person identifying success .
+[INFO] 18:34:50 HABackendInit: HadreamAssistant start  .
+[INFO] 18:34:50 HABackendInit: start self check .
+[INFO] 18:34:50 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:34:55 HABackendInit: Start pulseaudio .
+[INFO] 18:34:55 HABackendInit: Start three threads .
+[ERROR] 18:34:55 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:34:55 HASnowboy: snowboy is now running... .
+[INFO] 18:34:55 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:34:55 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:34:55 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:34:55 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:34:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:34:55 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:34:55 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:34:56 HACamera: image captured .
+[INFO] 18:34:56 HAAiFaceReg: start identifying face .
+[INFO] 18:35:01 HAAiFaceReg: face identify success .
+[INFO] 18:35:01 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:35:01 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:35:01 HANotionMaintainer: person identifying success .
+[INFO] 18:35:03 HATts: tts request succeed .
+[INFO] 18:35:03 HAPlayer: Playing say.wav .
+[INFO] 18:35:07 HAPlayer: say.wav play end .
+[INFO] 18:35:09 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:09 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:09 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:09 HACamera: image captured .
+[INFO] 18:35:09 HAAiFaceReg: start identifying face .
+[INFO] 18:35:09 HAAiFaceReg: face identify success .
+[INFO] 18:35:09 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:35:09 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:35:09 HANotionMaintainer: person identifying success .
+[INFO] 18:35:11 HATts: tts request succeed .
+[INFO] 18:35:11 HAPlayer: Playing say.wav .
+[INFO] 18:35:15 HAPlayer: say.wav play end .
+[INFO] 18:35:17 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:17 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:17 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:17 HACamera: image captured .
+[INFO] 18:35:17 HAAiFaceReg: start identifying face .
+[INFO] 18:35:17 HAAiFaceReg: face identify success .
+[INFO] 18:35:17 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:35:17 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:35:17 HANotionMaintainer: person identifying success .
+[INFO] 18:35:19 HATts: tts request succeed .
+[INFO] 18:35:19 HAPlayer: Playing say.wav .
+[INFO] 18:35:23 HAPlayer: say.wav play end .
+[INFO] 18:35:25 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:25 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:25 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:25 HACamera: image captured .
+[INFO] 18:35:25 HAAiFaceReg: start identifying face .
+[INFO] 18:35:25 HAAiFaceReg: face identify success .
+[INFO] 18:35:25 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:35:25 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:35:25 HANotionMaintainer: person identifying success .
+[INFO] 18:35:26 HATts: tts request succeed .
+[INFO] 18:35:26 HAPlayer: Playing say.wav .
+[INFO] 18:35:30 HAPlayer: say.wav play end .
+[INFO] 18:35:33 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:33 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:33 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:33 HACamera: image captured .
+[INFO] 18:35:33 HAAiFaceReg: start identifying face .
+[INFO] 18:35:33 HAAiFaceReg: face identify success .
+[INFO] 18:35:33 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:35:33 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:35:33 HANotionMaintainer: person identifying success .
+[INFO] 18:35:34 HATts: tts request succeed .
+[INFO] 18:35:34 HAPlayer: Playing say.wav .
+[INFO] 18:35:38 HAPlayer: say.wav play end .
+[INFO] 18:35:40 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:40 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:40 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:41 HACamera: image captured .
+[INFO] 18:35:41 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:41 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2599651017935, 'timestamp': 1639478141, 'cached': 0, 'result': None} .
+[WARNING] 18:35:41 HANotionMaintainer: picture don't have a face .
+[INFO] 18:35:43 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:35:43 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:43 HACamera: image captured .
+[INFO] 18:35:43 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:43 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2011012520155, 'timestamp': 1639478143, 'cached': 0, 'result': None} .
+[WARNING] 18:35:43 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:35:43 HANotionMaintainer: person identifying failed .
+[INFO] 18:35:45 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:45 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:45 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:45 HACamera: image captured .
+[INFO] 18:35:45 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:46 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 19400199890, 'timestamp': 1639478146, 'cached': 0, 'result': None} .
+[WARNING] 18:35:46 HANotionMaintainer: picture don't have a face .
+[INFO] 18:35:48 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:35:48 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:48 HACamera: image captured .
+[INFO] 18:35:48 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:48 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2018994657999, 'timestamp': 1639478148, 'cached': 0, 'result': None} .
+[WARNING] 18:35:48 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:35:48 HANotionMaintainer: person identifying failed .
+[INFO] 18:35:50 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:50 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:50 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:50 HACamera: image captured .
+[INFO] 18:35:50 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:51 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1018489799400, 'timestamp': 1639478151, 'cached': 0, 'result': None} .
+[WARNING] 18:35:51 HANotionMaintainer: picture don't have a face .
+[INFO] 18:35:53 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:35:53 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:53 HACamera: image captured .
+[INFO] 18:35:53 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:53 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2019410110165, 'timestamp': 1639478153, 'cached': 0, 'result': None} .
+[WARNING] 18:35:53 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:35:53 HANotionMaintainer: person identifying failed .
+[INFO] 18:35:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:35:55 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:35:55 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:55 HACamera: image captured .
+[INFO] 18:35:55 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:56 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7945948405358, 'timestamp': 1639478156, 'cached': 0, 'result': None} .
+[WARNING] 18:35:56 HANotionMaintainer: picture don't have a face .
+[INFO] 18:35:58 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:35:58 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:35:58 HACamera: image captured .
+[INFO] 18:35:58 HAAiFaceReg: start identifying face .
+[ERROR] 18:35:58 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 11515101057, 'timestamp': 1639478158, 'cached': 0, 'result': None} .
+[WARNING] 18:35:58 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:35:58 HANotionMaintainer: person identifying failed .
+[INFO] 18:38:47 HABackendInit: HadreamAssistant start  .
+[INFO] 18:38:47 HABackendInit: start self check .
+[INFO] 18:38:47 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:38:51 HABackendInit: Start pulseaudio .
+[INFO] 18:38:51 HABackendInit: Start three threads .
+[INFO] 18:38:51 HASnowboy: snowboy is now running... .
+[ERROR] 18:38:51 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:38:51 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:38:51 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:38:51 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:38:51 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:38:51 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:38:51 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:38:51 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:38:52 HACamera: image captured .
+[INFO] 18:38:52 HAAiFaceReg: start identifying face .
+[INFO] 18:38:58 HAAiFaceReg: face identify success .
+[INFO] 18:38:58 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:38:58 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:38:58 HANotionMaintainer: person identifying success .
+[INFO] 18:38:59 HATts: tts request succeed .
+[INFO] 18:38:59 HAPlayer: Playing say.wav .
+[INFO] 18:39:05 HAPlayer: say.wav play end .
+[INFO] 18:39:07 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:39:07 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:39:07 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:39:07 HACamera: image captured .
+[INFO] 18:39:07 HAAiFaceReg: start identifying face .
+[INFO] 18:39:07 HAAiFaceReg: face identify success .
+[INFO] 18:39:07 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:39:07 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:39:07 HANotionMaintainer: person identifying success .
+[INFO] 18:39:08 HATts: tts request succeed .
+[INFO] 18:39:08 HAPlayer: Playing say.wav .
+[INFO] 18:41:17 HABackendInit: HadreamAssistant start  .
+[INFO] 18:41:17 HABackendInit: start self check .
+[INFO] 18:41:17 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:41:21 HABackendInit: Start pulseaudio .
+[INFO] 18:41:21 HABackendInit: Start three threads .
+[ERROR] 18:41:21 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:41:21 HASnowboy: snowboy is now running... .
+[INFO] 18:41:21 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:41:21 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:41:21 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:41:21 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:41:21 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:41:21 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:41:21 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:41:22 HACamera: image captured .
+[INFO] 18:41:22 HAAiFaceReg: start identifying face .
+[INFO] 18:41:28 HAAiFaceReg: face identify success .
+[INFO] 18:41:28 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:41:28 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:41:28 HANotionMaintainer: person identifying success .
+[INFO] 18:41:29 HATts: tts request succeed .
+[INFO] 18:41:29 HAPlayer: Playing say.wav .
+[INFO] 18:41:35 HAPlayer: say.wav play end .
+[INFO] 18:41:39 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:41:39 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:41:39 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:41:39 HACamera: image captured .
+[INFO] 18:41:39 HAAiFaceReg: start identifying face .
+[INFO] 18:41:39 HAAiFaceReg: face identify success .
+[INFO] 18:41:39 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:41:39 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:41:39 HANotionMaintainer: person identifying success .
+[INFO] 18:41:40 HATts: tts request succeed .
+[INFO] 18:41:40 HAPlayer: Playing say.wav .
+[INFO] 18:41:46 HAPlayer: say.wav play end .
+[INFO] 18:41:48 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:41:48 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:41:48 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:41:48 HACamera: image captured .
+[INFO] 18:41:48 HAAiFaceReg: start identifying face .
+[INFO] 18:41:48 HAAiFaceReg: face identify success .
+[INFO] 18:41:48 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:41:48 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:41:48 HANotionMaintainer: person identifying success .
+[INFO] 18:41:50 HATts: tts request succeed .
+[INFO] 18:41:50 HAPlayer: Playing say.wav .
+[INFO] 18:41:55 HAPlayer: say.wav play end .
+[INFO] 18:41:57 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:41:57 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:41:57 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:41:57 HACamera: image captured .
+[INFO] 18:41:57 HAAiFaceReg: start identifying face .
+[INFO] 18:41:58 HAAiFaceReg: face identify success .
+[INFO] 18:41:58 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:41:58 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:41:58 HANotionMaintainer: person identifying success .
+[INFO] 18:41:59 HATts: tts request succeed .
+[INFO] 18:41:59 HAPlayer: Playing say.wav .
+[INFO] 18:42:04 HAPlayer: say.wav play end .
+[INFO] 18:42:07 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:42:07 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:42:07 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:42:07 HACamera: image captured .
+[INFO] 18:42:07 HAAiFaceReg: start identifying face .
+[INFO] 18:42:07 HAAiFaceReg: face identify success .
+[INFO] 18:42:07 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:42:07 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:42:07 HANotionMaintainer: person identifying success .
+[INFO] 18:42:09 HATts: tts request succeed .
+[INFO] 18:42:09 HAPlayer: Playing say.wav .
+[INFO] 18:42:14 HAPlayer: say.wav play end .
+[INFO] 18:42:16 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:42:16 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:42:16 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:42:16 HACamera: image captured .
+[INFO] 18:42:16 HAAiFaceReg: start identifying face .
+[ERROR] 18:42:17 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 4584455525001, 'timestamp': 1639478537, 'cached': 0, 'result': None} .
+[WARNING] 18:42:17 HANotionMaintainer: picture don't have a face .
+[INFO] 18:42:19 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 18:42:19 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:42:19 HACamera: image captured .
+[INFO] 18:42:19 HAAiFaceReg: start identifying face .
+[ERROR] 18:42:19 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8979842018965, 'timestamp': 1639478539, 'cached': 0, 'result': None} .
+[WARNING] 18:42:19 HANotionMaintainer: picture don't have a face .
+[WARNING] 18:42:19 HANotionMaintainer: person identifying failed .
+[INFO] 18:42:21 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:42:21 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:42:21 HACamera: capturing one image using opencv2 and openni .
+[INFO] 18:42:21 HACamera: image captured .
+[INFO] 18:42:21 HAAiFaceReg: start identifying face .
+[ERROR] 18:42:22 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 6599001947994, 'timestamp': 1639478542, 'cached': 0, 'result': None} .
+[WARNING] 18:42:22 HANotionMaintainer: picture don't have a face .
+[INFO] 18:46:36 HABackendInit: HadreamAssistant start  .
+[INFO] 18:46:36 HABackendInit: start self check .
+[INFO] 18:46:36 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:46:40 HABackendInit: Start pulseaudio .
+[INFO] 18:46:41 HABackendInit: Start three threads .
+[INFO] 18:46:41 HASnowboy: snowboy is now running... .
+[ERROR] 18:46:41 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:46:41 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:46:41 HANotionMaintainer: start the notion maintainer .
+[INFO] 18:46:41 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:46:41 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:46:41 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:46:41 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:46:42 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 18:46:42 HAConversation: start new conversation .
+[INFO] 18:46:42 HAConversation: start recording command .
+[INFO] 18:46:42 HAPlayer: Playing start_recording .
+[INFO] 18:46:42 HAPlayer: start_recording play end .
+[INFO] 18:46:42 HARecorder: start vad record(record_with_vad module) .
+[INFO] 18:46:46 HACamera: capturing one image using opencv2 .
+[INFO] 18:46:46 HACamera: image captured .
+[INFO] 18:46:46 HAAiFaceReg: start identifying face .
+[INFO] 18:46:52 HAAiFaceReg: face identify success .
+[INFO] 18:46:52 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:46:52 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:46:52 HANotionMaintainer: person identifying success .
+[INFO] 18:46:53 HAPlayer: Playing stop_recording .
+[INFO] 18:46:53 HATts: tts request succeed .
+[INFO] 18:46:53 HAPlayer: Playing say.wav .
+[INFO] 18:46:53 HAPlayer: stop_recording play end .
+[INFO] 18:46:53 HAConversation: start speech to text .
+[INFO] 18:46:53 HAStt: start speech to text .
+[INFO] 18:46:59 HAPlayer: say.wav play end .
+[INFO] 18:47:00 HAStt: stt request time cost 6.466110 .
+[INFO] 18:47:00 HANlp: start text ecnet: text-K，你叫他来干嘛？这样等你用啊，那我不叫老公好，你叫了他就要挨家唠给面子，乱七八糟的，你看我又不好。 .
+[INFO] 18:47:00 HAStt: speech recognition result(after text fixing): K，你叫他来干嘛？这样等你用啊，那我不叫老公好，你叫了他就要挨家唠给面子，乱七八糟的，你看我又不好。 .
+[INFO] 18:47:00 HAConversation: start recognizing the intent and slots .
+[DEBUG] 18:47:00 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 18:47:01 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:47:01 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:47:01 HATts: tts request succeed .
+[INFO] 18:47:01 HAPlayer: Playing say.wav .
+[INFO] 18:47:02 HAPlayer: say.wav play end .
+[INFO] 18:47:06 HACamera: capturing one image using opencv2 .
+[INFO] 18:47:06 HACamera: image captured .
+[INFO] 18:47:06 HAAiFaceReg: start identifying face .
+[INFO] 18:47:06 HAAiFaceReg: face identify success .
+[INFO] 18:47:06 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:47:06 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:47:06 HANotionMaintainer: person identifying success .
+[INFO] 18:47:08 HATts: tts request succeed .
+[INFO] 18:47:08 HAPlayer: Playing say.wav .
+[INFO] 18:47:14 HAPlayer: say.wav play end .
+[INFO] 18:47:16 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:47:16 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:47:18 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 18:47:18 HAConversation: start new conversation .
+[INFO] 18:47:18 HAConversation: start recording command .
+[INFO] 18:47:18 HAPlayer: Playing start_recording .
+[INFO] 18:47:19 HAPlayer: start_recording play end .
+[INFO] 18:47:19 HARecorder: start vad record(record_with_vad module) .
+[INFO] 18:47:21 HAPlayer: Playing stop_recording .
+[INFO] 18:47:21 HACamera: capturing one image using opencv2 .
+[INFO] 18:47:21 HAPlayer: stop_recording play end .
+[INFO] 18:47:21 HAConversation: start speech to text .
+[INFO] 18:47:21 HAStt: start speech to text .
+[INFO] 18:47:21 HACamera: image captured .
+[INFO] 18:47:21 HAAiFaceReg: start identifying face .
+[INFO] 18:47:21 HAAiFaceReg: face identify success .
+[INFO] 18:47:21 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:47:21 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:47:21 HANotionMaintainer: person identifying success .
+[INFO] 18:47:21 HAStt: stt request time cost 0.503830 .
+[INFO] 18:47:21 HANlp: start text ecnet: text-你是不是有病？ .
+[INFO] 18:47:22 HAStt: speech recognition result(after text fixing): 你是不是有病？ .
+[INFO] 18:47:22 HAConversation: start recognizing the intent and slots .
+[DEBUG] 18:47:22 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 18:47:23 HATts: tts request succeed .
+[INFO] 18:47:23 HAPlayer: Playing say.wav .
+[INFO] 18:47:23 HATts: tts request succeed .
+[INFO] 18:47:23 HAPlayer: Playing say.wav .
+[INFO] 18:47:25 HAPlayer: say.wav play end .
+[INFO] 18:47:25 HAPlayer: say.wav play end .
+[INFO] 18:47:27 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:47:27 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:47:32 HACamera: capturing one image using opencv2 .
+[INFO] 18:47:32 HACamera: image captured .
+[INFO] 18:47:32 HAAiFaceReg: start identifying face .
+[INFO] 18:47:33 HAAiFaceReg: face identify success .
+[INFO] 18:47:33 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:47:33 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:47:33 HANotionMaintainer: person identifying success .
+[INFO] 18:48:21 HABackendInit: HadreamAssistant start  .
+[INFO] 18:48:21 HABackendInit: start self check .
+[INFO] 18:48:21 HABackendInit: play the welcome speech(local play)  .
+[INFO] 18:48:26 HABackendInit: Start pulseaudio .
+[INFO] 18:48:26 HABackendInit: Start three threads .
+[INFO] 18:48:26 HASnowboy: snowboy is now running... .
+[INFO] 18:48:26 HANotionMaintainer: start the notion maintainer .
+[ERROR] 18:48:26 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 18:48:26 HANotionMaintainer: start the data monitoring thread .
+[INFO] 18:48:26 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 18:48:26 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 18:48:27 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:48:27 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:48:32 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 18:48:34 HACamera: image captured .
+[INFO] 18:48:34 HAAiFaceReg: start identifying face .
+[INFO] 18:48:40 HAAiFaceReg: face identify success .
+[INFO] 18:48:40 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 18:48:40 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 18:48:40 HANotionMaintainer: person identifying success .
+[INFO] 18:48:41 HATts: tts request succeed .
+[INFO] 18:48:41 HAPlayer: Playing say.wav .
+[INFO] 18:48:47 HAPlayer: say.wav play end .
+[INFO] 18:48:53 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 18:48:53 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 18:48:58 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 18:49:01 HACamera: image captured .
+[INFO] 18:49:01 HAAiFaceReg: start identifying face .
+[INFO] 18:49:01 HAAiFaceReg: face identify success .
+[WARNING] 18:49:01 HANotionMaintainer: picture don't have a face .
+[INFO] 18:49:03 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:38:22 HABackendInit: HadreamAssistant start  .
+[INFO] 20:38:22 HABackendInit: start self check .
+[INFO] 20:38:22 HABackendInit: play the welcome speech(local play)  .
+[INFO] 20:38:26 HABackendInit: Start pulseaudio .
+[INFO] 20:38:26 HABackendInit: Start three threads .
+[INFO] 20:38:26 HASnowboy: snowboy is now running... .
+[ERROR] 20:38:26 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 20:38:26 HANotionMaintainer: start the notion maintainer .
+[INFO] 20:38:26 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 20:38:26 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 20:38:26 HANotionMaintainer: start the data monitoring thread .
+[INFO] 20:38:26 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:38:26 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:38:31 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:38:34 HACamera: image captured .
+[INFO] 20:38:34 HAAiFaceReg: start identifying face .
+[INFO] 20:38:40 HAAiFaceReg: face identify success .
+[INFO] 20:38:40 HAPersonnelManager: start search for person-lj's info .
+[INFO] 20:38:40 HANotionMaintainer: the person-lj's info is found .
+[INFO] 20:38:40 HANotionMaintainer: person identifying success .
+[INFO] 20:38:41 HATts: tts request succeed .
+[INFO] 20:38:41 HAPlayer: Playing say.wav .
+[INFO] 20:38:47 HAPlayer: say.wav play end .
+[INFO] 20:38:49 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:38:49 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:38:54 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:38:56 HACamera: image captured .
+[INFO] 20:38:56 HAAiFaceReg: start identifying face .
+[INFO] 20:38:57 HAAiFaceReg: face identify success .
+[WARNING] 20:38:57 HANotionMaintainer: picture don't have a face .
+[INFO] 20:38:59 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:39:04 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:39:06 HACamera: image captured .
+[INFO] 20:39:06 HAAiFaceReg: start identifying face .
+[INFO] 20:39:07 HAAiFaceReg: face identify success .
+[INFO] 20:39:07 HAPersonnelManager: start search for person-lyt's info .
+[ERROR] 20:39:07 HAPersonnelManager: person-lyt does not exist .
+[INFO] 20:39:07 HANotionMaintainer: the person-lyt is not found .
+[INFO] 20:39:08 HATts: tts request succeed .
+[INFO] 20:39:08 HAPlayer: Playing say.wav .
+[INFO] 20:39:12 HAPlayer: say.wav play end .
+[WARNING] 20:39:12 HANotionMaintainer: person identifying failed .
+[INFO] 20:39:14 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:39:14 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:39:19 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:39:21 HACamera: image captured .
+[INFO] 20:39:21 HAAiFaceReg: start identifying face .
+[INFO] 20:39:22 HAAiFaceReg: face identify success .
+[WARNING] 20:39:22 HANotionMaintainer: picture don't have a face .
+[INFO] 20:39:24 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:39:29 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:39:31 HACamera: image captured .
+[INFO] 20:39:31 HAAiFaceReg: start identifying face .
+[INFO] 20:39:32 HAAiFaceReg: face identify success .
+[WARNING] 20:39:32 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:39:32 HANotionMaintainer: person identifying failed .
+[INFO] 20:39:34 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:39:34 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:39:39 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:39:42 HACamera: image captured .
+[INFO] 20:39:42 HAAiFaceReg: start identifying face .
+[INFO] 20:39:42 HAAiFaceReg: face identify success .
+[INFO] 20:39:42 HAPersonnelManager: start search for person-fjy's info .
+[ERROR] 20:39:42 HAPersonnelManager: person-fjy does not exist .
+[INFO] 20:39:42 HANotionMaintainer: the person-fjy is not found .
+[INFO] 20:39:43 HATts: tts request succeed .
+[INFO] 20:39:43 HAPlayer: Playing say.wav .
+[INFO] 20:39:47 HAPlayer: say.wav play end .
+[INFO] 20:39:49 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:39:54 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:39:57 HACamera: image captured .
+[INFO] 20:39:57 HAAiFaceReg: start identifying face .
+[INFO] 20:39:57 HAAiFaceReg: face identify success .
+[INFO] 20:39:57 HAPersonnelManager: start search for person-ysy's info .
+[INFO] 20:39:57 HANotionMaintainer: the person-ysy's info is found .
+[INFO] 20:39:57 HANotionMaintainer: person identifying success .
+[INFO] 20:39:59 HATts: tts request succeed .
+[INFO] 20:39:59 HAPlayer: Playing say.wav .
+[INFO] 20:40:04 HAPlayer: say.wav play end .
+[INFO] 20:40:06 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:40:06 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:40:11 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:40:14 HACamera: image captured .
+[INFO] 20:40:14 HAAiFaceReg: start identifying face .
+[INFO] 20:40:14 HAAiFaceReg: face identify success .
+[WARNING] 20:40:14 HANotionMaintainer: picture don't have a face .
+[INFO] 20:40:16 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:40:21 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:40:24 HACamera: image captured .
+[INFO] 20:40:24 HAAiFaceReg: start identifying face .
+[INFO] 20:40:24 HAAiFaceReg: face identify success .
+[INFO] 20:40:24 HAPersonnelManager: start search for person-lj's info .
+[INFO] 20:40:24 HANotionMaintainer: the person-lj's info is found .
+[INFO] 20:40:24 HANotionMaintainer: person identifying success .
+[INFO] 20:40:26 HATts: tts request succeed .
+[INFO] 20:40:26 HAPlayer: Playing say.wav .
+[INFO] 20:40:31 HAPlayer: say.wav play end .
+[INFO] 20:40:33 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:40:33 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:40:38 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:40:40 HACamera: image captured .
+[INFO] 20:40:40 HAAiFaceReg: start identifying face .
+[INFO] 20:40:41 HAAiFaceReg: face identify success .
+[WARNING] 20:40:41 HANotionMaintainer: picture don't have a face .
+[INFO] 20:40:43 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:40:45 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 20:40:45 HAConversation: start new conversation .
+[INFO] 20:40:45 HAConversation: start recording command .
+[INFO] 20:40:45 HAPlayer: Playing start_recording .
+[INFO] 20:40:46 HAPlayer: start_recording play end .
+[INFO] 20:40:46 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:40:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:40:51 HACamera: image captured .
+[INFO] 20:40:51 HAAiFaceReg: start identifying face .
+[INFO] 20:40:51 HAAiFaceReg: face identify success .
+[WARNING] 20:40:51 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:40:51 HANotionMaintainer: person identifying failed .
+[INFO] 20:40:54 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:40:54 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:40:57 HAPlayer: Playing stop_recording .
+[INFO] 20:40:57 HAPlayer: stop_recording play end .
+[INFO] 20:40:57 HAConversation: start speech to text .
+[INFO] 20:40:57 HAStt: start speech to text .
+[INFO] 20:40:59 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:41:01 HACamera: image captured .
+[INFO] 20:41:01 HAAiFaceReg: start identifying face .
+[ERROR] 20:41:02 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 6584790017979, 'timestamp': 1639485661, 'cached': 0, 'result': None} .
+[WARNING] 20:41:02 HANotionMaintainer: picture don't have a face .
+[INFO] 20:41:03 HAStt: stt request time cost 6.136310 .
+[INFO] 20:41:03 HANlp: start text ecnet: text-那你再说几句，他不回答你？ .
+[INFO] 20:41:03 HAStt: speech recognition result(after text fixing): 那你再说几句，他不回答你？ .
+[INFO] 20:41:03 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:41:03 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 20:41:04 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:41:04 HATts: tts request succeed .
+[INFO] 20:41:04 HAPlayer: Playing say.wav .
+[INFO] 20:41:05 HAPlayer: say.wav play end .
+[INFO] 20:41:09 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:41:11 HACamera: image captured .
+[INFO] 20:41:11 HAAiFaceReg: start identifying face .
+[INFO] 20:41:12 HAAiFaceReg: face identify success .
+[WARNING] 20:41:12 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:41:12 HANotionMaintainer: person identifying failed .
+[INFO] 20:41:14 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:41:14 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:41:19 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:41:21 HACamera: image captured .
+[INFO] 20:41:21 HAAiFaceReg: start identifying face .
+[INFO] 20:41:22 HAAiFaceReg: face identify success .
+[INFO] 20:41:22 HAPersonnelManager: start search for person-tyn's info .
+[INFO] 20:41:22 HANotionMaintainer: the person-tyn's info is found .
+[INFO] 20:41:22 HANotionMaintainer: person identifying success .
+[INFO] 20:41:23 HATts: tts request succeed .
+[INFO] 20:41:23 HAPlayer: Playing say.wav .
+[INFO] 20:41:29 HAPlayer: say.wav play end .
+[INFO] 20:41:31 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:41:31 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:41:36 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:41:38 HACamera: image captured .
+[INFO] 20:41:38 HAAiFaceReg: start identifying face .
+[INFO] 20:41:39 HAAiFaceReg: face identify success .
+[INFO] 20:41:39 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:41:39 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:41:39 HANotionMaintainer: person identifying success .
+[INFO] 20:41:40 HATts: tts request succeed .
+[INFO] 20:41:40 HAPlayer: Playing say.wav .
+[INFO] 20:41:46 HAPlayer: say.wav play end .
+[INFO] 20:41:48 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:41:48 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:41:53 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:41:55 HACamera: image captured .
+[INFO] 20:41:55 HAAiFaceReg: start identifying face .
+[INFO] 20:41:56 HAAiFaceReg: face identify success .
+[INFO] 20:41:56 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:41:56 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:41:56 HANotionMaintainer: person identifying success .
+[INFO] 20:41:57 HATts: tts request succeed .
+[INFO] 20:41:57 HAPlayer: Playing say.wav .
+[INFO] 20:42:02 HAPlayer: say.wav play end .
+[INFO] 20:42:04 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:42:04 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:42:09 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:42:12 HACamera: image captured .
+[INFO] 20:42:12 HAAiFaceReg: start identifying face .
+[INFO] 20:42:12 HAAiFaceReg: face identify success .
+[INFO] 20:42:12 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:42:12 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:42:12 HANotionMaintainer: person identifying success .
+[INFO] 20:42:14 HATts: tts request succeed .
+[INFO] 20:42:14 HAPlayer: Playing say.wav .
+[INFO] 20:42:19 HAPlayer: say.wav play end .
+[INFO] 20:42:21 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:42:21 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:42:26 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:42:29 HACamera: image captured .
+[INFO] 20:42:29 HAAiFaceReg: start identifying face .
+[INFO] 20:42:29 HAAiFaceReg: face identify success .
+[INFO] 20:42:29 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 20:42:29 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 20:42:29 HANotionMaintainer: person identifying success .
+[INFO] 20:42:31 HATts: tts request succeed .
+[INFO] 20:42:31 HAPlayer: Playing say.wav .
+[INFO] 20:42:36 HAPlayer: say.wav play end .
+[INFO] 20:42:38 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:42:38 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:42:43 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:42:46 HACamera: image captured .
+[INFO] 20:42:46 HAAiFaceReg: start identifying face .
+[INFO] 20:42:46 HAAiFaceReg: face identify success .
+[WARNING] 20:42:46 HANotionMaintainer: picture don't have a face .
+[INFO] 20:42:48 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:42:53 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:42:56 HACamera: image captured .
+[INFO] 20:42:56 HAAiFaceReg: start identifying face .
+[INFO] 20:42:57 HAAiFaceReg: face identify success .
+[INFO] 20:42:57 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:42:57 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:42:57 HANotionMaintainer: person identifying success .
+[INFO] 20:42:58 HATts: tts request succeed .
+[INFO] 20:42:58 HAPlayer: Playing say.wav .
+[INFO] 20:43:03 HAPlayer: say.wav play end .
+[INFO] 20:43:05 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:43:05 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:43:10 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:43:12 HACamera: image captured .
+[INFO] 20:43:13 HAAiFaceReg: start identifying face .
+[INFO] 20:43:13 HAAiFaceReg: face identify success .
+[INFO] 20:43:13 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 20:43:13 HAPersonnelManager: person-hyl does not exist .
+[INFO] 20:43:13 HANotionMaintainer: the person-hyl is not found .
+[INFO] 20:43:14 HATts: tts request succeed .
+[INFO] 20:43:14 HAPlayer: Playing say.wav .
+[INFO] 20:43:18 HAPlayer: say.wav play end .
+[INFO] 20:43:19 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 20:43:19 HAConversation: start new conversation .
+[INFO] 20:43:19 HAConversation: start recording command .
+[INFO] 20:43:19 HAPlayer: Playing start_recording .
+[INFO] 20:43:20 HAPlayer: start_recording play end .
+[INFO] 20:43:20 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:43:20 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:43:25 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:43:27 HACamera: image captured .
+[INFO] 20:43:28 HAAiFaceReg: start identifying face .
+[INFO] 20:43:28 HAPlayer: Playing stop_recording .
+[INFO] 20:43:28 HAPlayer: stop_recording play end .
+[INFO] 20:43:28 HAConversation: start speech to text .
+[INFO] 20:43:28 HAStt: start speech to text .
+[ERROR] 20:43:28 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 18475945594, 'timestamp': 1639485808, 'cached': 0, 'result': None} .
+[WARNING] 20:43:28 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:43:28 HANotionMaintainer: person identifying failed .
+[INFO] 20:43:29 HAStt: stt request time cost 0.462174 .
+[INFO] 20:43:29 HANlp: start text ecnet: text-4 english。 .
+[INFO] 20:43:29 HAStt: speech recognition result(after text fixing): 4 english。 .
+[INFO] 20:43:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:43:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 20:43:30 HATts: tts request succeed .
+[INFO] 20:43:30 HAPlayer: Playing say.wav .
+[INFO] 20:43:31 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:43:31 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:43:32 HAPlayer: say.wav play end .
+[INFO] 20:43:36 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:43:39 HACamera: image captured .
+[INFO] 20:43:39 HAAiFaceReg: start identifying face .
+[INFO] 20:43:39 HAAiFaceReg: face identify success .
+[WARNING] 20:43:39 HANotionMaintainer: picture don't have a face .
+[INFO] 20:43:41 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:43:46 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:43:49 HACamera: image captured .
+[INFO] 20:43:49 HAAiFaceReg: start identifying face .
+[INFO] 20:43:49 HAAiFaceReg: face identify success .
+[INFO] 20:43:49 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 20:43:49 HAPersonnelManager: person-hyl does not exist .
+[INFO] 20:43:49 HANotionMaintainer: the person-hyl is not found .
+[INFO] 20:43:50 HATts: tts request succeed .
+[INFO] 20:43:50 HAPlayer: Playing say.wav .
+[INFO] 20:43:54 HAPlayer: say.wav play end .
+[WARNING] 20:43:54 HANotionMaintainer: person identifying failed .
+[INFO] 20:43:56 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:43:56 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:44:01 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:44:04 HACamera: image captured .
+[INFO] 20:44:04 HAAiFaceReg: start identifying face .
+[INFO] 20:44:04 HAAiFaceReg: face identify success .
+[WARNING] 20:44:04 HANotionMaintainer: picture don't have a face .
+[INFO] 20:44:06 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:44:11 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:44:14 HACamera: image captured .
+[INFO] 20:44:14 HAAiFaceReg: start identifying face .
+[INFO] 20:44:15 HAAiFaceReg: face identify success .
+[INFO] 20:44:15 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 20:44:15 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 20:44:15 HANotionMaintainer: person identifying success .
+[INFO] 20:44:16 HATts: tts request succeed .
+[INFO] 20:44:16 HAPlayer: Playing say.wav .
+[INFO] 20:44:21 HAPlayer: say.wav play end .
+[INFO] 20:44:23 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:44:23 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:44:29 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:44:31 HACamera: image captured .
+[INFO] 20:44:31 HAAiFaceReg: start identifying face .
+[INFO] 20:44:32 HAAiFaceReg: face identify success .
+[INFO] 20:44:32 HAPersonnelManager: start search for person-zmy's info .
+[ERROR] 20:44:32 HAPersonnelManager: person-zmy does not exist .
+[INFO] 20:44:32 HANotionMaintainer: the person-zmy is not found .
+[INFO] 20:44:33 HATts: tts request succeed .
+[INFO] 20:44:33 HAPlayer: Playing say.wav .
+[INFO] 20:44:37 HAPlayer: say.wav play end .
+[INFO] 20:44:39 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:44:44 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:44:46 HACamera: image captured .
+[INFO] 20:44:46 HAAiFaceReg: start identifying face .
+[INFO] 20:44:47 HAAiFaceReg: face identify success .
+[WARNING] 20:44:47 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:44:47 HANotionMaintainer: person identifying failed .
+[INFO] 20:44:49 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:44:49 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:44:54 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:44:56 HACamera: image captured .
+[INFO] 20:44:56 HAAiFaceReg: start identifying face .
+[INFO] 20:44:57 HAAiFaceReg: face identify success .
+[INFO] 20:44:57 HAPersonnelManager: start search for person-wjl's info .
+[ERROR] 20:44:57 HAPersonnelManager: person-wjl does not exist .
+[INFO] 20:44:57 HANotionMaintainer: the person-wjl is not found .
+[INFO] 20:44:58 HATts: tts request succeed .
+[INFO] 20:44:58 HAPlayer: Playing say.wav .
+[INFO] 20:45:03 HAPlayer: say.wav play end .
+[INFO] 20:45:05 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:45:10 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:45:12 HACamera: image captured .
+[INFO] 20:45:12 HAAiFaceReg: start identifying face .
+[INFO] 20:45:13 HAAiFaceReg: face identify success .
+[INFO] 20:45:13 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 20:45:13 HAPersonnelManager: person-hyl does not exist .
+[INFO] 20:45:13 HANotionMaintainer: the person-hyl is not found .
+[INFO] 20:45:14 HATts: tts request succeed .
+[INFO] 20:45:14 HAPlayer: Playing say.wav .
+[INFO] 20:45:17 HAPlayer: say.wav play end .
+[WARNING] 20:45:17 HANotionMaintainer: person identifying failed .
+[INFO] 20:45:20 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:45:20 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:45:25 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:45:27 HACamera: image captured .
+[INFO] 20:45:27 HAAiFaceReg: start identifying face .
+[INFO] 20:45:28 HAAiFaceReg: face identify success .
+[WARNING] 20:45:28 HANotionMaintainer: picture don't have a face .
+[INFO] 20:45:30 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:45:35 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:45:37 HACamera: image captured .
+[INFO] 20:45:37 HAAiFaceReg: start identifying face .
+[INFO] 20:45:38 HAAiFaceReg: face identify success .
+[WARNING] 20:45:38 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:45:38 HANotionMaintainer: person identifying failed .
+[INFO] 20:45:40 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:45:40 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:45:45 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:45:47 HACamera: image captured .
+[INFO] 20:45:47 HAAiFaceReg: start identifying face .
+[INFO] 20:45:48 HAAiFaceReg: face identify success .
+[WARNING] 20:45:48 HANotionMaintainer: picture don't have a face .
+[INFO] 20:45:50 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:45:55 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:45:57 HACamera: image captured .
+[INFO] 20:45:57 HAAiFaceReg: start identifying face .
+[ERROR] 20:45:58 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2016525257575, 'timestamp': 1639485958, 'cached': 0, 'result': None} .
+[WARNING] 20:45:58 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:45:58 HANotionMaintainer: person identifying failed .
+[INFO] 20:46:00 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:46:00 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:46:05 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:08 HACamera: image captured .
+[INFO] 20:46:08 HAAiFaceReg: start identifying face .
+[INFO] 20:46:08 HAAiFaceReg: face identify success .
+[WARNING] 20:46:08 HANotionMaintainer: picture don't have a face .
+[INFO] 20:46:10 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:46:15 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:18 HACamera: image captured .
+[INFO] 20:46:18 HAAiFaceReg: start identifying face .
+[ERROR] 20:46:19 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9455257575001, 'timestamp': 1639485978, 'cached': 0, 'result': None} .
+[WARNING] 20:46:19 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:46:19 HANotionMaintainer: person identifying failed .
+[INFO] 20:46:21 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:46:21 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:46:26 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:28 HACamera: image captured .
+[INFO] 20:46:28 HAAiFaceReg: start identifying face .
+[INFO] 20:46:29 HAAiFaceReg: face identify success .
+[WARNING] 20:46:29 HANotionMaintainer: picture don't have a face .
+[INFO] 20:46:31 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:46:36 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:38 HACamera: image captured .
+[INFO] 20:46:38 HAAiFaceReg: start identifying face .
+[INFO] 20:46:39 HAAiFaceReg: face identify success .
+[WARNING] 20:46:39 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:46:39 HANotionMaintainer: person identifying failed .
+[INFO] 20:46:41 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:46:41 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:46:46 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:48 HACamera: image captured .
+[INFO] 20:46:48 HAAiFaceReg: start identifying face .
+[ERROR] 20:46:49 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1510199552589, 'timestamp': 1639486009, 'cached': 0, 'result': None} .
+[WARNING] 20:46:49 HANotionMaintainer: picture don't have a face .
+[INFO] 20:46:51 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:46:56 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:46:58 HACamera: image captured .
+[INFO] 20:46:58 HAAiFaceReg: start identifying face .
+[ERROR] 20:46:59 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9935151500189, 'timestamp': 1639486019, 'cached': 0, 'result': None} .
+[WARNING] 20:46:59 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:46:59 HANotionMaintainer: person identifying failed .
+[INFO] 20:47:01 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:47:01 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:47:06 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:47:09 HACamera: image captured .
+[INFO] 20:47:09 HAAiFaceReg: start identifying face .
+[INFO] 20:47:09 HAAiFaceReg: face identify success .
+[WARNING] 20:47:09 HANotionMaintainer: picture don't have a face .
+[INFO] 20:47:11 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:47:16 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:47:19 HACamera: image captured .
+[INFO] 20:47:19 HAAiFaceReg: start identifying face .
+[INFO] 20:47:20 HAAiFaceReg: face identify success .
+[WARNING] 20:47:20 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:47:20 HANotionMaintainer: person identifying failed .
+[INFO] 20:47:22 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:47:22 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:47:27 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:47:29 HACamera: image captured .
+[INFO] 20:47:29 HAAiFaceReg: start identifying face .
+[INFO] 20:47:30 HAAiFaceReg: face identify success .
+[WARNING] 20:47:30 HANotionMaintainer: picture don't have a face .
+[INFO] 20:47:32 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:47:37 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:47:39 HACamera: image captured .
+[INFO] 20:47:39 HAAiFaceReg: start identifying face .
+[INFO] 20:47:40 HAAiFaceReg: face identify success .
+[INFO] 20:47:40 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 20:47:40 HAPersonnelManager: person-hyl does not exist .
+[INFO] 20:47:40 HANotionMaintainer: the person-hyl is not found .
+[INFO] 20:47:41 HATts: tts request succeed .
+[INFO] 20:47:41 HAPlayer: Playing say.wav .
+[INFO] 20:47:45 HAPlayer: say.wav play end .
+[WARNING] 20:47:45 HANotionMaintainer: person identifying failed .
+[INFO] 20:47:47 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:47:47 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:47:52 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:47:54 HACamera: image captured .
+[INFO] 20:47:54 HAAiFaceReg: start identifying face .
+[INFO] 20:47:55 HAAiFaceReg: face identify success .
+[INFO] 20:47:55 HAPersonnelManager: start search for person-zjh's info .
+[ERROR] 20:47:55 HAPersonnelManager: person-zjh does not exist .
+[INFO] 20:47:55 HANotionMaintainer: the person-zjh is not found .
+[INFO] 20:47:56 HATts: tts request succeed .
+[INFO] 20:47:56 HAPlayer: Playing say.wav .
+[INFO] 20:48:01 HAPlayer: say.wav play end .
+[INFO] 20:48:03 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:48:08 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:48:10 HACamera: image captured .
+[INFO] 20:48:10 HAAiFaceReg: start identifying face .
+[ERROR] 20:48:11 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9435455584996, 'timestamp': 1639486090, 'cached': 0, 'result': None} .
+[WARNING] 20:48:11 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:48:11 HANotionMaintainer: person identifying failed .
+[INFO] 20:48:13 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:48:13 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:48:18 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:48:20 HACamera: image captured .
+[INFO] 20:48:20 HAAiFaceReg: start identifying face .
+[INFO] 20:48:21 HAAiFaceReg: face identify success .
+[WARNING] 20:48:21 HANotionMaintainer: picture don't have a face .
+[INFO] 20:48:23 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:48:28 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:48:30 HACamera: image captured .
+[INFO] 20:48:30 HAAiFaceReg: start identifying face .
+[INFO] 20:48:31 HAAiFaceReg: face identify success .
+[INFO] 20:48:31 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 20:48:31 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 20:48:31 HANotionMaintainer: person identifying success .
+[INFO] 20:48:33 HATts: tts request succeed .
+[INFO] 20:48:33 HAPlayer: Playing say.wav .
+[INFO] 20:48:38 HAPlayer: say.wav play end .
+[INFO] 20:48:40 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:48:40 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:48:45 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:48:48 HACamera: image captured .
+[INFO] 20:48:48 HAAiFaceReg: start identifying face .
+[INFO] 20:48:49 HAAiFaceReg: face identify success .
+[WARNING] 20:48:49 HANotionMaintainer: picture don't have a face .
+[INFO] 20:48:51 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:48:56 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:48:58 HACamera: image captured .
+[INFO] 20:48:58 HAAiFaceReg: start identifying face .
+[INFO] 20:48:59 HAAiFaceReg: face identify success .
+[WARNING] 20:48:59 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:48:59 HANotionMaintainer: person identifying failed .
+[INFO] 20:49:01 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:49:01 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:49:06 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:49:08 HACamera: image captured .
+[INFO] 20:49:08 HAAiFaceReg: start identifying face .
+[INFO] 20:49:09 HAAiFaceReg: face identify success .
+[WARNING] 20:49:09 HANotionMaintainer: picture don't have a face .
+[INFO] 20:49:11 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:49:16 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:49:18 HACamera: image captured .
+[INFO] 20:49:18 HAAiFaceReg: start identifying face .
+[INFO] 20:49:19 HAAiFaceReg: face identify success .
+[INFO] 20:49:19 HAPersonnelManager: start search for person-tyn's info .
+[INFO] 20:49:19 HANotionMaintainer: the person-tyn's info is found .
+[INFO] 20:49:19 HANotionMaintainer: person identifying success .
+[INFO] 20:49:20 HATts: tts request succeed .
+[INFO] 20:49:20 HAPlayer: Playing say.wav .
+[INFO] 20:49:26 HAPlayer: say.wav play end .
+[INFO] 20:49:28 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:49:28 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:49:33 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:49:35 HACamera: image captured .
+[INFO] 20:49:35 HAAiFaceReg: start identifying face .
+[INFO] 20:49:36 HAAiFaceReg: face identify success .
+[WARNING] 20:49:36 HANotionMaintainer: picture don't have a face .
+[INFO] 20:49:38 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:49:43 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:49:45 HACamera: image captured .
+[INFO] 20:49:45 HAAiFaceReg: start identifying face .
+[INFO] 20:49:46 HAAiFaceReg: face identify success .
+[WARNING] 20:49:46 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:49:46 HANotionMaintainer: person identifying failed .
+[INFO] 20:49:48 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:49:48 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:49:53 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:49:56 HACamera: image captured .
+[INFO] 20:49:56 HAAiFaceReg: start identifying face .
+[INFO] 20:49:57 HAAiFaceReg: face identify success .
+[INFO] 20:49:57 HAPersonnelManager: start search for person-cqy's info .
+[INFO] 20:49:57 HANotionMaintainer: the person-cqy's info is found .
+[INFO] 20:49:57 HANotionMaintainer: person identifying success .
+[INFO] 20:49:58 HATts: tts request succeed .
+[INFO] 20:49:58 HAPlayer: Playing say.wav .
+[INFO] 20:50:04 HAPlayer: say.wav play end .
+[INFO] 20:50:06 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:50:06 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:50:11 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:50:13 HACamera: image captured .
+[INFO] 20:50:13 HAAiFaceReg: start identifying face .
+[INFO] 20:50:14 HAAiFaceReg: face identify success .
+[INFO] 20:50:14 HAPersonnelManager: start search for person-cqy's info .
+[INFO] 20:50:14 HANotionMaintainer: the person-cqy's info is found .
+[INFO] 20:50:14 HANotionMaintainer: person identifying success .
+[INFO] 20:50:15 HATts: tts request succeed .
+[INFO] 20:50:15 HAPlayer: Playing say.wav .
+[INFO] 20:50:21 HAPlayer: say.wav play end .
+[INFO] 20:50:23 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:50:23 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:50:28 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:50:30 HACamera: image captured .
+[INFO] 20:50:30 HAAiFaceReg: start identifying face .
+[INFO] 20:50:31 HAAiFaceReg: face identify success .
+[WARNING] 20:50:31 HANotionMaintainer: picture don't have a face .
+[INFO] 20:50:33 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:50:38 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:50:41 HACamera: image captured .
+[INFO] 20:50:41 HAAiFaceReg: start identifying face .
+[ERROR] 20:50:41 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7979058979459, 'timestamp': 1639486241, 'cached': 0, 'result': None} .
+[WARNING] 20:50:41 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:50:41 HANotionMaintainer: person identifying failed .
+[INFO] 20:50:43 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:50:43 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:50:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:50:51 HACamera: image captured .
+[INFO] 20:50:51 HAAiFaceReg: start identifying face .
+[INFO] 20:50:51 HAAiFaceReg: face identify success .
+[WARNING] 20:50:51 HANotionMaintainer: picture don't have a face .
+[INFO] 20:50:53 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:50:59 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:01 HACamera: image captured .
+[INFO] 20:51:01 HAAiFaceReg: start identifying face .
+[INFO] 20:51:02 HAAiFaceReg: face identify success .
+[WARNING] 20:51:02 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:51:02 HANotionMaintainer: person identifying failed .
+[INFO] 20:51:04 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:51:04 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:51:09 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:11 HACamera: image captured .
+[INFO] 20:51:11 HAAiFaceReg: start identifying face .
+[INFO] 20:51:12 HAAiFaceReg: face identify success .
+[WARNING] 20:51:12 HANotionMaintainer: picture don't have a face .
+[INFO] 20:51:14 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:51:19 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:21 HACamera: image captured .
+[INFO] 20:51:21 HAAiFaceReg: start identifying face .
+[INFO] 20:51:22 HAAiFaceReg: face identify success .
+[WARNING] 20:51:22 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:51:22 HANotionMaintainer: person identifying failed .
+[INFO] 20:51:25 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:51:25 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:51:30 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:33 HACamera: image captured .
+[INFO] 20:51:33 HAAiFaceReg: start identifying face .
+[INFO] 20:51:33 HAAiFaceReg: face identify success .
+[WARNING] 20:51:33 HANotionMaintainer: picture don't have a face .
+[INFO] 20:51:35 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:51:40 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:43 HACamera: image captured .
+[INFO] 20:51:43 HAAiFaceReg: start identifying face .
+[INFO] 20:51:43 HAAiFaceReg: face identify success .
+[WARNING] 20:51:43 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:51:43 HANotionMaintainer: person identifying failed .
+[INFO] 20:51:46 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:51:46 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:51:51 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:51:53 HACamera: image captured .
+[INFO] 20:51:53 HAAiFaceReg: start identifying face .
+[ERROR] 20:51:54 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2018455655510, 'timestamp': 1639486313, 'cached': 0, 'result': None} .
+[WARNING] 20:51:54 HANotionMaintainer: picture don't have a face .
+[INFO] 20:51:56 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:52:01 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:03 HACamera: image captured .
+[INFO] 20:52:03 HAAiFaceReg: start identifying face .
+[ERROR] 20:52:04 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9455847589359, 'timestamp': 1639486323, 'cached': 0, 'result': None} .
+[WARNING] 20:52:04 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:52:04 HANotionMaintainer: person identifying failed .
+[INFO] 20:52:06 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:52:06 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:52:11 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:13 HACamera: image captured .
+[INFO] 20:52:13 HAAiFaceReg: start identifying face .
+[INFO] 20:52:14 HAAiFaceReg: face identify success .
+[WARNING] 20:52:14 HANotionMaintainer: picture don't have a face .
+[INFO] 20:52:16 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:52:21 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:23 HACamera: image captured .
+[INFO] 20:52:23 HAAiFaceReg: start identifying face .
+[INFO] 20:52:24 HAAiFaceReg: face identify success .
+[WARNING] 20:52:24 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:52:24 HANotionMaintainer: person identifying failed .
+[INFO] 20:52:26 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:52:26 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:52:31 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:33 HACamera: image captured .
+[INFO] 20:52:33 HAAiFaceReg: start identifying face .
+[ERROR] 20:52:34 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7925201150505, 'timestamp': 1639486354, 'cached': 0, 'result': None} .
+[WARNING] 20:52:34 HANotionMaintainer: picture don't have a face .
+[INFO] 20:52:36 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:52:41 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:43 HACamera: image captured .
+[INFO] 20:52:43 HAAiFaceReg: start identifying face .
+[INFO] 20:52:44 HAAiFaceReg: face identify success .
+[WARNING] 20:52:44 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:52:44 HANotionMaintainer: person identifying failed .
+[INFO] 20:52:46 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:52:46 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:52:51 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:52:54 HACamera: image captured .
+[INFO] 20:52:54 HAAiFaceReg: start identifying face .
+[INFO] 20:52:54 HAAiFaceReg: face identify success .
+[WARNING] 20:52:54 HANotionMaintainer: picture don't have a face .
+[INFO] 20:52:56 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:53:01 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:04 HACamera: image captured .
+[INFO] 20:53:04 HAAiFaceReg: start identifying face .
+[INFO] 20:53:05 HAAiFaceReg: face identify success .
+[WARNING] 20:53:05 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:53:05 HANotionMaintainer: person identifying failed .
+[INFO] 20:53:07 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:53:07 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:53:12 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:14 HACamera: image captured .
+[INFO] 20:53:14 HAAiFaceReg: start identifying face .
+[INFO] 20:53:15 HAAiFaceReg: face identify success .
+[WARNING] 20:53:15 HANotionMaintainer: picture don't have a face .
+[INFO] 20:53:17 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:53:22 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:24 HACamera: image captured .
+[INFO] 20:53:24 HAAiFaceReg: start identifying face .
+[INFO] 20:53:25 HAAiFaceReg: face identify success .
+[WARNING] 20:53:25 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:53:25 HANotionMaintainer: person identifying failed .
+[INFO] 20:53:27 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:53:27 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:53:32 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:35 HACamera: image captured .
+[INFO] 20:53:35 HAAiFaceReg: start identifying face .
+[ERROR] 20:53:35 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8420120194990, 'timestamp': 1639486415, 'cached': 0, 'result': None} .
+[WARNING] 20:53:35 HANotionMaintainer: picture don't have a face .
+[INFO] 20:53:37 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:53:42 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:45 HACamera: image captured .
+[INFO] 20:53:45 HAAiFaceReg: start identifying face .
+[INFO] 20:53:45 HAAiFaceReg: face identify success .
+[WARNING] 20:53:45 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:53:45 HANotionMaintainer: person identifying failed .
+[INFO] 20:53:48 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:53:48 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:53:53 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:53:55 HACamera: image captured .
+[INFO] 20:53:55 HAAiFaceReg: start identifying face .
+[INFO] 20:53:56 HAAiFaceReg: face identify success .
+[WARNING] 20:53:56 HANotionMaintainer: picture don't have a face .
+[INFO] 20:53:58 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:54:03 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:54:05 HACamera: image captured .
+[INFO] 20:54:05 HAAiFaceReg: start identifying face .
+[INFO] 20:54:06 HAAiFaceReg: face identify success .
+[WARNING] 20:54:06 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:54:06 HANotionMaintainer: person identifying failed .
+[INFO] 20:54:08 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:54:08 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:54:13 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:54:15 HACamera: image captured .
+[INFO] 20:54:15 HAAiFaceReg: start identifying face .
+[INFO] 20:54:16 HAAiFaceReg: face identify success .
+[WARNING] 20:54:16 HANotionMaintainer: picture don't have a face .
+[INFO] 20:54:18 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:54:23 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:54:25 HACamera: image captured .
+[INFO] 20:54:25 HAAiFaceReg: start identifying face .
+[INFO] 20:54:26 HAAiFaceReg: face identify success .
+[INFO] 20:54:26 HAPersonnelManager: start search for person-lpy's info .
+[INFO] 20:54:26 HANotionMaintainer: the person-lpy's info is found .
+[INFO] 20:54:26 HANotionMaintainer: person identifying success .
+[INFO] 20:54:28 HATts: tts request succeed .
+[INFO] 20:54:28 HAPlayer: Playing say.wav .
+[INFO] 20:54:33 HAPlayer: say.wav play end .
+[INFO] 20:54:35 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:54:35 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:54:40 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:54:43 HACamera: image captured .
+[INFO] 20:54:43 HAAiFaceReg: start identifying face .
+[INFO] 20:54:43 HAAiFaceReg: face identify success .
+[INFO] 20:54:43 HAPersonnelManager: start search for person-cqy's info .
+[INFO] 20:54:43 HANotionMaintainer: the person-cqy's info is found .
+[INFO] 20:54:43 HANotionMaintainer: person identifying success .
+[INFO] 20:54:45 HATts: tts request succeed .
+[INFO] 20:54:45 HAPlayer: Playing say.wav .
+[INFO] 20:54:51 HAPlayer: say.wav play end .
+[INFO] 20:54:53 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:54:53 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:54:58 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:55:00 HACamera: image captured .
+[INFO] 20:55:00 HAAiFaceReg: start identifying face .
+[INFO] 20:55:01 HAAiFaceReg: face identify success .
+[INFO] 20:55:01 HAPersonnelManager: start search for person-wyw's info .
+[ERROR] 20:55:01 HAPersonnelManager: person-wyw does not exist .
+[INFO] 20:55:01 HANotionMaintainer: the person-wyw is not found .
+[INFO] 20:55:02 HATts: tts request succeed .
+[INFO] 20:55:02 HAPlayer: Playing say.wav .
+[INFO] 20:55:06 HAPlayer: say.wav play end .
+[INFO] 20:55:08 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:55:13 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:55:15 HACamera: image captured .
+[INFO] 20:55:15 HAAiFaceReg: start identifying face .
+[INFO] 20:55:16 HAAiFaceReg: face identify success .
+[INFO] 20:55:16 HAPersonnelManager: start search for person-wyw's info .
+[ERROR] 20:55:16 HAPersonnelManager: person-wyw does not exist .
+[INFO] 20:55:16 HANotionMaintainer: the person-wyw is not found .
+[INFO] 20:55:17 HATts: tts request succeed .
+[INFO] 20:55:17 HAPlayer: Playing say.wav .
+[INFO] 20:55:21 HAPlayer: say.wav play end .
+[WARNING] 20:55:21 HANotionMaintainer: person identifying failed .
+[INFO] 20:55:23 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:55:23 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:55:28 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:55:30 HACamera: image captured .
+[INFO] 20:55:30 HAAiFaceReg: start identifying face .
+[INFO] 20:55:31 HAAiFaceReg: face identify success .
+[WARNING] 20:55:31 HANotionMaintainer: picture don't have a face .
+[INFO] 20:55:33 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:55:38 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 20:55:38 HAConversation: start new conversation .
+[INFO] 20:55:38 HAConversation: start recording command .
+[INFO] 20:55:38 HAPlayer: Playing start_recording .
+[INFO] 20:55:38 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:55:38 HAPlayer: start_recording play end .
+[INFO] 20:55:38 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:55:40 HACamera: image captured .
+[INFO] 20:55:40 HAAiFaceReg: start identifying face .
+[INFO] 20:55:41 HAAiFaceReg: face identify success .
+[WARNING] 20:55:41 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:55:41 HANotionMaintainer: person identifying failed .
+[INFO] 20:55:43 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:55:43 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:55:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:55:49 HAPlayer: Playing stop_recording .
+[INFO] 20:55:49 HAPlayer: stop_recording play end .
+[INFO] 20:55:49 HAConversation: start speech to text .
+[INFO] 20:55:49 HAStt: start speech to text .
+[INFO] 20:55:50 HAStt: stt request time cost 0.730134 .
+[INFO] 20:55:50 HANlp: start text ecnet: text-春江花月夜中写出个人的生命是短暂即逝的，而人类的存在只是。 .
+[INFO] 20:55:50 HAStt: speech recognition result(after text fixing): 春江花月夜中写出个人的生命是短暂即逝的，而人类的存在只是。 .
+[INFO] 20:55:50 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:55:50 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 20:55:51 HACamera: image captured .
+[INFO] 20:55:51 HAAiFaceReg: start identifying face .
+[INFO] 20:55:51 HATts: tts request succeed .
+[INFO] 20:55:51 HAPlayer: Playing say.wav .
+[INFO] 20:55:51 HAAiFaceReg: face identify success .
+[WARNING] 20:55:51 HANotionMaintainer: picture don't have a face .
+[INFO] 20:55:53 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:55:54 HAPlayer: say.wav play end .
+[INFO] 20:55:58 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:56:01 HACamera: image captured .
+[INFO] 20:56:01 HAAiFaceReg: start identifying face .
+[INFO] 20:56:01 HAAiFaceReg: face identify success .
+[WARNING] 20:56:01 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:56:01 HANotionMaintainer: person identifying failed .
+[INFO] 20:56:04 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:56:04 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:56:09 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:56:11 HACamera: image captured .
+[INFO] 20:56:11 HAAiFaceReg: start identifying face .
+[INFO] 20:56:12 HAAiFaceReg: face identify success .
+[INFO] 20:56:12 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 20:56:12 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 20:56:12 HANotionMaintainer: person identifying success .
+[INFO] 20:56:13 HATts: tts request succeed .
+[INFO] 20:56:13 HAPlayer: Playing say.wav .
+[INFO] 20:56:18 HAPlayer: say.wav play end .
+[INFO] 20:56:21 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:56:21 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:56:26 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:56:28 HACamera: image captured .
+[INFO] 20:56:28 HAAiFaceReg: start identifying face .
+[INFO] 20:56:29 HAAiFaceReg: face identify success .
+[WARNING] 20:56:29 HANotionMaintainer: picture don't have a face .
+[INFO] 20:56:30 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 20:56:30 HAConversation: start new conversation .
+[INFO] 20:56:30 HAConversation: start recording command .
+[INFO] 20:56:30 HAPlayer: Playing start_recording .
+[INFO] 20:56:30 HAPlayer: start_recording play end .
+[INFO] 20:56:30 HARecorder: start vad record(record_with_vad module) .
+[INFO] 20:56:31 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:56:36 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:56:38 HACamera: image captured .
+[INFO] 20:56:38 HAAiFaceReg: start identifying face .
+[INFO] 20:56:39 HAAiFaceReg: face identify success .
+[INFO] 20:56:39 HAPersonnelManager: start search for person-wyw's info .
+[ERROR] 20:56:39 HAPersonnelManager: person-wyw does not exist .
+[INFO] 20:56:39 HANotionMaintainer: the person-wyw is not found .
+[INFO] 20:56:40 HATts: tts request succeed .
+[INFO] 20:56:40 HAPlayer: Playing say.wav .
+[INFO] 20:56:41 HAPlayer: Playing stop_recording .
+[INFO] 20:56:41 HAPlayer: stop_recording play end .
+[INFO] 20:56:41 HAConversation: start speech to text .
+[INFO] 20:56:41 HAStt: start speech to text .
+[INFO] 20:56:42 HAStt: stt request time cost 0.970774 .
+[INFO] 20:56:42 HANlp: start text ecnet: text-春江花月夜中写出个人的生命是短暂即逝的，而人类的存在则是绵延久长，表明诗人虽有对人生短暂的。 .
+[INFO] 20:56:42 HAStt: speech recognition result(after text fixing): 春江花月夜中写出个人的生命是短暂即逝的，而人类的存在则是绵延久长，表明诗人虽有对人生短暂的。 .
+[INFO] 20:56:42 HAConversation: start recognizing the intent and slots .
+[DEBUG] 20:56:42 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 20:56:44 HAPlayer: say.wav play end .
+[WARNING] 20:56:44 HANotionMaintainer: person identifying failed .
+[INFO] 20:56:44 HATts: tts request succeed .
+[INFO] 20:56:44 HAPlayer: Playing say.wav .
+[INFO] 20:56:46 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:56:46 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:56:46 HAPlayer: say.wav play end .
+[INFO] 20:56:51 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:56:53 HACamera: image captured .
+[INFO] 20:56:53 HAAiFaceReg: start identifying face .
+[INFO] 20:56:54 HAAiFaceReg: face identify success .
+[WARNING] 20:56:54 HANotionMaintainer: picture don't have a face .
+[INFO] 20:56:56 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:57:01 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:57:03 HACamera: image captured .
+[INFO] 20:57:03 HAAiFaceReg: start identifying face .
+[INFO] 20:57:04 HAAiFaceReg: face identify success .
+[INFO] 20:57:04 HAPersonnelManager: start search for person-ljj's info .
+[INFO] 20:57:04 HANotionMaintainer: the person-ljj's info is found .
+[INFO] 20:57:04 HANotionMaintainer: person identifying success .
+[INFO] 20:57:05 HATts: tts request succeed .
+[INFO] 20:57:05 HAPlayer: Playing say.wav .
+[INFO] 20:57:11 HAPlayer: say.wav play end .
+[INFO] 20:57:13 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:57:13 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:57:18 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:57:20 HACamera: image captured .
+[INFO] 20:57:20 HAAiFaceReg: start identifying face .
+[INFO] 20:57:21 HAAiFaceReg: face identify success .
+[INFO] 20:57:21 HAPersonnelManager: start search for person-ljj's info .
+[INFO] 20:57:21 HANotionMaintainer: the person-ljj's info is found .
+[INFO] 20:57:21 HANotionMaintainer: person identifying success .
+[INFO] 20:57:22 HATts: tts request succeed .
+[INFO] 20:57:22 HAPlayer: Playing say.wav .
+[INFO] 20:57:28 HAPlayer: say.wav play end .
+[INFO] 20:57:30 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:57:30 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:57:35 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:57:37 HACamera: image captured .
+[INFO] 20:57:37 HAAiFaceReg: start identifying face .
+[INFO] 20:57:38 HAAiFaceReg: face identify success .
+[WARNING] 20:57:38 HANotionMaintainer: picture don't have a face .
+[INFO] 20:57:40 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:57:45 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:57:48 HACamera: image captured .
+[INFO] 20:57:48 HAAiFaceReg: start identifying face .
+[INFO] 20:57:48 HAAiFaceReg: face identify success .
+[WARNING] 20:57:48 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:57:48 HANotionMaintainer: person identifying failed .
+[INFO] 20:57:50 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:57:50 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:57:55 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:57:58 HACamera: image captured .
+[INFO] 20:57:58 HAAiFaceReg: start identifying face .
+[INFO] 20:57:58 HAAiFaceReg: face identify success .
+[WARNING] 20:57:58 HANotionMaintainer: picture don't have a face .
+[INFO] 20:58:00 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:58:05 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:58:08 HACamera: image captured .
+[INFO] 20:58:08 HAAiFaceReg: start identifying face .
+[INFO] 20:58:09 HAAiFaceReg: face identify success .
+[WARNING] 20:58:09 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:58:09 HANotionMaintainer: person identifying failed .
+[INFO] 20:58:11 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:58:11 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:58:16 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:58:18 HACamera: image captured .
+[INFO] 20:58:18 HAAiFaceReg: start identifying face .
+[INFO] 20:58:19 HAAiFaceReg: face identify success .
+[INFO] 20:58:19 HAPersonnelManager: start search for person-tyn's info .
+[INFO] 20:58:19 HANotionMaintainer: the person-tyn's info is found .
+[INFO] 20:58:19 HANotionMaintainer: person identifying success .
+[INFO] 20:58:21 HATts: tts request succeed .
+[INFO] 20:58:21 HAPlayer: Playing say.wav .
+[INFO] 20:58:26 HAPlayer: say.wav play end .
+[INFO] 20:58:28 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:58:28 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:58:33 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:58:36 HACamera: image captured .
+[INFO] 20:58:36 HAAiFaceReg: start identifying face .
+[INFO] 20:58:37 HAAiFaceReg: face identify success .
+[INFO] 20:58:37 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:58:37 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:58:37 HANotionMaintainer: person identifying success .
+[INFO] 20:58:38 HATts: tts request succeed .
+[INFO] 20:58:38 HAPlayer: Playing say.wav .
+[INFO] 20:58:43 HAPlayer: say.wav play end .
+[INFO] 20:58:45 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:58:45 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:58:50 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:58:53 HACamera: image captured .
+[INFO] 20:58:53 HAAiFaceReg: start identifying face .
+[INFO] 20:58:53 HAAiFaceReg: face identify success .
+[INFO] 20:58:53 HAPersonnelManager: start search for person-hxx's info .
+[ERROR] 20:58:53 HAPersonnelManager: person-hxx does not exist .
+[INFO] 20:58:53 HANotionMaintainer: the person-hxx is not found .
+[INFO] 20:58:55 HATts: tts request succeed .
+[INFO] 20:58:55 HAPlayer: Playing say.wav .
+[INFO] 20:58:59 HAPlayer: say.wav play end .
+[INFO] 20:59:01 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:59:06 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:59:09 HACamera: image captured .
+[INFO] 20:59:09 HAAiFaceReg: start identifying face .
+[INFO] 20:59:09 HAAiFaceReg: face identify success .
+[WARNING] 20:59:09 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:59:09 HANotionMaintainer: person identifying failed .
+[INFO] 20:59:11 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:59:11 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:59:16 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:59:19 HACamera: image captured .
+[INFO] 20:59:19 HAAiFaceReg: start identifying face .
+[INFO] 20:59:20 HAAiFaceReg: face identify success .
+[WARNING] 20:59:20 HANotionMaintainer: picture don't have a face .
+[INFO] 20:59:22 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:59:27 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:59:29 HACamera: image captured .
+[INFO] 20:59:29 HAAiFaceReg: start identifying face .
+[INFO] 20:59:30 HAAiFaceReg: face identify success .
+[WARNING] 20:59:30 HANotionMaintainer: picture don't have a face .
+[WARNING] 20:59:30 HANotionMaintainer: person identifying failed .
+[INFO] 20:59:32 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:59:32 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 20:59:37 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:59:39 HACamera: image captured .
+[INFO] 20:59:39 HAAiFaceReg: start identifying face .
+[INFO] 20:59:40 HAAiFaceReg: face identify success .
+[WARNING] 20:59:40 HANotionMaintainer: picture don't have a face .
+[INFO] 20:59:42 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 20:59:47 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 20:59:49 HACamera: image captured .
+[INFO] 20:59:49 HAAiFaceReg: start identifying face .
+[INFO] 20:59:50 HAAiFaceReg: face identify success .
+[INFO] 20:59:50 HAPersonnelManager: start search for person-lc's info .
+[INFO] 20:59:50 HANotionMaintainer: the person-lc's info is found .
+[INFO] 20:59:50 HANotionMaintainer: person identifying success .
+[INFO] 20:59:52 HATts: tts request succeed .
+[INFO] 20:59:52 HAPlayer: Playing say.wav .
+[INFO] 20:59:57 HAPlayer: say.wav play end .
+[INFO] 20:59:59 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 20:59:59 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:00:04 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:00:06 HACamera: image captured .
+[INFO] 21:00:06 HAAiFaceReg: start identifying face .
+[INFO] 21:00:07 HAAiFaceReg: face identify success .
+[WARNING] 21:00:07 HANotionMaintainer: picture don't have a face .
+[INFO] 21:00:09 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:00:14 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:00:16 HACamera: image captured .
+[INFO] 21:00:17 HAAiFaceReg: start identifying face .
+[ERROR] 21:00:17 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 5589001101892, 'timestamp': 1639486817, 'cached': 0, 'result': None} .
+[WARNING] 21:00:17 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:00:17 HANotionMaintainer: person identifying failed .
+[INFO] 21:00:19 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:00:19 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:00:24 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:00:27 HACamera: image captured .
+[INFO] 21:00:27 HAAiFaceReg: start identifying face .
+[ERROR] 21:00:27 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1525101159955, 'timestamp': 1639486827, 'cached': 0, 'result': None} .
+[WARNING] 21:00:27 HANotionMaintainer: picture don't have a face .
+[INFO] 21:00:29 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:00:34 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:00:36 HACamera: image captured .
+[INFO] 21:00:36 HAAiFaceReg: start identifying face .
+[INFO] 21:00:37 HAAiFaceReg: face identify success .
+[INFO] 21:00:37 HAPersonnelManager: start search for person-lc's info .
+[INFO] 21:00:37 HANotionMaintainer: the person-lc's info is found .
+[INFO] 21:00:37 HANotionMaintainer: person identifying success .
+[INFO] 21:00:38 HATts: tts request succeed .
+[INFO] 21:00:38 HAPlayer: Playing say.wav .
+[INFO] 21:00:44 HAPlayer: say.wav play end .
+[INFO] 21:00:46 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:00:46 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:00:51 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:00:53 HACamera: image captured .
+[INFO] 21:00:53 HAAiFaceReg: start identifying face .
+[INFO] 21:00:54 HAAiFaceReg: face identify success .
+[INFO] 21:00:54 HAPersonnelManager: start search for person-lc's info .
+[INFO] 21:00:54 HANotionMaintainer: the person-lc's info is found .
+[INFO] 21:00:54 HANotionMaintainer: person identifying success .
+[INFO] 21:00:55 HATts: tts request succeed .
+[INFO] 21:00:55 HAPlayer: Playing say.wav .
+[INFO] 21:01:00 HAPlayer: say.wav play end .
+[INFO] 21:01:03 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:01:03 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:01:04 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:01:04 HAConversation: start new conversation .
+[INFO] 21:01:04 HAConversation: start recording command .
+[INFO] 21:01:04 HAPlayer: Playing start_recording .
+[INFO] 21:01:04 HAPlayer: start_recording play end .
+[INFO] 21:01:04 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:01:04 HAPlayer: Playing stop_recording .
+[INFO] 21:01:05 HAPlayer: stop_recording play end .
+[INFO] 21:01:05 HAConversation: start speech to text .
+[INFO] 21:01:05 HAStt: start speech to text .
+[INFO] 21:01:05 HAStt: stt request time cost 0.744081 .
+[INFO] 21:01:05 HANlp: start text ecnet: text-春江花月夜中写出个人的生命是短暂即逝的，而人类的存在则是绵延久长，表明诗人虽有对人生短暂的。 .
+[INFO] 21:01:06 HAStt: speech recognition result(after text fixing): 春江花月夜中写出个人的生命是短暂即逝的，而人类的存在则是绵延久长，表明诗人虽有对人生短暂的。 .
+[INFO] 21:01:06 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:01:06 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:01:07 HATts: tts request succeed .
+[INFO] 21:01:07 HAPlayer: Playing say.wav .
+[INFO] 21:01:08 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:01:10 HACamera: image captured .
+[INFO] 21:01:10 HAAiFaceReg: start identifying face .
+[INFO] 21:01:11 HAAiFaceReg: face identify success .
+[WARNING] 21:01:11 HANotionMaintainer: picture don't have a face .
+[INFO] 21:01:11 HAPlayer: say.wav play end .
+[INFO] 21:01:13 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:01:18 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:01:20 HACamera: image captured .
+[INFO] 21:01:20 HAAiFaceReg: start identifying face .
+[INFO] 21:01:21 HAAiFaceReg: face identify success .
+[WARNING] 21:01:21 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:01:21 HANotionMaintainer: person identifying failed .
+[INFO] 21:01:23 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:01:23 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:01:28 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:01:30 HACamera: image captured .
+[INFO] 21:01:30 HAAiFaceReg: start identifying face .
+[ERROR] 21:01:31 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8435259425947, 'timestamp': 1639486891, 'cached': 0, 'result': None} .
+[WARNING] 21:01:31 HANotionMaintainer: picture don't have a face .
+[INFO] 21:01:33 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:01:38 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:01:40 HACamera: image captured .
+[INFO] 21:01:40 HAAiFaceReg: start identifying face .
+[ERROR] 21:01:41 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 5584201259484, 'timestamp': 1639486901, 'cached': 0, 'result': None} .
+[WARNING] 21:01:41 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:01:41 HANotionMaintainer: person identifying failed .
+[INFO] 21:01:43 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:01:43 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:01:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:01:50 HACamera: image captured .
+[INFO] 21:01:50 HAAiFaceReg: start identifying face .
+[INFO] 21:01:51 HAAiFaceReg: face identify success .
+[INFO] 21:01:51 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:01:51 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:01:51 HANotionMaintainer: person identifying success .
+[INFO] 21:01:52 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:01:52 HAConversation: start new conversation .
+[INFO] 21:01:52 HAConversation: start recording command .
+[INFO] 21:01:52 HAPlayer: Playing start_recording .
+[INFO] 21:01:52 HATts: tts request succeed .
+[INFO] 21:01:52 HAPlayer: Playing say.wav .
+[INFO] 21:01:53 HAPlayer: start_recording play end .
+[INFO] 21:01:53 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:01:58 HAPlayer: say.wav play end .
+[INFO] 21:02:00 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:02:00 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:02:05 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:02:07 HACamera: image captured .
+[INFO] 21:02:07 HAAiFaceReg: start identifying face .
+[ERROR] 21:02:08 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2579892589558, 'timestamp': 1639486928, 'cached': 0, 'result': None} .
+[WARNING] 21:02:08 HANotionMaintainer: picture don't have a face .
+[INFO] 21:02:10 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:02:15 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:02:18 HACamera: image captured .
+[INFO] 21:02:18 HAAiFaceReg: start identifying face .
+[INFO] 21:02:18 HAAiFaceReg: face identify success .
+[INFO] 21:02:18 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:02:18 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:02:18 HANotionMaintainer: person identifying success .
+[INFO] 21:02:20 HATts: tts request succeed .
+[INFO] 21:02:20 HAPlayer: Playing say.wav .
+[INFO] 21:02:25 HAPlayer: say.wav play end .
+[INFO] 21:02:28 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:02:28 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:02:33 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:02:35 HACamera: image captured .
+[INFO] 21:02:35 HAAiFaceReg: start identifying face .
+[ERROR] 21:02:36 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2011545848900, 'timestamp': 1639486955, 'cached': 0, 'result': None} .
+[WARNING] 21:02:36 HANotionMaintainer: picture don't have a face .
+[INFO] 21:02:38 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:02:43 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:04:54 HABackendInit: HadreamAssistant start  .
+[INFO] 21:04:54 HABackendInit: start self check .
+[INFO] 21:04:54 HABackendInit: play the welcome speech(local play)  .
+[INFO] 21:04:58 HABackendInit: Start pulseaudio .
+[INFO] 21:04:59 HABackendInit: Start three threads .
+[INFO] 21:04:59 HASnowboy: snowboy is now running... .
+[ERROR] 21:04:59 HAInit: keyboard awaken engine need to be run as root, exit .
+[INFO] 21:04:59 HAInit: 'enter' was pressed, please mode: 1-voice, 0-text .
+[INFO] 21:04:59 HANotionMaintainer: start the notion maintainer .
+[INFO] 21:04:59 HANotionMaintainer: start the human activation detecting for reminding thread .
+[INFO] 21:04:59 HANotionMaintainer: start the data monitoring thread .
+[INFO] 21:04:59 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:04:59 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:05:01 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:05:01 HAConversation: start new conversation .
+[INFO] 21:05:01 HAConversation: start recording command .
+[INFO] 21:05:01 HAPlayer: Playing start_recording .
+[INFO] 21:05:02 HAPlayer: start_recording play end .
+[INFO] 21:05:02 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:05:04 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:05:05 HAPlayer: Playing stop_recording .
+[INFO] 21:05:06 HAPlayer: stop_recording play end .
+[INFO] 21:05:06 HAConversation: start speech to text .
+[INFO] 21:05:06 HAStt: start speech to text .
+[INFO] 21:05:06 HACamera: image captured .
+[INFO] 21:05:06 HAAiFaceReg: start identifying face .
+[INFO] 21:05:12 HAStt: stt request time cost 5.871541 .
+[INFO] 21:05:12 HANlp: start text ecnet: text-那医生没有说啊，他她不会死的。 .
+[INFO] 21:05:12 HAStt: speech recognition result(after text fixing): 那医生没有说啊，他她不会死的。 .
+[INFO] 21:05:12 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:05:12 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:05:12 HAAiFaceReg: face identify success .
+[INFO] 21:05:12 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:05:12 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:05:12 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:05:13 HATts: tts request succeed .
+[INFO] 21:05:13 HAPlayer: Playing say.wav .
+[INFO] 21:05:13 HATts: tts request succeed .
+[INFO] 21:05:13 HAPlayer: Playing say.wav .
+[INFO] 21:05:15 HAPlayer: say.wav play end .
+[INFO] 21:05:17 HAPlayer: say.wav play end .
+[INFO] 21:05:19 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:05:24 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:05:24 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:05:24 HAConversation: start new conversation .
+[INFO] 21:05:24 HAConversation: start recording command .
+[INFO] 21:05:24 HAPlayer: Playing start_recording .
+[INFO] 21:05:25 HAPlayer: start_recording play end .
+[INFO] 21:05:25 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:05:26 HACamera: image captured .
+[INFO] 21:05:26 HAAiFaceReg: start identifying face .
+[INFO] 21:05:27 HAAiFaceReg: face identify success .
+[INFO] 21:05:27 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:05:27 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:05:27 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:05:28 HAPlayer: Playing stop_recording .
+[INFO] 21:05:28 HATts: tts request succeed .
+[INFO] 21:05:28 HAPlayer: Playing say.wav .
+[INFO] 21:05:28 HAPlayer: stop_recording play end .
+[INFO] 21:05:28 HAConversation: start speech to text .
+[INFO] 21:05:28 HAStt: start speech to text .
+[INFO] 21:05:29 HAStt: stt request time cost 0.613119 .
+[INFO] 21:05:29 HANlp: start text ecnet: text-对于loveme。 .
+[INFO] 21:05:29 HAStt: speech recognition result(after text fixing): 对于loveme。 .
+[INFO] 21:05:29 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:05:29 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:05:30 HATts: tts request succeed .
+[INFO] 21:05:30 HAPlayer: Playing say.wav .
+[INFO] 21:05:30 HAPlayer: say.wav play end .
+[WARNING] 21:05:30 HANotionMaintainer: person identifying failed .
+[INFO] 21:05:32 HAPlayer: say.wav play end .
+[INFO] 21:05:32 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:05:32 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:05:37 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:05:40 HACamera: image captured .
+[INFO] 21:05:40 HAAiFaceReg: start identifying face .
+[INFO] 21:05:40 HAAiFaceReg: face identify success .
+[INFO] 21:05:40 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:05:40 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:05:40 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:05:41 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:05:41 HAConversation: start new conversation .
+[INFO] 21:05:41 HAConversation: start recording command .
+[INFO] 21:05:41 HAPlayer: Playing start_recording .
+[INFO] 21:05:41 HAPlayer: start_recording play end .
+[INFO] 21:05:41 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:05:41 HATts: tts request succeed .
+[INFO] 21:05:41 HAPlayer: Playing say.wav .
+[INFO] 21:05:45 HAPlayer: say.wav play end .
+[INFO] 21:05:46 HAPlayer: Playing stop_recording .
+[INFO] 21:05:47 HAPlayer: stop_recording play end .
+[INFO] 21:05:47 HAConversation: start speech to text .
+[INFO] 21:05:47 HAStt: start speech to text .
+[INFO] 21:05:47 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:05:48 HAStt: stt request time cost 1.167025 .
+[INFO] 21:05:48 HANlp: start text ecnet: text-因此，letletisisloveloveyouyouyouyou。 .
+[INFO] 21:05:48 HAStt: speech recognition result(after text fixing): 因此，letletisisloveloveyouyouyouyou。 .
+[INFO] 21:05:48 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:05:48 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:05:50 HATts: tts request succeed .
+[INFO] 21:05:50 HAPlayer: Playing say.wav .
+[INFO] 21:05:52 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:05:54 HACamera: image captured .
+[INFO] 21:05:54 HAAiFaceReg: start identifying face .
+[INFO] 21:05:55 HAAiFaceReg: face identify success .
+[WARNING] 21:05:55 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:05:55 HANotionMaintainer: person identifying failed .
+[INFO] 21:05:57 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:05:57 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:05:57 HAPlayer: say.wav play end .
+[INFO] 21:06:02 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:06:02 HAConversation: start new conversation .
+[INFO] 21:06:02 HAConversation: start recording command .
+[INFO] 21:06:02 HAPlayer: Playing start_recording .
+[INFO] 21:06:02 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:02 HAPlayer: start_recording play end .
+[INFO] 21:06:02 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:06:05 HACamera: image captured .
+[INFO] 21:06:05 HAAiFaceReg: start identifying face .
+[INFO] 21:06:05 HAAiFaceReg: face identify success .
+[WARNING] 21:06:05 HANotionMaintainer: picture don't have a face .
+[INFO] 21:06:07 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:06:09 HAPlayer: Playing stop_recording .
+[INFO] 21:06:09 HAPlayer: stop_recording play end .
+[INFO] 21:06:09 HAConversation: start speech to text .
+[INFO] 21:06:09 HAStt: start speech to text .
+[INFO] 21:06:09 HAStt: stt request time cost 0.554301 .
+[INFO] 21:06:09 HANlp: start text ecnet: text-放一点音乐，你怎么笑得这么准？抒情一。 .
+[INFO] 21:06:10 HAStt: speech recognition result(after text fixing): 放一点音乐，你怎么笑得这么准？抒情一。 .
+[INFO] 21:06:10 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:06:10 HANlu: analyze result: [0, 'play_music', 'play_music', 0] .
+[INFO] 21:06:10 XiaolanSkillMusicPlayer: Start .
+[INFO] 21:06:11 HATts: tts request succeed .
+[INFO] 21:06:11 HAPlayer: Playing say.wav .
+[INFO] 21:06:12 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:14 HAPlayer: say.wav play end .
+[INFO] 21:06:15 HACamera: image captured .
+[INFO] 21:06:15 HAAiFaceReg: start identifying face .
+[INFO] 21:06:15 HAAiFaceReg: face identify success .
+[WARNING] 21:06:15 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:06:15 HANotionMaintainer: person identifying failed .
+[INFO] 21:06:17 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:06:17 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:06:22 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:25 HACamera: image captured .
+[INFO] 21:06:25 HAAiFaceReg: start identifying face .
+[ERROR] 21:06:25 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 3525259900100, 'timestamp': 1639487185, 'cached': 0, 'result': None} .
+[WARNING] 21:06:25 HANotionMaintainer: picture don't have a face .
+[INFO] 21:06:28 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:06:33 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:34 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:06:34 HAConversation: start new conversation .
+[INFO] 21:06:34 HAConversation: start recording command .
+[INFO] 21:06:34 HAPlayer: Playing start_recording .
+[INFO] 21:06:35 HACamera: image captured .
+[INFO] 21:06:35 HAAiFaceReg: start identifying face .
+[INFO] 21:06:35 HAPlayer: start_recording play end .
+[INFO] 21:06:35 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:06:36 HAAiFaceReg: face identify success .
+[WARNING] 21:06:36 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:06:36 HANotionMaintainer: person identifying failed .
+[INFO] 21:06:37 HAPlayer: Playing stop_recording .
+[INFO] 21:06:38 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:06:38 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:06:38 HAPlayer: stop_recording play end .
+[INFO] 21:06:38 HAConversation: start speech to text .
+[INFO] 21:06:38 HAStt: start speech to text .
+[INFO] 21:06:38 HAStt: stt request time cost 0.379091 .
+[INFO] 21:06:38 HANlp: start text ecnet: text-停止播放。 .
+[INFO] 21:06:38 HAStt: speech recognition result(after text fixing): 停止播放。 .
+[INFO] 21:06:38 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:06:38 HANlu: analyze result: [0, 'pause', 'play_music', 0] .
+[INFO] 21:06:38 XiaolanSkillMusicPlayer: Start .
+[INFO] 21:06:43 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:43 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:06:43 HAConversation: start new conversation .
+[INFO] 21:06:43 HAConversation: start recording command .
+[INFO] 21:06:43 HAPlayer: Playing start_recording .
+[INFO] 21:06:44 HAPlayer: start_recording play end .
+[INFO] 21:06:44 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:06:45 HACamera: image captured .
+[INFO] 21:06:45 HAAiFaceReg: start identifying face .
+[ERROR] 21:06:46 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1520194056594, 'timestamp': 1639487205, 'cached': 0, 'result': None} .
+[WARNING] 21:06:46 HANotionMaintainer: picture don't have a face .
+[INFO] 21:06:46 HAPlayer: Playing stop_recording .
+[INFO] 21:06:47 HAPlayer: stop_recording play end .
+[INFO] 21:06:47 HAConversation: start speech to text .
+[INFO] 21:06:47 HAStt: start speech to text .
+[INFO] 21:06:47 HAStt: stt request time cost 0.264691 .
+[INFO] 21:06:47 HANlp: start text ecnet: text-你爱我吗？ .
+[INFO] 21:06:47 HAStt: speech recognition result(after text fixing): 你爱我吗？ .
+[INFO] 21:06:47 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:06:47 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:06:48 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:06:49 HATts: tts request succeed .
+[INFO] 21:06:49 HAPlayer: Playing say.wav .
+[INFO] 21:06:52 HAPlayer: say.wav play end .
+[INFO] 21:06:53 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:06:55 HACamera: image captured .
+[INFO] 21:06:55 HAAiFaceReg: start identifying face .
+[ERROR] 21:06:56 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7910105059420, 'timestamp': 1639487215, 'cached': 0, 'result': None} .
+[WARNING] 21:06:56 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:06:56 HANotionMaintainer: person identifying failed .
+[INFO] 21:06:58 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:06:58 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:07:03 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:07:05 HACamera: image captured .
+[INFO] 21:07:05 HAAiFaceReg: start identifying face .
+[INFO] 21:07:06 HAAiFaceReg: face identify success .
+[INFO] 21:07:06 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:07:06 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:07:06 HANotionMaintainer: person identifying success .
+[INFO] 21:07:07 HATts: tts request succeed .
+[INFO] 21:07:07 HAPlayer: Playing say.wav .
+[INFO] 21:07:13 HAPlayer: say.wav play end .
+[INFO] 21:07:15 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:07:15 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:07:15 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:07:15 HAConversation: start new conversation .
+[INFO] 21:07:15 HAConversation: start recording command .
+[INFO] 21:07:15 HAPlayer: Playing start_recording .
+[INFO] 21:07:15 HAPlayer: start_recording play end .
+[INFO] 21:07:15 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:07:18 HAPlayer: Playing stop_recording .
+[INFO] 21:07:18 HAPlayer: stop_recording play end .
+[INFO] 21:07:18 HAConversation: start speech to text .
+[INFO] 21:07:18 HAStt: start speech to text .
+[INFO] 21:07:19 HAStt: stt request time cost 0.515050 .
+[INFO] 21:07:19 HANlp: start text ecnet: text-你爱陈志峰吗？ .
+[INFO] 21:07:19 HAStt: speech recognition result(after text fixing): 你爱陈志峰吗？ .
+[INFO] 21:07:19 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:07:19 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:07:20 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:07:20 HATts: tts request succeed .
+[INFO] 21:07:20 HAPlayer: Playing say.wav .
+[INFO] 21:07:21 HAPlayer: say.wav play end .
+[INFO] 21:07:22 HACamera: image captured .
+[INFO] 21:07:22 HAAiFaceReg: start identifying face .
+[INFO] 21:07:23 HAAiFaceReg: face identify success .
+[INFO] 21:07:23 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:07:23 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:07:23 HANotionMaintainer: person identifying success .
+[INFO] 21:07:24 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:07:24 HAConversation: start new conversation .
+[INFO] 21:07:24 HAConversation: start recording command .
+[INFO] 21:07:24 HAPlayer: Playing start_recording .
+[INFO] 21:07:24 HAPlayer: start_recording play end .
+[INFO] 21:07:24 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:07:25 HATts: tts request succeed .
+[INFO] 21:07:25 HAPlayer: Playing say.wav .
+[INFO] 21:07:30 HAPlayer: say.wav play end .
+[INFO] 21:07:32 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:07:33 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:07:35 HAPlayer: Playing stop_recording .
+[INFO] 21:07:35 HAPlayer: stop_recording play end .
+[INFO] 21:07:35 HAConversation: start speech to text .
+[INFO] 21:07:35 HAStt: start speech to text .
+[INFO] 21:07:36 HAStt: stt request time cost 0.583565 .
+[INFO] 21:07:36 HANlp: start text ecnet: text-哀哀鸿同学你好，什么鬼？ .
+[INFO] 21:07:36 HAStt: speech recognition result(after text fixing): 哀哀鸿同学你好，什么鬼？ .
+[INFO] 21:07:36 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:07:36 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:07:38 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:07:38 HATts: tts request succeed .
+[INFO] 21:07:38 HAPlayer: Playing say.wav .
+[INFO] 21:07:40 HACamera: image captured .
+[INFO] 21:07:40 HAAiFaceReg: start identifying face .
+[ERROR] 21:07:41 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 14525948475, 'timestamp': 1639487260, 'cached': 0, 'result': None} .
+[WARNING] 21:07:41 HANotionMaintainer: picture don't have a face .
+[INFO] 21:07:43 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:07:44 HAPlayer: say.wav play end .
+[INFO] 21:07:45 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:07:45 HAConversation: start new conversation .
+[INFO] 21:07:45 HAConversation: start recording command .
+[INFO] 21:07:45 HAPlayer: Playing start_recording .
+[INFO] 21:07:46 HAPlayer: start_recording play end .
+[INFO] 21:07:46 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:07:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:07:49 HAPlayer: Playing stop_recording .
+[INFO] 21:07:49 HAPlayer: stop_recording play end .
+[INFO] 21:07:49 HAConversation: start speech to text .
+[INFO] 21:07:49 HAStt: start speech to text .
+[INFO] 21:07:49 HAStt: stt request time cost 0.286500 .
+[INFO] 21:07:49 HANlp: start text ecnet: text-帮我写作业吧。 .
+[INFO] 21:07:49 HAStt: speech recognition result(after text fixing): 帮我写作业吧。 .
+[INFO] 21:07:49 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:07:49 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:07:50 HACamera: image captured .
+[INFO] 21:07:50 HAAiFaceReg: start identifying face .
+[ERROR] 21:07:51 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9420155054525, 'timestamp': 1639487270, 'cached': 0, 'result': None} .
+[WARNING] 21:07:51 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:07:51 HANotionMaintainer: person identifying failed .
+[INFO] 21:07:51 HATts: tts request succeed .
+[INFO] 21:07:51 HAPlayer: Playing say.wav .
+[INFO] 21:07:53 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:07:53 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:07:56 HAPlayer: say.wav play end .
+[INFO] 21:07:58 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:08:00 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:08:00 HAConversation: start new conversation .
+[INFO] 21:08:00 HAConversation: start recording command .
+[INFO] 21:08:00 HAPlayer: Playing start_recording .
+[INFO] 21:08:00 HACamera: image captured .
+[INFO] 21:08:00 HAAiFaceReg: start identifying face .
+[INFO] 21:08:00 HAPlayer: start_recording play end .
+[INFO] 21:08:00 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:08:01 HAAiFaceReg: face identify success .
+[WARNING] 21:08:01 HANotionMaintainer: picture don't have a face .
+[INFO] 21:08:03 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:08:06 HAPlayer: Playing stop_recording .
+[INFO] 21:08:06 HAPlayer: stop_recording play end .
+[INFO] 21:08:06 HAConversation: start speech to text .
+[INFO] 21:08:06 HAStt: start speech to text .
+[INFO] 21:08:07 HAStt: stt request time cost 0.688105 .
+[INFO] 21:08:07 HANlp: start text ecnet: text-考试好难啊，给我传答案吧！ .
+[INFO] 21:08:07 HAStt: speech recognition result(after text fixing): 考试好难啊，给我传答案吧！ .
+[INFO] 21:08:07 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:08:07 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:08:08 HATts: tts request succeed .
+[INFO] 21:08:08 HAPlayer: Playing say.wav .
+[INFO] 21:08:08 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:08:10 HACamera: image captured .
+[INFO] 21:08:10 HAAiFaceReg: start identifying face .
+[INFO] 21:08:10 HAPlayer: say.wav play end .
+[INFO] 21:08:11 HAAiFaceReg: face identify success .
+[INFO] 21:08:11 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:08:11 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:08:11 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:08:12 HATts: tts request succeed .
+[INFO] 21:08:12 HAPlayer: Playing say.wav .
+[INFO] 21:08:16 HAPlayer: say.wav play end .
+[WARNING] 21:08:16 HANotionMaintainer: person identifying failed .
+[INFO] 21:08:18 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:08:18 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:08:20 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:08:20 HAConversation: start new conversation .
+[INFO] 21:08:20 HAConversation: start recording command .
+[INFO] 21:08:20 HAPlayer: Playing start_recording .
+[INFO] 21:08:21 HAPlayer: start_recording play end .
+[INFO] 21:08:21 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:08:23 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:08:24 HAPlayer: Playing stop_recording .
+[INFO] 21:08:24 HAPlayer: stop_recording play end .
+[INFO] 21:08:24 HAConversation: start speech to text .
+[INFO] 21:08:24 HAStt: start speech to text .
+[INFO] 21:08:25 HAStt: stt request time cost 0.549230 .
+[INFO] 21:08:25 HANlp: start text ecnet: text-为什么你识别不出人脸？ .
+[INFO] 21:08:25 HAStt: speech recognition result(after text fixing): 为什么你识别不出人脸？ .
+[INFO] 21:08:25 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:08:25 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:08:25 HACamera: image captured .
+[INFO] 21:08:25 HAAiFaceReg: start identifying face .
+[ERROR] 21:08:26 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2013584845589, 'timestamp': 1639487306, 'cached': 0, 'result': None} .
+[WARNING] 21:08:26 HANotionMaintainer: picture don't have a face .
+[INFO] 21:08:26 HATts: tts request succeed .
+[INFO] 21:08:26 HAPlayer: Playing say.wav .
+[INFO] 21:08:28 HAPlayer: say.wav play end .
+[INFO] 21:08:28 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:08:33 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:08:35 HACamera: image captured .
+[INFO] 21:08:35 HAAiFaceReg: start identifying face .
+[INFO] 21:08:36 HAAiFaceReg: face identify success .
+[INFO] 21:08:36 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:08:36 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:08:36 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:08:37 HATts: tts request succeed .
+[INFO] 21:08:37 HAPlayer: Playing say.wav .
+[INFO] 21:08:41 HAPlayer: say.wav play end .
+[WARNING] 21:08:41 HANotionMaintainer: person identifying failed .
+[INFO] 21:08:43 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:08:43 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:08:48 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:08:48 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:08:48 HAConversation: start new conversation .
+[INFO] 21:08:48 HAConversation: start recording command .
+[INFO] 21:08:48 HAPlayer: Playing start_recording .
+[INFO] 21:08:49 HAPlayer: start_recording play end .
+[INFO] 21:08:49 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:08:50 HACamera: image captured .
+[INFO] 21:08:50 HAAiFaceReg: start identifying face .
+[INFO] 21:08:51 HAAiFaceReg: face identify success .
+[INFO] 21:08:51 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:08:51 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:08:51 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:08:51 HAPlayer: Playing stop_recording .
+[INFO] 21:08:51 HAPlayer: stop_recording play end .
+[INFO] 21:08:51 HAConversation: start speech to text .
+[INFO] 21:08:51 HAStt: start speech to text .
+[INFO] 21:08:52 HAStt: stt request time cost 0.344012 .
+[INFO] 21:08:52 HANlp: start text ecnet: text-Youarebitch。 .
+[INFO] 21:08:52 HAStt: speech recognition result(after text fixing): Youarebitch。 .
+[INFO] 21:08:52 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:08:52 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:08:52 HATts: tts request succeed .
+[INFO] 21:08:52 HAPlayer: Playing say.wav .
+[INFO] 21:08:53 HATts: tts request succeed .
+[INFO] 21:08:53 HAPlayer: Playing say.wav .
+[INFO] 21:08:53 HAPlayer: say.wav play end .
+[INFO] 21:08:54 HAPlayer: say.wav play end .
+[INFO] 21:08:55 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:09:00 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:09:02 HACamera: image captured .
+[INFO] 21:09:02 HAAiFaceReg: start identifying face .
+[INFO] 21:09:03 HAAiFaceReg: face identify success .
+[WARNING] 21:09:03 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:09:03 HANotionMaintainer: person identifying failed .
+[INFO] 21:09:05 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:09:05 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:09:10 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:09:12 HACamera: image captured .
+[INFO] 21:09:12 HAAiFaceReg: start identifying face .
+[INFO] 21:09:13 HAAiFaceReg: face identify success .
+[INFO] 21:09:13 HAPersonnelManager: start search for person-hyl's info .
+[ERROR] 21:09:13 HAPersonnelManager: person-hyl does not exist .
+[INFO] 21:09:13 HANotionMaintainer: the person-hyl is not found .
+[INFO] 21:09:14 HATts: tts request succeed .
+[INFO] 21:09:14 HAPlayer: Playing say.wav .
+[INFO] 21:09:18 HAPlayer: say.wav play end .
+[INFO] 21:09:20 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:09:20 HAConversation: start new conversation .
+[INFO] 21:09:20 HAConversation: start recording command .
+[INFO] 21:09:20 HAPlayer: Playing start_recording .
+[INFO] 21:09:20 HAPlayer: start_recording play end .
+[INFO] 21:09:20 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:09:20 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:09:25 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:09:27 HAPlayer: Playing stop_recording .
+[INFO] 21:09:27 HAPlayer: stop_recording play end .
+[INFO] 21:09:27 HAConversation: start speech to text .
+[INFO] 21:09:27 HAStt: start speech to text .
+[INFO] 21:09:28 HACamera: image captured .
+[INFO] 21:09:28 HAAiFaceReg: start identifying face .
+[INFO] 21:09:28 HAStt: stt request time cost 0.847689 .
+[INFO] 21:09:28 HANlp: start text ecnet: text-所以叫张华拍照拍下来后就麻哇你不信对。 .
+[INFO] 21:09:28 HAStt: speech recognition result(after text fixing): 所以叫张华拍照拍下来后就麻哇你不信对。 .
+[INFO] 21:09:28 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:09:28 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[ERROR] 21:09:28 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8425846584151, 'timestamp': 1639487368, 'cached': 0, 'result': None} .
+[WARNING] 21:09:28 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:09:28 HANotionMaintainer: person identifying failed .
+[INFO] 21:09:30 HATts: tts request succeed .
+[INFO] 21:09:30 HAPlayer: Playing say.wav .
+[INFO] 21:09:30 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:09:30 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:09:32 HAPlayer: say.wav play end .
+[INFO] 21:09:33 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:09:33 HAConversation: start new conversation .
+[INFO] 21:09:33 HAConversation: start recording command .
+[INFO] 21:09:33 HAPlayer: Playing start_recording .
+[INFO] 21:09:34 HAPlayer: start_recording play end .
+[INFO] 21:09:34 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:09:36 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:09:38 HACamera: image captured .
+[INFO] 21:09:38 HAAiFaceReg: start identifying face .
+[ERROR] 21:09:39 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1505791594101, 'timestamp': 1639487378, 'cached': 0, 'result': None} .
+[WARNING] 21:09:39 HANotionMaintainer: picture don't have a face .
+[INFO] 21:09:39 HAPlayer: Playing stop_recording .
+[INFO] 21:09:40 HAPlayer: stop_recording play end .
+[INFO] 21:09:40 HAConversation: start speech to text .
+[INFO] 21:09:40 HAStt: start speech to text .
+[INFO] 21:09:41 HAStt: stt request time cost 0.756877 .
+[INFO] 21:09:41 HANlp: start text ecnet: text-李佩瑜美吗？谢谢。 .
+[INFO] 21:09:41 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:09:41 HAStt: speech recognition result(after text fixing): 李佩瑜美吗？谢谢。 .
+[INFO] 21:09:41 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:09:41 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:09:42 HATts: tts request succeed .
+[INFO] 21:09:42 HAPlayer: Playing say.wav .
+[INFO] 21:09:45 HAPlayer: say.wav play end .
+[INFO] 21:09:46 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:09:48 HACamera: image captured .
+[INFO] 21:09:48 HAAiFaceReg: start identifying face .
+[INFO] 21:09:49 HAAiFaceReg: face identify success .
+[INFO] 21:09:49 HAPersonnelManager: start search for person-lc's info .
+[INFO] 21:09:49 HANotionMaintainer: the person-lc's info is found .
+[INFO] 21:09:49 HANotionMaintainer: person identifying success .
+[INFO] 21:09:49 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:09:49 HAConversation: start new conversation .
+[INFO] 21:09:49 HAConversation: start recording command .
+[INFO] 21:09:49 HAPlayer: Playing start_recording .
+[INFO] 21:09:50 HAPlayer: start_recording play end .
+[INFO] 21:09:50 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:09:51 HATts: tts request succeed .
+[INFO] 21:09:51 HAPlayer: Playing say.wav .
+[INFO] 21:09:56 HAPlayer: say.wav play end .
+[INFO] 21:09:58 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:09:58 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:10:00 HAPlayer: Playing stop_recording .
+[INFO] 21:10:01 HAPlayer: stop_recording play end .
+[INFO] 21:10:01 HAConversation: start speech to text .
+[INFO] 21:10:01 HAStt: start speech to text .
+[INFO] 21:10:02 HAStt: stt request time cost 1.380740 .
+[INFO] 21:10:02 HANlp: start text ecnet: text-太思珂思珂思珂思耐一点先珂珂珂珂珂珂珂珂唱同学你好noboynoo。 .
+[INFO] 21:10:02 HAStt: speech recognition result(after text fixing): 太思珂思珂思珂思耐一点先珂珂珂珂珂珂珂珂唱同学你好noboynoo。 .
+[INFO] 21:10:02 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:10:02 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:10:03 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:03 HATts: tts request succeed .
+[INFO] 21:10:03 HAPlayer: Playing say.wav .
+[INFO] 21:10:05 HACamera: image captured .
+[INFO] 21:10:05 HAPlayer: say.wav play end .
+[INFO] 21:10:05 HAAiFaceReg: start identifying face .
+[ERROR] 21:10:06 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7905358405001, 'timestamp': 1639487406, 'cached': 0, 'result': None} .
+[WARNING] 21:10:06 HANotionMaintainer: picture don't have a face .
+[INFO] 21:10:08 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:10:13 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:14 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:10:14 HAConversation: start new conversation .
+[INFO] 21:10:14 HAConversation: start recording command .
+[INFO] 21:10:14 HAPlayer: Playing start_recording .
+[INFO] 21:10:14 HAPlayer: start_recording play end .
+[INFO] 21:10:14 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:10:16 HACamera: image captured .
+[INFO] 21:10:16 HAAiFaceReg: start identifying face .
+[ERROR] 21:10:16 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 4555940515252, 'timestamp': 1639487416, 'cached': 0, 'result': None} .
+[WARNING] 21:10:16 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:10:16 HANotionMaintainer: person identifying failed .
+[INFO] 21:10:17 HAPlayer: Playing stop_recording .
+[INFO] 21:10:17 HAPlayer: stop_recording play end .
+[INFO] 21:10:17 HAConversation: start speech to text .
+[INFO] 21:10:17 HAStt: start speech to text .
+[INFO] 21:10:17 HAStt: stt request time cost 0.494979 .
+[INFO] 21:10:17 HANlp: start text ecnet: text-够谈恋爱吧！ .
+[INFO] 21:10:18 HAStt: speech recognition result(after text fixing): 够谈恋爱吧！ .
+[INFO] 21:10:18 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:10:18 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:10:19 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:10:19 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:10:19 HATts: tts request succeed .
+[INFO] 21:10:19 HAPlayer: Playing say.wav .
+[INFO] 21:10:24 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:24 HAPlayer: say.wav play end .
+[INFO] 21:10:26 HACamera: image captured .
+[INFO] 21:10:26 HAAiFaceReg: start identifying face .
+[ERROR] 21:10:27 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 6599899900155, 'timestamp': 1639487426, 'cached': 0, 'result': None} .
+[WARNING] 21:10:27 HANotionMaintainer: picture don't have a face .
+[INFO] 21:10:29 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:10:34 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:36 HACamera: image captured .
+[INFO] 21:10:36 HAAiFaceReg: start identifying face .
+[ERROR] 21:10:37 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7915844579058, 'timestamp': 1639487436, 'cached': 0, 'result': None} .
+[WARNING] 21:10:37 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:10:37 HANotionMaintainer: person identifying failed .
+[INFO] 21:10:37 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:10:37 HAConversation: start new conversation .
+[INFO] 21:10:37 HAConversation: start recording command .
+[INFO] 21:10:37 HAPlayer: Playing start_recording .
+[INFO] 21:10:37 HAPlayer: start_recording play end .
+[INFO] 21:10:37 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:10:39 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:10:39 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:10:40 HAPlayer: Playing stop_recording .
+[INFO] 21:10:41 HAPlayer: stop_recording play end .
+[INFO] 21:10:41 HAConversation: start speech to text .
+[INFO] 21:10:41 HAStt: start speech to text .
+[INFO] 21:10:41 HAStt: stt request time cost 0.543249 .
+[INFO] 21:10:41 HANlp: start text ecnet: text-袁艳红和李畅，你选一个。 .
+[INFO] 21:10:41 HAStt: speech recognition result(after text fixing): 袁艳红和李畅，你选一个。 .
+[INFO] 21:10:41 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:10:41 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:10:42 HATts: tts request succeed .
+[INFO] 21:10:42 HAPlayer: Playing say.wav .
+[INFO] 21:10:44 HAPlayer: say.wav play end .
+[INFO] 21:10:44 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:46 HACamera: image captured .
+[INFO] 21:10:46 HAAiFaceReg: start identifying face .
+[INFO] 21:10:47 HAAiFaceReg: face identify success .
+[WARNING] 21:10:47 HANotionMaintainer: picture don't have a face .
+[INFO] 21:10:49 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:10:54 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:10:56 HACamera: image captured .
+[INFO] 21:10:56 HAAiFaceReg: start identifying face .
+[ERROR] 21:10:57 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 4599001359984, 'timestamp': 1639487457, 'cached': 0, 'result': None} .
+[WARNING] 21:10:57 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:10:57 HANotionMaintainer: person identifying failed .
+[INFO] 21:10:59 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:10:59 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:11:04 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:11:06 HACamera: image captured .
+[INFO] 21:11:06 HAAiFaceReg: start identifying face .
+[ERROR] 21:11:07 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 5515001159915, 'timestamp': 1639487467, 'cached': 0, 'result': None} .
+[WARNING] 21:11:07 HANotionMaintainer: picture don't have a face .
+[INFO] 21:11:09 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:11:14 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:11:16 HACamera: image captured .
+[INFO] 21:11:16 HAAiFaceReg: start identifying face .
+[ERROR] 21:11:17 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1018475255535, 'timestamp': 1639487477, 'cached': 0, 'result': None} .
+[WARNING] 21:11:17 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:11:17 HANotionMaintainer: person identifying failed .
+[INFO] 21:11:19 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:11:19 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:11:24 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:11:27 HACamera: image captured .
+[INFO] 21:11:27 HAAiFaceReg: start identifying face .
+[INFO] 21:11:28 HAAiFaceReg: face identify success .
+[INFO] 21:11:28 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:11:28 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:11:28 HANotionMaintainer: person identifying success .
+[INFO] 21:11:29 HATts: tts request succeed .
+[INFO] 21:11:29 HAPlayer: Playing say.wav .
+[INFO] 21:11:35 HAPlayer: say.wav play end .
+[INFO] 21:11:37 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:11:37 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:11:42 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:11:44 HACamera: image captured .
+[INFO] 21:11:44 HAAiFaceReg: start identifying face .
+[INFO] 21:11:45 HAAiFaceReg: face identify success .
+[INFO] 21:11:45 HAPersonnelManager: start search for person-yyh's info .
+[INFO] 21:11:45 HANotionMaintainer: the person-yyh's info is found .
+[INFO] 21:11:45 HANotionMaintainer: person identifying success .
+[INFO] 21:11:47 HATts: tts request succeed .
+[INFO] 21:11:47 HAPlayer: Playing say.wav .
+[INFO] 21:11:52 HAPlayer: say.wav play end .
+[INFO] 21:11:54 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:11:54 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:11:59 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:02 HACamera: image captured .
+[INFO] 21:12:02 HAAiFaceReg: start identifying face .
+[INFO] 21:12:02 HAAiFaceReg: face identify success .
+[WARNING] 21:12:02 HANotionMaintainer: picture don't have a face .
+[INFO] 21:12:04 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:12:09 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:12 HACamera: image captured .
+[INFO] 21:12:12 HAAiFaceReg: start identifying face .
+[ERROR] 21:12:12 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8955790510194, 'timestamp': 1639487532, 'cached': 0, 'result': None} .
+[WARNING] 21:12:12 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:12:12 HANotionMaintainer: person identifying failed .
+[INFO] 21:12:14 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:12:14 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:12:19 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:22 HACamera: image captured .
+[INFO] 21:12:22 HAAiFaceReg: start identifying face .
+[ERROR] 21:12:23 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2555751565001, 'timestamp': 1639487542, 'cached': 0, 'result': None} .
+[WARNING] 21:12:23 HANotionMaintainer: picture don't have a face .
+[INFO] 21:12:25 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:12:30 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:32 HACamera: image captured .
+[INFO] 21:12:32 HAAiFaceReg: start identifying face .
+[ERROR] 21:12:33 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9410179201652, 'timestamp': 1639487552, 'cached': 0, 'result': None} .
+[WARNING] 21:12:33 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:12:33 HANotionMaintainer: person identifying failed .
+[INFO] 21:12:35 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:12:35 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:12:40 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:42 HACamera: image captured .
+[INFO] 21:12:42 HAAiFaceReg: start identifying face .
+[ERROR] 21:12:43 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 500189754599, 'timestamp': 1639487562, 'cached': 0, 'result': None} .
+[WARNING] 21:12:43 HANotionMaintainer: picture don't have a face .
+[INFO] 21:12:45 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:12:50 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:12:52 HACamera: image captured .
+[INFO] 21:12:52 HAAiFaceReg: start identifying face .
+[ERROR] 21:12:53 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 1016505552018, 'timestamp': 1639487572, 'cached': 0, 'result': None} .
+[WARNING] 21:12:53 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:12:53 HANotionMaintainer: person identifying failed .
+[INFO] 21:12:55 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:12:55 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:13:00 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:02 HACamera: image captured .
+[INFO] 21:13:02 HAAiFaceReg: start identifying face .
+[ERROR] 21:13:03 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 2010584359425, 'timestamp': 1639487583, 'cached': 0, 'result': None} .
+[WARNING] 21:13:03 HANotionMaintainer: picture don't have a face .
+[INFO] 21:13:05 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:13:10 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:12 HACamera: image captured .
+[INFO] 21:13:12 HAAiFaceReg: start identifying face .
+[ERROR] 21:13:13 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 7965257584251, 'timestamp': 1639487593, 'cached': 0, 'result': None} .
+[WARNING] 21:13:13 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:13:13 HANotionMaintainer: person identifying failed .
+[INFO] 21:13:15 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:13:15 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:13:20 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:22 HACamera: image captured .
+[INFO] 21:13:22 HAAiFaceReg: start identifying face .
+[ERROR] 21:13:23 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9415153510145, 'timestamp': 1639487603, 'cached': 0, 'result': None} .
+[WARNING] 21:13:23 HANotionMaintainer: picture don't have a face .
+[INFO] 21:13:25 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:13:27 HAInit: Detected awaken from snowboy/keyboard .
+[INFO] 21:13:27 HAConversation: start new conversation .
+[INFO] 21:13:27 HAConversation: start recording command .
+[INFO] 21:13:27 HAPlayer: Playing start_recording .
+[INFO] 21:13:27 HAPlayer: start_recording play end .
+[INFO] 21:13:27 HARecorder: start vad record(record_with_vad module) .
+[INFO] 21:13:30 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:32 HACamera: image captured .
+[INFO] 21:13:32 HAAiFaceReg: start identifying face .
+[ERROR] 21:13:33 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 8465899999452, 'timestamp': 1639487613, 'cached': 0, 'result': None} .
+[WARNING] 21:13:33 HANotionMaintainer: picture don't have a face .
+[WARNING] 21:13:33 HANotionMaintainer: person identifying failed .
+[INFO] 21:13:35 HANotionMaintainer: Arduino PRI detected people, start person identifying .
+[INFO] 21:13:35 HANotionMaintainer: start person identifying, tried-1 .
+[INFO] 21:13:37 HAPlayer: Playing stop_recording .
+[INFO] 21:13:37 HAPlayer: stop_recording play end .
+[INFO] 21:13:37 HAConversation: start speech to text .
+[INFO] 21:13:37 HAStt: start speech to text .
+[INFO] 21:13:38 HAStt: stt request time cost 0.515093 .
+[INFO] 21:13:38 HANlp: start text ecnet: text-袁艳红，什么时候能找到男朋友才能去把你脖子上抓抓抓过去抢了。 .
+[INFO] 21:13:38 HAStt: speech recognition result(after text fixing): 袁艳红，什么时候能找到男朋友才能去把你脖子上抓抓抓过去抢了。 .
+[INFO] 21:13:38 HAConversation: start recognizing the intent and slots .
+[DEBUG] 21:13:38 HANlu: analyze result: [0, 'launch', 'tuling', 0] .
+[INFO] 21:13:39 HATts: tts request succeed .
+[INFO] 21:13:39 HAPlayer: Playing say.wav .
+[INFO] 21:13:40 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:42 HAPlayer: say.wav play end .
+[INFO] 21:13:43 HACamera: image captured .
+[INFO] 21:13:43 HAAiFaceReg: start identifying face .
+[ERROR] 21:13:43 HAAiFaceReg: face identify failed, res-{'error_code': 222202, 'error_msg': 'pic not has face', 'log_id': 9420184057515, 'timestamp': 1639487623, 'cached': 0, 'result': None} .
+[WARNING] 21:13:43 HANotionMaintainer: picture don't have a face .
+[INFO] 21:13:45 HANotionMaintainer: start person identifying, tried-2 .
+[INFO] 21:13:50 HACamera: capturing one image using fswebcam in resolution-1920x1090 .
+[INFO] 21:13:53 HACamera: image captured .
+[INFO] 21:13:53 HAAiFaceReg: start identifying face .
+[INFO] 21:13:54 HAAiFaceReg: face identify success .
+[INFO] 21:13:54 HAPersonnelManager: start search for person-lpy's info .
+[INFO] 21:13:54 HANotionMaintainer: the person-lpy's info is found .
+[INFO] 21:13:54 HANotionMaintainer: person identifying success .
+[INFO] 21:13:55 HATts: tts request succeed .
+[INFO] 21:13:55 HAPlayer: Playing say.wav .

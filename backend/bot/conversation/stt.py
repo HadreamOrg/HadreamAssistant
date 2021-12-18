@@ -2,12 +2,19 @@
 # author: Lan_zhijiang
 # description: STT engine
 # date: 2020/10/3
-import sys
+
 import requests
 import json
 import wave
 import base64
 import urllib.parse
+import time
+
+from urllib.request import urlopen
+from urllib.request import Request
+from urllib.error import URLError
+from urllib.parse import urlencode
+timer = time.perf_counter
 
 
 class HAStt:
@@ -48,69 +55,55 @@ class HAStt:
         except requests.exceptions.HTTPError:
             self.log.add_log("HAStt: Cannot get token successfully", 3)
             return ""
-        
-    def start(self, fp="./backend/data/audio/record.wav"):
 
+    def start(self, fp="./backend/data/audio/record.wav"):
+        
         """
         开始语音识别
-        :param fp: 要识别的文件路径
-        :return:
+        :param fp 识别文件路径
+        :return string
         """
-        try:
-            wav_file = wave.open(fp, 'rb')
-        except IOError:
-            self.log.add_log("HAStt: Can't find or open the file %s"%fp, 1)
-            return []
-        n_frames = wav_file.getnframes()
-        frame_rate = wav_file.getframerate()
-        audio = wav_file.readframes(n_frames)
-        base_data = base64.b64encode(audio)
+        self.log.add_log("HAStt: start speech to text", 1)
+        speech_data = []
+        with open(fp, 'rb') as speech_file:
+            speech_data = speech_file.read()
 
-        if self.token == "":
-            self.token = self.get_token()
+        length = len(speech_data)
+        # if length == 0:
+        #     raise DemoError('file %s length read 0 bytes' % AUDIO_FILE)
+        speech = base64.b64encode(speech_data)
 
-        data = {
-            "format": "wav",
-            "token": self.token,
-            "len": len(audio),
-            "rate": frame_rate,
-            "speech": str(base_data),
-            "dev_pid": 80001,
-            "cuid": 'b0-10-41-92-84-4d',
-            "channel": 1
+        speech = str(speech, 'utf-8')
+        params = {
+            'dev_pid': 80001,
+            'format': "wav",
+            'rate': 16000,
+            'token': self.token,
+            'cuid': "hadream_assistant",
+            'channel': 1,
+            'speech': speech,
+            'len': length
         }
 
-        data = json.dumps(data)
-
-        r = requests.post('http://vop.baidu.com/server_api',
-                          data=data,
-                          headers={'content-type': 'application/json'})
-
+        post_data = json.dumps(params, sort_keys=False)
+        req = Request("http://vop.baidu.com/pro_api", post_data.encode('utf-8'))
+        req.add_header('Content-Type', 'application/json')
         try:
-            r.raise_for_status()
-            if r.status_code == 200:
-                res = r.json()
-                if res["err_no"] == 3302:
-                    self.get_token()
-                    self.log.add_log("HAStt: token is invalid", 3)
-                    text = None
-                elif res["err_no"] == 0:
-                    text = r.json()['result'][0].encode('utf-8')
-                    text = self.nlp.ecnet(text)
-                    self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
-                else:
-                    self.log.add_log("HAStt: we meet problem, code-%s" % res["err_no"], 1)
-                    text = None
-                return text
-        except requests.exceptions.HTTPError:
-            self.log.add_log('HAStt: Request failed with response: %r'%r.text, 1)
-            return None
-        except requests.exceptions.RequestException:
-            self.log.add_log('HAStt: Request failed', 1)
-            return None
-        except ValueError as e:
-            self.log.add_log('HAStt: Cannot parse response: %s'%e.args[0], 1)
-            return None
-        except KeyError:
-            self.log.add_log('HAStt: Cannot parse response', 1)
-            return None
+            begin = timer()
+            f = urlopen(req)
+            result_str = str(f.read(), "utf-8")
+            # print(type(result_str))
+            result_str = eval(result_str)
+            self.log.add_log("HAStt: stt request time cost %f" % (timer() - begin), 1)
+            self.log.add_log("HAStt: stt response %s" % result_str, 0)
+            text = result_str["result"][0].encode("utf-8")
+            text = self.nlp.ecnet(text)
+            self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
+        except URLError as err:
+            self.log.add_log('HAStt: stt http response http code : ' + str(err.code), 3)
+            print(err.read())
+            text = None
+
+        # result_str = str(result_str, 'utf-8')
+        
+        return text

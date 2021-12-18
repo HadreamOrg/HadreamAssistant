@@ -1,0 +1,11 @@
+{
+  "dictName": "attender",
+  "canNlp": true,
+  "nlpItemType": "ne",
+  "nlpItemType2": "PERSON",
+  "content": [
+    ["文体部全体", "文体部", "文体部全体成员"],
+    ["纪检部全体", "纪检部", "纪检部全体成员"],
+    ["$all_personnel"]
+  ]
+}

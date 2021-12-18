@@ -3,6 +3,7 @@
 
 import wave
 import pyaudio
+import backend.bot.conversation.recorder_with_vad
 
 
 class HARecorder():
@@ -12,13 +13,20 @@ class HARecorder():
         self.ba = ba
         self.log = ba.log
         self.recorder_setting = ba.setting["bot"]["conversation"]["recorder"]
-
-        self.format = pyaudio.paInt16
     
-    def record(self, time=None):
+    def record(self):
 
         """
-        录音
+        录音(vad)
+        :return bool
+        """
+        self.log.add_log("HARecorder: start vad record(record_with_vad module)", 1)
+        backend.bot.conversation.recorder_with_vad.start_record_with_vad(self.recorder_setting["outputPath"])
+
+    def record_time_limitied(self, time=None):
+
+        """
+        录音（时间限制）
         :param time: 录音时间
         :return:
         """
@@ -47,7 +55,7 @@ class HARecorder():
 
         wf = wave.open(self.recorder_setting["outputPath"], 'wb')
         wf.setnchannels(self.recorder_setting["channel"])
-        wf.setsampwidth(p.get_sample_size(self.format))
+        wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
         wf.setframerate(self.recorder_setting["rate"])
         wf.writeframes(b''.join(frames))
         wf.close()

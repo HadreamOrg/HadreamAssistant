@@ -1,0 +1,7 @@
+{
+  "dictName": "time",
+  "canNlp": true,
+  "nlpItemType": "ne",
+  "nlpItemType2": "TIME",
+  "content": null
+}
