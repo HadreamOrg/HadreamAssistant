@@ -133,6 +133,7 @@ class HANotionBase:
                 result[name] = values[i]
 
     def create_property_value_object(self, names, types, ):
+        pass
 
     '''Database operations'''
     def analyze_database_object(self, database_object):
@@ -273,8 +274,8 @@ class HANotionBase:
             "parent": parent,
             "properties": properties
         }
-        if children
-        code, res = self.request("POST", url, body)
+        if children:
+            code, res = self.request("POST", url, body)
 
         if code == 200:
             self.log.add_log("HANotionBase: query_page success", 1)

@@ -95,7 +95,7 @@ class HAStt:
             # print(type(result_str))
             result_str = eval(result_str)
             self.log.add_log("HAStt: stt request time cost %f" % (timer() - begin), 1)
-            self.log.add_log("HAStt: stt response %s" % result_str, 0)
+            # self.log.add_log("HAStt: stt response %s" % result_str, 0)
             text = result_str["result"][0].encode("utf-8")
             text = self.nlp.ecnet(text)
             self.log.add_log("HAStt: speech recognition result(after text fixing): %s" % text, 1)
