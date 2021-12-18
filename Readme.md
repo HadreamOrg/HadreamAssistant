@@ -1,5 +1,7 @@
-# HadreamAssistant--A smart office assistant
-- HadreamAssistant是为了智能办公而生的助手，可以通过语音、键盘、微信进行自然语言交互，帮助您完成各种工作，甚至于帮助您的团队完成各项工作
+# HadreamAssistant--A high custom voice assistant
+- HadreamAssistant是为了创造您自己的语音应用（助手）而生的。
+  - 你可以通过语音、键盘、微信进行自然语言交互，帮助您完成各种工作，甚至于帮助您的团队完成各项工作
+  - 也可以自己自定义修改代码或者编写新的技能，在现有的交互系统上，使HA达到你想要的功能
 
 ### SimpleUsage
 - git clone或者下载zip到Raspbian/Ubuntu等Linux系统上
