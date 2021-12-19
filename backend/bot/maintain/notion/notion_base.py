@@ -13,7 +13,7 @@ class HANotionBase:
 
         self.ba = ba
         self.log = ba.log
-        self.notion_setting = json.load(open("./notion_setting.json", "r", encoding="utf-8"))
+        self.notion_setting = json.load(open("./backend/data/json/notion_setting.json", "r", encoding="utf-8"))
 
         self.integration_token = self.notion_setting["integrationToken"]
         self.headers = {
@@ -296,3 +296,5 @@ class HANotionBase:
     '''Block operations'''
 
     '''Search'''
+
+

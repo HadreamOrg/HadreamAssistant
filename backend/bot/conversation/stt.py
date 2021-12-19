@@ -65,12 +65,17 @@ class HAStt:
         """
         self.log.add_log("HAStt: start speech to text", 1)
         speech_data = []
-        with open(fp, 'rb') as speech_file:
-            speech_data = speech_file.read()
+        try:
+            with open(fp, 'rb') as speech_file:
+                speech_data = speech_file.read()
+        except IOError:
+            self.log.add_log("HAStt: audio file is empty", 3)
+            return None
 
-        length = len(speech_data)
-        # if length == 0:
-        #     raise DemoError('file %s length read 0 bytes' % AUDIO_FILE)
+        if not speech_data:
+            self.log.add_log("HAStt: audio file is empty", 3)
+            return None
+
         speech = base64.b64encode(speech_data)
 
         speech = str(speech, 'utf-8')
@@ -82,7 +87,7 @@ class HAStt:
             'cuid': "hadream_assistant",
             'channel': 1,
             'speech': speech,
-            'len': length
+            'len': len(speech_data)
         }
 
         post_data = json.dumps(params, sort_keys=False)
