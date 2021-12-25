@@ -105,7 +105,6 @@ class HAInit:
         keyboard_thread.start()
         awake_detect_thread.start()
         # notion_maintainer_thread.start()
-        # self.snowboy.run(self.callback)
 
     def callback(self):
 
@@ -122,15 +121,13 @@ class HAInit:
         检测唤醒flag以开始对话
         :return:
         """
+        self.log.add_log("HAInit: start detecting awake status", 1)
         while True:
-            self.log.add_log("HAInit: start detecting awake status", 1)
             if self.awake:
                 self.log.add_log("HAInit: self.awake is True, start conversation", 1)
                 self.conversation.new_conversation(self.interface_mode)
                 self.interface_mode = 1
                 self.awake = False
-            else:
-                self.log.add_log("HAInit: conversation is under process, awaken was locked, miss the awaken", 1)
 
     def keyboard_awake(self, callback):
 
@@ -145,13 +142,16 @@ class HAInit:
             except ImportError:
                 self.log.add_log("HAInit: keyboard awaken engine need to be run as root, exit", 3)
                 raise ImportError
-            self.log.add_log("HAInit: 'enter' was pressed, please mode: 1-voice, 0-text", 1)
-            a = input("chose your interface mode")
-            if a == "1":
-                self.interface_mode = 1
-                callback()
-            elif a == "0":
-                self.interface_mode = 0
-                callback()
+            if not self.awake:
+                self.log.add_log("HAInit: 'enter' was pressed, please mode: 1-voice, 0-text", 1)
+                a = input("chose your interface mode")
+                if a == "1":
+                    self.interface_mode = 1
+                    callback()
+                elif a == "0":
+                    self.interface_mode = 0
+                    callback()
+                else:
+                    self.log.add_log("HAInit: wrong mode-%s chosen, you should chose between 0 and 1", 2)
             else:
-                self.log.add_log("HAInit: wrong mode-%s chosen, you should chose between 0 and 1", 2)
+                self.log.add_log("HAInit: keyboard awaken is now disabled, conversation is under process", 2)

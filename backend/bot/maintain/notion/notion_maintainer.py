@@ -188,7 +188,7 @@ class HANotionMaintainer:
                 task_name = tasks[i]["name"]
                 task_from = tasks[i]["from"]
                 task_time = tasks[i]["time"]
-                self.tts.start("第%s条任务" % i+1)
+                self.tts.start("第%s条任务" % str(i+1))
                 self.tts.start("%s在%s给您布置了任务，%s，请尽快登录Notion在任务板上查看" % (task_from, task_time, task_name))
                 time.sleep(0.5)
             del self.remind_set[person_id]

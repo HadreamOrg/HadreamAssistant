@@ -31,7 +31,7 @@
       }
     },
     "snowboy": {
-      "hotword": "./backend/bot/snowboy/hotword/xiaolan_tongxue.pmdl",
+      "hotword": "./backend/bot/snowboy/hotword/snowboy.umdl",
       "sensitivity": 0.7
     },
     "skill": {

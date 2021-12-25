@@ -141,6 +141,14 @@ class HANotionBase:
         :return:
         """
 
+    def analyze_response(self, res):
+
+        """
+        分析返回
+        :param res:
+        :return:
+        """
+
     '''Database operations'''
     def analyze_database_object(self, database_object):
 

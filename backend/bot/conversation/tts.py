@@ -8,7 +8,7 @@ import urllib.request
 import urllib.parse
 
 
-class HATts():
+class HATts:
 
     def __init__(self, ba):
 
@@ -40,7 +40,7 @@ class HATts():
             self.token = token
             return token
         except requests.exceptions.HTTPError:
-            self.log.add_log("HATTS: Getting token http error! code-%s " % r.status_code, 3)
+            self.log.add_log("HATts: failed to get token, http error, code-%s " % r.status_code, 3)
             return ""
 
     # def put_data(self, data):
@@ -75,6 +75,7 @@ class HATts():
         :param is_play: 是否立即播放
         :return:
         """
+        self.log.add_log("HATts: start tts, text-%s" % text, 1)
         text = urllib.parse.quote_plus(text)
         data = {
             'tex': text,
@@ -99,7 +100,8 @@ class HATts():
             self.log.add_log("HATts: tts request succeed", 1)
             with open("./backend/data/audio/say.wav", "wb+") as f:
                 f.write(result_str)
-            self.player.say()
+            if is_play:
+                self.player.say()
             return True
             # if is_play:
             #     put_data_t = threading.Thread(target=self.put_data, args=(result_str,))
@@ -113,5 +115,5 @@ class HATts():
             #     return True
         else:
             self.get_token()
-            self.log.add_log("HATTS: Tts meet an error! Response: %s" % str(result_str), 3)
+            self.log.add_log("HATts: Tts meet an error! Response: %s" % str(result_str), 3)
             return False

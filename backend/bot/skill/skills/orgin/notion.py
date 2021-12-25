@@ -60,16 +60,6 @@ class HASkillNotion:
         :return:
         """
         self.log.add_log("HASkillNotion: start intent_handler-book_meeting", 1)
-        self.tts.start("好的，请说一下会议名称和参会人信息")
-        self.player.start_recording()
-        self.recorder.record()
-        self.player.stop_recording()
-        self.tts.start("主持人已经默认设置为你，李佩瑜同学。会议已预约")
-        # self.tts.start("很遗憾，本周四晚的党员活动室已经被文体部的李佩瑜同学预定了，要召开名为合唱比赛的会议。是否要对他留言请求交换呢？")
-        # self.player.start_recording()
-        # self.recorder.record()
-        # self.player.stop_recording()
-        # self.tts.start("好的~不用谢，有需要再叫我哦~")
 
     def message(self):
 
