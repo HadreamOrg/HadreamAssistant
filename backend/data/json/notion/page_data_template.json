@@ -1,0 +1,30 @@
+{
+  "objectType": "page",
+  "id": "",
+  "name": "",
+  "created_time": "",
+  "last_edited_time": "",
+  "archived": false,
+  "parent": {},
+  "url": "",
+  "other": {
+    "icon": {},
+    "cover": null
+  },
+  "title": [],
+  "properties": {
+    "length": 0,
+    "idList": [],
+    "content": {}
+  },
+  "blocks": {
+    "length": 0,
+    "idList": [],
+    "content": {}
+  },
+  "databases": {
+    "length": 0,
+    "idList": [],
+    "content": {}
+  }
+}

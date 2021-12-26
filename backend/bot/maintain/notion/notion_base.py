@@ -166,7 +166,9 @@ class HANotionBase:
             name, type_, value = names[index], types[index], values[index]
 
             property_info[name] = {
-                    type_: value
+                "id": name,
+                "type": type_,
+                type_: value
             }
 
         return property_info
@@ -447,4 +449,12 @@ class HANotionBase:
 
     '''Search'''
 
+    '''Second level build'''
+
+    def build_notion_structure(self):
+
+        """
+        从notion拉去数据，在本地构建一个完整的库
+        :return:
+        """
 
