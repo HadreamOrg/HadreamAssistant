@@ -38,7 +38,7 @@ class HANotionBase:
             r = requests.post(url, data=json.dumps(body), headers=headers)
         elif request_type == "GET":
             r = requests.get(url, headers=headers)
-        elif request_type == "patch":
+        elif request_type == "PATCH":
             r = requests.patch(url, data=body)
         else:
             return False
@@ -98,6 +98,13 @@ class HANotionBase:
         :return: list
         """
 
+    def create_file_object(self):
+
+        """
+        创建一个文件对象
+        :return:
+        """
+
     def create_property_schema_object(self, names, operations, values, options=None):
 
         """
@@ -132,13 +139,45 @@ class HANotionBase:
             elif operation == "value":
                 result[name] = values[i]
 
-    def create_property_value_object(self, names, types, ):
+    def create_property_value_object(self, names, types, values):
 
         """
         创建property value object（用于创建page/database)
         :param names:
         :param types:
+        :param values: 由types决定
         :return:
+
+        property value content
+        title, rich_text: array(rich_text_object)
+        select: object{id/name, color}
+        multi_select: array[object{id/name, color}]
+        date: object{start, end, time_zone}
+        string, boolean, number: str, bool, num
+        relation: array[object{id}]
+        url, email, number, time
+        files, checkbox
+        created_by, last_edited_time, last_edited_by
+        """
+        self.log.add_log("HANotionBase: start generate property_value_object", 1)
+        property_info = {}
+
+        for index in range(0, len(names)):
+            name, type_, value = names[index], types[index], values[index]
+
+            property_info[name] = {
+                    type_: value
+            }
+
+        return property_info
+
+    def transfer_time_format(self, raw, format_="ISO 8601"):
+
+        """
+        转换时间格式
+        :param raw: 原始数据
+        :param format_: 要求格式
+        :return: str
         """
 
     def analyze_response(self, res):
@@ -202,7 +241,7 @@ class HANotionBase:
             self.log.add_log("HANotionBase: query_database failed, code-%s" % code, 3)
             return False
 
-    def update_database(self, database_id, id_type, title, properties):
+    def update_database(self, database_id, id_type, title=None, properties=None):
 
         """
         修改数据库数据
@@ -288,7 +327,12 @@ class HANotionBase:
             "parent": parent,
             "properties": properties
         }
-        # if children
+        if children is not None:
+            body["children"] = children
+        if icon is not None:
+            body["icon"] = icon
+        if cover is not None:
+            body["cover"] = cover
         code, res = self.request("POST", url, body)
 
         if code == 200:
@@ -301,7 +345,105 @@ class HANotionBase:
             self.log.add_log("HANotionBase: query page failed, code-%s" % code, 3)
             return False
 
+    def update_page(self, page_id, properties=None, archived=None, icon=None, cover=None):
+
+        """
+        更新页面
+        :param page_id: 页面id
+        :param properties: property values object
+        :param archived: 是否归档
+        :param icon: 图表
+        :param cover: 封面
+        :return:
+        """
+        self.log.add_log("HANotionBase: try update page-%s" % page_id, 1)
+        url = "https://api.notion.com/v1/pages/%s" % page_id
+
+        body = {}
+        if properties is not None:
+            body["properties"] = properties
+        if archived is not None:
+            body["archived"] = archived
+        if icon is not None:
+            body["icon"] = icon
+        if cover is not None:
+            body["cover"] = cover
+
+        code, res = self.request("PATCH", url, body)
+
+        if code == 200:
+            self.log.add_log("HANotionBase: update_page success", 1)
+            return res
+        elif code == 404:
+            self.log.add_log("HANotionBase: page does not exist", 3)
+            return res
+        else:
+            self.log.add_log("HANotionBase: update page failed, code-%s" % code, 3)
+            return False
+
+    def get_property_item(self, page_id, property_id, page_size=None, start_cursor=None):
+
+        """
+        获取一个特定页面的特定property的值
+        :param page_id: 页面id
+        :param property_id: 属性id
+        :param page_size: 返回的最大数量
+        :param start_cursor: 开始点
+        :return:
+        """
+        self.log.add_log("HANotionBase: try get page-%s's property-%s" % (page_id, property_id), 1)
+        url = "https://api.notion.com/v1/pages/%s/properties/%s" % (page_id, property_id)
+
+        path_param = "?"
+        if page_size is not None:
+            path_param = path_param + "page_size=%s&" % page_size
+        if start_cursor is not None:
+            path_param = path_param + "start_cursor=%s" % start_cursor
+        url = url + path_param
+
+        code, res = self.request("GET", url)
+
+        if code == 200:
+            self.log.add_log("HANotionBase: get_property_item success", 1)
+            return res
+        elif code == 404:
+            self.log.add_log("HANotionBase: page or property does not exist", 3)
+            return res
+        else:
+            self.log.add_log("HANotionBase: get_property_item failed, code-%s" % code, 3)
+            return False
+
     '''Block operations'''
+    def query_block(self, block_id):
+
+        """
+        请求block
+        :param block_id: block的id
+        :return:
+        如果检测到has_children=True,那么就会自动切换url,再次请求，两个结果都会保留
+        """
+        self.log.add_log("HANotionBase: query for block-%s" % block_id, 1)
+        result = [None, None]
+        url = "https://api.notion.com/v1/blocks/%s" % block_id
+
+        code, res = self.request("GET", url)
+
+        if code == 200:
+            self.log.add_log("HANotionBase: query block success", 1)
+            result[0] = res
+            if res["has_children"]:
+                self.log.add_log("HANotionBase: block has children, request for children", 1)
+                url = "https://api.notion.com/v1/blocks/%s/children" % block_id
+                code, res_2 = self.request("GET", url)
+                result[1] = res_2
+            return res
+        elif code == 404:
+            self.log.add_log("HANotionBase: block does not exist", 3)
+            result[0] = res
+            return result
+        else:
+            self.log.add_log("HANotionBase: query block failed, code-%s" % code, 3)
+            return False
 
     '''Search'''
 
