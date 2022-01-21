@@ -44,6 +44,7 @@ class HANotionMaintainer:
         人体活动检测线程
         """
         self.log.add_log("HANotionMaintainer: start the human activation detecting for reminding thread", 1)
+        fail_times = 0
         while True:
             time.sleep(0.1)
             serial_read = str(self.serial.readline(), "utf-8").replace("\r\n", "")
@@ -53,11 +54,15 @@ class HANotionMaintainer:
                 person_info = self.person_identity()
                 if person_info is False:
                     self.log.add_log("HANotionMaintainer: person identity failed", 2)
-                    # time.sleep(2)
+                    fail_times += 1
+                    if fail_times >= 2:
+                        self.log.add_log("HANotionMaintainer: it seems that the sensor got delayed, wait...", 2)
+                        time.sleep(12)
+                        fail_times = 0
                 else:
                     self.log.add_log("HANotionMaintainer: person identity success", 1)
                     person_id = person_info["id"]
-                    self.remind("detecter", person_id, person_info)
+                    self.remind("detector", person_id, person_info)
                     # print("--------------------------------------------")
                     # time.sleep(1.5)
 
@@ -196,5 +201,5 @@ class HANotionMaintainer:
         except KeyError:
             if source == "skill":
                 self.tts.start("%s，您暂时没有任何提醒哦~" % call)
-            elif source == "detecter":
-                self.tts.start("Test success, person identity success, welcome，-%s，你好！" % call)
+            elif source == "detector":
+                self.tts.start("你好啊！%s" % call)
