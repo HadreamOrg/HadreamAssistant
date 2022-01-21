@@ -45,18 +45,47 @@ class HAConversation:
 
         if text is None:
             self.log.add_log("HAConversation: text is unclear, speak text_none", 1)
-            self.tts.start("抱歉，我没有听懂呢")  # should be replaced by local playing
+            self.tts.start("抱歉，我听不清楚")  # should be replaced by local playing
             return
         else:
             self.log.add_log("HAConversation: start recognizing the intent and slots", 1)
-            intent = self.nlu.analyze_intent(text)
-            if intent[0] == "open_skill":
-                if intent[2] is None:
+            nlu_result = self.nlu.analyze_intent(text)
+            if nlu_result[0] == "open_skill":
+                if nlu_result[2] is None:
                     self.log.add_log("HAConversation: open_skill failed, skill_name is None", 3)
                     return
-                self.skill_manager.name_skill_list[intent[2]](self.ba, text, intent).start()
-            elif intent[0] == "error":
-                self.player.baisc_play("./backend/data/audio/%s.wav" % intent[2])
+                self.skill_manager.name_skill_list[nlu_result[2]](self.ba, text, nlu_result).start()
+            elif nlu_result[0] == "error":
+                self.player.baisc_play("./backend/data/audio/%s.wav" % nlu_result[2])
             else:
-                self.skill_manager.skills_list[intent[2]](self.ba, text, intent).start()
+                self.skill_manager.skills_list[nlu_result[2]](self.ba, text, nlu_result).start()
+
+    def skill_conversation(self, skill_name):
+
+        """
+        开始技能内对话
+        :param skill_name: 技能名称，用于提交给skill_nlu
+        :return:
+        """
+        self.log.add_log("HAConversation: start skill conversation, skill-%s" % skill_name, 1)
+
+        self.log.add_log("HAConversation: start recording command", 1)
+        self.player.start_recording()
+        self.recorder.record()
+        self.player.stop_recording()
+        self.log.add_log("HAConversation: start speech to text", 1)
+        text = self.stt.start()
+
+        if text is None:
+            self.log.add_log("HAConversation: text is unclear, speak text_none", 1)
+            self.tts.start("抱歉，我听不清楚")  # should be replaced by local playing
+            return None
+        else:
+            self.log.add_log("HAConversation: start analyzing the intent and slots", 1)
+            nlu_result = self.nlu.skill_analyze_intent(text)
+            if nlu_result[0] == "error":
+                self.player.baisc_play("./backend/data/audio/%s.wav" % nlu_result[2])
+                return None
+            else:
+                return nlu_result
 

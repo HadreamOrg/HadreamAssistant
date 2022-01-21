@@ -28,7 +28,7 @@ class HANlu:
         :param text: 文本
         :return: str
         """
-        nlu_result = [0, 0, 0, 0] # intent["operation", "intent_name", "handle_skill", "slot"]
+        nlu_result = [0, 0, 0, 0]  # intent["operation", "intent_name", "handle_skill", "slot"]
         slot_result = {}
 
         if text[0:2] == "打开":
@@ -218,34 +218,25 @@ class HANlu:
         self.log.add_log("HANlu: analyze result: %s" % nlu_result, 0)
         return nlu_result
 
-    def skill_nlu(self, text, skill):
+    def skill_analyze_intent(self, text, skill_name):
 
         """
-        技能内部意图识别
+        技能内部意图分析
         :param text: 文本
-        :param skill: 技能名称
-        :return: intent_name(str)
+        :param skill_name: 技能名称
+        :return: list[0, "intent_name", $skill_name, "slot"]
         """
-        intent = None
-        slot = None
+        nlu_result = [0, 0, skill_name, 0]  # intent["operation", "intent_name", "handle_skill", "slot"]
 
-        for keyword in data.keys():
-            if keyword in text:
-                intent = data[keyword]
-                slot = text[len(keyword)-1:]
-                return intent, slot
-
-        return intent, slot
-
-    def ask_slots(self, slot_name, slot_asking, slot_dict, retry_time=2):
+    def ask_slots(self, slot_name, slot_asking, slot_dict, retried_limit=2):
 
         """
         询问词槽
         :param slot_name: 词槽名称
         :param slot_asking: 询问话术
         :param slot_dict: 匹配字典
-        :param retyr_time: 重试次数
-        :type retry_time: int
+        :param retried_limit: 重试次数
+        :type retried_limit: int
         :return dict{slot_name: target}
         """
 
