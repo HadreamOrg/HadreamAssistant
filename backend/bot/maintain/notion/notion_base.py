@@ -13,7 +13,7 @@ class HANotionBase:
 
         self.ba = ba
         self.log = ba.log
-        self.notion_setting = json.load(open("./backend/data/json/notion_setting.json", "r", encoding="utf-8"))
+        self.notion_setting = json.load(open("./backend/data/json/notion/notion_setting.json", "r", encoding="utf-8"))
 
         self.integration_token = self.notion_setting["integrationToken"]
         self.headers = {
@@ -202,7 +202,7 @@ class HANotionBase:
     def query_database(self, database_id, id_type="name", filter_object=None, sorts_object=None, start_cursor=None, page_size=None):
 
         """
-        获取数据库中的Pages
+        获取数据库
         :param database_id:
         :param id_type: name/id
         :param filter_object: 过滤器

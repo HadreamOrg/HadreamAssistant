@@ -31,13 +31,14 @@ class HANlu:
         nlu_result = [0, 0, 0, 0]  # intent["operation", "intent_name", "handle_skill", "slot"]
         slot_result = {}
 
-        if text[0:2] == "打开":
+        if "打开" in text:
             # open skill
             nlu_result[0] = "open_skill"
             nlu_result[1] = "launch"
             try:
-                skill_called = text[2:]
-                self.log.add_log("HANlu: open_skill, skill_called-%s" % skill_called, 0)
+                open_char_index = text.index("打开")+2
+                skill_called = text[open_char_index:]
+                self.log.add_log("HANlu: detect open_skill, skill_called-%s" % skill_called, 0)
                 skill_name = None
                 for a in self.skill_manager.name_skills_list:
                     for skill_name_group in a:
@@ -105,102 +106,7 @@ class HANlu:
                         # print(intent)
 
                         # 开始解析词槽
-                        if slot_group:
-                            nlp_result = self.nlp.lexer(text)
-                            nlp_result = self.nlp.lexer_result_process(nlp_result)
-                            # print(nlp_result)
-                            for slot in slot_group:
-                                ask = False
-                                if "!" in slot[1]:
-                                    ask = True
-                                
-                                if "$" in slot[1]:
-                                    # dict mode
-                                    slot_dict = json.load(open("./backend/data/json/skill_slots/dict_%s.json" % slot[1].replace("$", "").replace("!", "")))
-                                    # print(slot_dict)
-                                    if slot_dict["canNlp"]:
-                                        # nlp法
-                                        self.log.add_log("HANlu: start filling slot-%s in nlp mode" % slot[0], 1)
-                                        try:
-                                            slot_result[slot[0]] = nlp_result[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]]
-                                        except KeyError:
-                                            self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
-                                            if ask:
-                                                self.log.add_log("HANlu: ask slot is available, start ask slot", 1)
-                                                self.tts.start(slot[2])
-                                                self.player.start_recording()
-                                                self.recorder.record()
-                                                self.player.stop_recording()
-                                                nlp_result_ = self.nlp.lexer_result_process(self.nlp.lexer(self.stt.start()))
-                                                print(nlp_result_)
-                                                try:
-                                                    slot_result[slot[0]] = nlp_result_[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]]
-                                                except KeyError:
-                                                    self.tts.start("没有匹配到词槽呢，您可以在下一次提问中换一个表述试试呢")
-                                                    self.log.add_log("HANlu: ask slot-%s failed, no word compared" % slot[0], 1)
-                                            self.log.add_log("HANlu: ask slot is not available, skip slot", 1)
-                                    else:
-                                        # 自带词语匹配法
-                                        slot_dict_content = slot_dict["content"]
-                                        slot_compared = False
-                                        for content_group in slot_dict_content:
-                                            real_word = content_group[0]
-                                            referring_dict = False
-                                            if "$" in real_word:
-                                                referring_dict = True
-                                                content_group = json.load(open("./backend/data/json/skill_dicts/all_personnel.json", "r", encoding="utf-8"))
-                                            for word in content_group:
-                                                if word in text:
-                                                    # 词槽存在
-                                                    if referring_dict:
-                                                        real_word = word
-                                                    slot_compared = True
-                                                    break
-                                            if slot_compared:
-                                                slot_result[slot[0]] = real_word
-                                                break
-                                        if not slot_compared:
-                                            slot_result[slot[0]] = None
-
-                                elif "*" in slot[1]:
-                                    # rule mode
-                                    slot_rule = json.load(open("./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
-
-                                    self.log.add_log("HANlu: start filling slot-%s in rule_%s mode" % (slot[0], slot_rule["mode"]), 1)
-                                    if slot_rule["mode"] == "sentence_mode":
-                                        # sentence rule mode
-                                        slot_rule_content = slot_rule["content"]
-                                        for sentence in slot_rule_content:
-                                            a = sentence.split("$")
-                                            compared_b = True
-                                            for i in a:
-                                                if i not in text:
-                                                    compared_b = False
-                                            if compared_b:
-                                                slot_result[slot[0]] = text[text.index(a[0][-1])+1:text.index(a[1][0])]
-                                        try:
-                                            c = slot_result[slot[0]]
-                                        except KeyError:
-                                            if ask:
-                                                self.log.add_log("HANlu: ask slot is available, start ask slot", 1)
-                                                self.tts.start(slot[2])
-                                                self.player.start_recording()
-                                                self.recorder.record()
-                                                asking_result = self.stt.start()
-                                                compared_b = True
-                                                for sentence in slot_rule_content:
-                                                    a = sentence.split("$")
-                                                    for i in a:
-                                                        if i not in asking_result:
-                                                            compared_b = False
-                                                    if compared_b:
-                                                        slot_result[slot[0]] = asking_result[text.index(a[0][-1]) + 1:asking_result.index(a[1][0])]
-                                            else:
-                                                self.log.add_log("HANlu: ask slot is not available, skip slot", 1)
-                                    elif slot_rule["mode"] == "pos_mode":
-                                        # pos rule mode
-                                        pass
-                                    # sentence and rule combiation mode
+                        slot_result = self.get_slot(text, slot_group)
                         break
                     
                     if i == intent_word_group_last_index-1 and not intent_compared:
@@ -228,70 +134,166 @@ class HANlu:
         """
         nlu_result = [0, 0, skill_name, 0]  # intent["operation", "intent_name", "handle_skill", "slot"]
 
-    def ask_slots(self, slot_name, slot_asking, slot_dict, retried_limit=2):
+    def get_slot(self, text, slots):
+
+        """
+        提取词槽
+        :param text: 文本
+        :param slots: 要获取的词槽名称及其对应数据 [(name, dict/rule), (...)]
+        :return: {}
+        注意！！！来自于ask_slot的解析请求，不允许再次ask，否则将会陷入死循环
+        """
+        self.log.add_log("HANlu: start analyzing slots...", 1)
+        slot_result = {}
+
+        nlp_result = self.nlp.lexer(text)
+        nlp_result = self.nlp.lexer_result_process(nlp_result)
+
+        for slot in slots:
+            ask = False
+            if "!" in slot[1]:
+                ask = True
+
+            if "$" in slot[1]:
+                # dict mode
+                slot_dict = json.load(open("./backend/data/json/skill_slots/dict_%s.json" % slot[1].replace("$", "").replace("!", "")))
+                if slot_dict["canNlp"]:
+                    # nlp法
+                    self.log.add_log("HANlu: start filling slot-%s in nlp mode" % slot[0], 1)
+                    try:
+                        slot_result[slot[0]] = nlp_result[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]]
+                    except KeyError:
+                        self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
+                        if ask:
+                            slot_result[slot[0]] = self.ask_slot([slot])[slot[0]]
+                            # self.log.add_log("HANlu: ask slot is available, request asking slot", 1)
+                            # self.tts.start(slot[2])
+                            # self.player.start_recording()
+                            # self.recorder.record()
+                            # self.player.stop_recording()
+                            # nlp_result_ = self.nlp.lexer_result_process(self.nlp.lexer(self.stt.start()))
+                            # print(nlp_result_)
+                            # try:
+                            #     slot_result[slot[0]] = nlp_result_[slot_dict["nlpItemType"]][
+                            #         slot_dict["nlpItemType2"]]
+                            # except KeyError:
+                            #     self.tts.start("没有匹配到词槽呢，您可以在下一次提问中换一个表述试试呢")
+                            #     self.log.add_log("HANlu: ask slot-%s failed, no word compared" % slot[0], 1)
+                        self.log.add_log("HANlu: ask slot is not available, skip the slot", 1)
+                else:
+                    # 自带词语匹配法
+                    slot_dict_content = slot_dict["content"]
+                    slot_compared = False
+                    for content_group in slot_dict_content:
+                        real_word = content_group[0]
+                        referring_dict = False
+                        if "$" in real_word:
+                            referring_dict = True
+                            content_group = json.load(
+                                open("./backend/data/json/skill_dicts/all_personnel.json", "r", encoding="utf-8"))
+                        for word in content_group:
+                            if word in text:
+                                # 词槽存在
+                                if referring_dict:
+                                    real_word = word
+                                slot_compared = True
+                                break
+                        if slot_compared:
+                            slot_result[slot[0]] = real_word
+                            break
+                    if not slot_compared:
+                        slot_result[slot[0]] = None
+
+            elif "*" in slot[1]:
+                # rule mode
+                slot_rule = json.load(open("./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
+
+                self.log.add_log("HANlu: start filling slot-%s in rule_%s mode" % (slot[0], slot_rule["mode"]), 1)
+                if slot_rule["mode"] == "sentence_mode":
+                    # sentence rule mode
+                    slot_rule_content = slot_rule["content"]
+                    for sentence in slot_rule_content:
+                        a = sentence.split("$")
+                        compared_b = True
+                        for i in a:
+                            if i not in text:
+                                compared_b = False
+                        if compared_b:
+                            slot_result[slot[0]] = text[text.index(a[0][-1]) + 1:text.index(a[1][0])]
+                    try:
+                        c = slot_result[slot[0]]
+                    except KeyError:
+                        if ask:
+                            self.log.add_log("HANlu: ask slot is available, request asking slot", 1)
+                            slot_result[slot[0]] = self.ask_slot([slot])[slot[0]]
+                            # self.tts.start(slot[2])
+                            # self.player.start_recording()
+                            # self.recorder.record()
+                            # asking_result = self.stt.start()
+                            # compared_b = True
+                            # for sentence in slot_rule_content:
+                            #     a = sentence.split("$")
+                            #     for i in a:
+                            #         if i not in asking_result:
+                            #             compared_b = False
+                            #     if compared_b:
+                            #         slot_result[slot[0]] = asking_result[text.index(a[0][-1]) + 1:asking_result.index(a[1][0])]
+                        else:
+                            self.log.add_log("HANlu: ask slot is not available, skip slot", 1)
+                elif slot_rule["mode"] == "pos_mode":
+                    # pos rule mode
+                    pass
+                # [sentence x rule]-mix mode
+        return slot_result
+
+    def ask_slot(self, slots_param, retried_limit=2):
 
         """
         询问词槽
-        :param slot_name: 词槽名称
-        :param slot_asking: 询问话术
-        :param slot_dict: 匹配字典
+        :param slots_param: 词槽参数[slot1_param(name, data, asking), slot2_param]
         :param retried_limit: 重试次数
         :type retried_limit: int
         :return dict{slot_name: target}
-        """
 
-    # def xfyun_intent_analyze(self, text):
-    #
-    #     """
-    #     讯飞语意识别模块
-    #     :param text: 文本
-    #     :return:
-    #     """
-    #     self.log.add_log("XiaolanNlu: Getting intent with ifly nlu engine")
-    #
-    #     url = 'http://api.xfyun.cn/v1/aiui/v1/text_semantic?text='
-    #     app_id = self.nlu_settings["appId"]  # ''
-    #     api_key = self.nlu_settings["appKey"]  # ''
-    #     lastmdl = self.nlu_settings["lastMdl"]  # ''
-    #
-    #     time_stamp = str(int(time.time()))
-    #
-    #     try:
-    #         base64_text = base64.b64encode(text)
-    #     except TypeError:
-    #         intent = None
-    #         return intent
-    #
-    #     text = 'text=' + text
-    #
-    #     raw = api_key + time_stamp + lastmdl + text
-    #
-    #     hash = hashlib.md5()
-    #     hash.update(raw)
-    #     check_sum = hash.hexdigest()
-    #
-    #     headers = {'X-Appid': app_id,
-    #                'Content-type': 'application/x-www-form-urlencoded; charset=utf-8',
-    #                'X-CurTime': time_stamp,
-    #                'X-Param': 'eyJ1c2VyaWQiOiIxMyIsInNjZW5lIjoibWFpbiJ9',
-    #                'X-CheckSum': check_sum}
-    #     url = url + base64_text
-    #
-    #     r = requests.post(url,
-    #                       headers=headers)
-    #     try:
-    #         json = r.json()
-    #     except:
-    #         return self.keyword_compare(text)
-    #
-    #     try:
-    #         intent = json['data']['service']
-    #     except KeyError:
-    #         return self.keyword_compare(text)
-    #     except TypeError:
-    #         return self.keyword_compare(text)
-    #
-    #     if intent is not None:
-    #         return [intent]
-    #     else:
-    #         return [None]
+        STEPS:
+            1.load the slot's info(name)
+            2.
+        """
+        self.log.add_log("HANlu: start asking slot", 1)
+
+        result = {}
+        for slot in slots_param:
+            retried = 0
+            slot_name = slot[0]
+            asking_text = slot[-1]
+            result[slot_name] = []
+
+
+            def ask():
+                global retried
+                self.tts.start(asking_text)
+                self.player.start_recording()
+                text = self.stt.start()
+                self.player.stop_recording()
+                return text
+
+            text = ask()
+            while True:
+                if text is None:
+                    if retried > retried_limit:
+                        self.log.add_log("HANlu: ask for slot-%s failed, text is empty, skip(over limit)" % slot[0], 3)
+                        break
+                    else:
+                        retried += 1
+                        self.log.add_log("HANlu: ask for slot-%s failed, text is empty, retried" % slot[0], 2)
+                        text = ask()
+                else:
+                    nlu_result = self.get_slot(text, [(slot_name, slot[1])])
+                    try:
+                        result[slot_name] = nlu_result[slot_name]
+                    except KeyError:
+                        self.log.add_log("HASkillNotion: ask for place fail, can't get the slot, skip", 2)
+                        continue
+                    break
+
+        return result

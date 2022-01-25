@@ -24,6 +24,7 @@ class HASkillManager:
         ]
         # nlu识别意图和词槽的资料库
         # [[关键词组]], [意图组], [意图对应词槽组], "技能名称"]
+        # 目前词槽不支持定义多个询问话术以及询问次数
         self.keyword_intent_list = [
             (
                 [[("订", "闹钟"), ("订", "时钟"), ("提醒")]], ["set_alarm"], [[("date", "$date!"), ("time", "$time!", "请问你想要预定什么时候的闹钟呢？")]], "alarm"),
@@ -42,12 +43,13 @@ class HASkillManager:
                     "book_meeting",
                     "cancel_meeting",
                     "update_meeting",
-                    "message",
                     "message"
                 ],
                 [
-                    [("date", "$date!", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？")],
-                    [("date", "$date", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？")],
+                    [("date", "$date!", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？"),
+                     ("place", "$place", "会议在哪里举行呢")],
+                    [("date", "$date", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？"),
+                     ("place", "$place", "会议在哪里举行呢")],
                     [],
                     [],
                     []

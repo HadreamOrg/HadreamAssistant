@@ -4,6 +4,7 @@
 # date: 2021/12/7
 
 from backend.bot.maintain.notion.notion_base import HANotionBase
+import json
 
 
 class HASkillNotion:
@@ -13,9 +14,10 @@ class HASkillNotion:
         self.log = ba.log
         self.setting = ba.setting
         self.tts = ba.tts
-        # self.stt = ba.stt
-        # self.recorder = ba.recorder
+        self.stt = ba.stt
+        self.recorder = ba.recorder
         self.player = ba.player
+        self.nlu = ba.nlu
         self.conversation = ba.conversation
 
         self.text = text
@@ -23,7 +25,8 @@ class HASkillNotion:
         self.intent = nlu_result[1]
         self.slot = nlu_result[3]
 
-        self.notion_op_base = HANotionBase(ba)
+        self.notion_base = HANotionBase(ba)
+        self.notion_cache = json.load(open("./backend/data/json/notion/cache.json", "r", encoding="utf-8"))
 
     def start(self, intent=None):
 
@@ -76,23 +79,50 @@ class HASkillNotion:
         nlu_result = self.conversation.skill_conversation("notion")
         self.start(nlu_result[1])
 
-    def book_meeting(self):
+    def book_meeting(self, boot_way="intent"):
 
         """
         预定会议
         STEPS:
-            1.get the meeting arrangement
-            2.ask basic meeting info
+            1.fetch the meeting arrangement
+            2.ask for basic meeting info
               name place participation time host
             3.verify the info
                 is the info correct
                 is the info conflict
             4.try to update the meeting arrangement database
-            5.report the status
+            5.report the update status->success then continue
             6.ask for release announcement(message) or not
+              if true: call up self.add_message
         :return:
         """
-        self.log.add_log("HASkillNotion: start intent_handler-book_meeting", 1)
+        if boot_way == "intent":
+            self.log.add_log("HASkillNotion: start intent_handler-book_meeting", 1)
+            # 1.fetch the meeting arrangement
+            # try cache's database_id list
+            database_id = "977d17d7-d8b7-453d-bd98-9f5b222b2d6e"
+            try:
+                meeting_arrangement = self.notion_base.query_database(database_id)["results"]
+            except KeyError:
+                self.log.add_log("HASkillNotion: meeting arrangement is empty, database error", 3)
+                self.tts.start("数据库出现错误，请联系管理员")
+
+            # 2.ask for basic meeting info(name place participation time host)
+            meeting_info_list = {}
+            keys = ["meeting_name", "date", "place", "attender"]
+            keys_asking = ["请问会议名称是什么？", "请问你想在什么时候举办会议？", "请问你想在哪里举行会议？", "请问参会人员有？"]
+            for i in range(0, len(keys)):
+                key = keys[i]
+                try:
+                    meeting_info_list[key] = self.slot[key]
+                except KeyError:
+                    ask_slot_result = self.nlu.ask_slots([(key,  "$%s" % key, keys_asking[i])])
+                    try:
+                        meeting_info_list[key] = ask_slot_result[key]
+                    except KeyError:
+                        self.log.add_log("HASkillNotion: ask for %s fail, can't get the slot, skip" % key, 2)
+                        continue
+
 
     def add_message(self):
 
