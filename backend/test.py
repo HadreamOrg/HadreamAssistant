@@ -150,7 +150,7 @@ class HANlp:
 
 from pypinyin import lazy_pinyin
 nlp = HANlp()
-personnel_list = json.load(open("./data/json/personnel_list.json", "r", encoding="utf-8"))
+personnel_list = json.load(open("data/json/notion/personnel_list.json", "r", encoding="utf-8"))
 text = "袁艺红"
 text_type = "word"
 result_list = []

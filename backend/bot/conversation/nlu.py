@@ -142,6 +142,18 @@ class HANlu:
         :param slots: 要获取的词槽名称及其对应数据 [(name, dict/rule), (...)]
         :return: {}
         注意！！！来自于ask_slot的解析请求，不允许再次ask，否则将会陷入死循环
+
+        STEPS:
+            for slot in slots:
+                加载slot的参数(slot_name, slot_data)
+                    slot_data是"$"，那就是dict模式，可以使用nlp和字典匹配；如果是"*"，那就是规则模式，有前后文规则，语法规则和最垃圾的句子规则三种方式获取词槽
+                    如果slot_data还带有"!"，就意味着识别不到之后需要请求ask_slot进行询问
+                在字典模式中，可以通过nlp匹配，也可以通过关键词匹配，判断指标是key-canNlp
+                    nlp匹配通过nlpItemType和nlpItemType2获得结果。
+                        nlpItemType是ne或者pos
+                        nlpItemType2是ne或者pos的下游key，即PLACE/PERSON;n/adj/adv...这些
+                    词匹配通过for遍历fst词典文件
+
         """
         self.log.add_log("HANlu: start analyzing slots...", 1)
         slot_result = {}
@@ -166,31 +178,17 @@ class HANlu:
                         self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
                         if ask:
                             slot_result[slot[0]] = self.ask_slot([slot])[slot[0]]
-                            # self.log.add_log("HANlu: ask slot is available, request asking slot", 1)
-                            # self.tts.start(slot[2])
-                            # self.player.start_recording()
-                            # self.recorder.record()
-                            # self.player.stop_recording()
-                            # nlp_result_ = self.nlp.lexer_result_process(self.nlp.lexer(self.stt.start()))
-                            # print(nlp_result_)
-                            # try:
-                            #     slot_result[slot[0]] = nlp_result_[slot_dict["nlpItemType"]][
-                            #         slot_dict["nlpItemType2"]]
-                            # except KeyError:
-                            #     self.tts.start("没有匹配到词槽呢，您可以在下一次提问中换一个表述试试呢")
-                            #     self.log.add_log("HANlu: ask slot-%s failed, no word compared" % slot[0], 1)
                         self.log.add_log("HANlu: ask slot is not available, skip the slot", 1)
                 else:
-                    # 自带词语匹配法
-                    slot_dict_content = slot_dict["content"]
+                    # 词匹配法
+                    slot_dict_content = slot_dict["content"] # read dict
                     slot_compared = False
                     for content_group in slot_dict_content:
                         real_word = content_group[0]
                         referring_dict = False
                         if "$" in real_word:
                             referring_dict = True
-                            content_group = json.load(
-                                open("./backend/data/json/skill_dicts/all_personnel.json", "r", encoding="utf-8"))
+                            content_group = json.load(open("./backend/data/json/notion/personnel_list.json", "r", encoding="utf-8"))
                         for word in content_group:
                             if word in text:
                                 # 词槽存在
@@ -266,16 +264,24 @@ class HANlu:
             retried = 0
             slot_name = slot[0]
             asking_text = slot[-1]
-            result[slot_name] = []
+            self.log.add_log("HANlu: now asking slot-%s" % slot_name)
 
+            if "!" in slot[1]:
+                self.log.add_log("HANlu: force ask is not allowed in ask_slot, skip", 2)
+                continue
+
+            tts = self.tts
+            stt = self.stt
+            player = self.player
+            recorder = self.recorder
 
             def ask():
-                global retried
-                self.tts.start(asking_text)
-                self.player.start_recording()
-                text = self.stt.start()
-                self.player.stop_recording()
-                return text
+                tts.start(asking_text)
+                player.start_recording()
+                recorder.record()
+                a = stt.start()
+                player.stop_recording()
+                return a
 
             text = ask()
             while True:
@@ -285,7 +291,7 @@ class HANlu:
                         break
                     else:
                         retried += 1
-                        self.log.add_log("HANlu: ask for slot-%s failed, text is empty, retried" % slot[0], 2)
+                        self.log.add_log("HANlu: text is empty, retry...", 2)
                         text = ask()
                 else:
                     nlu_result = self.get_slot(text, [(slot_name, slot[1])])

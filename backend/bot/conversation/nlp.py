@@ -130,8 +130,8 @@ class HANlp:
         """
         self.log.add_log("HANlp: start lexer result process", 1)
         result = {
-            "ne": {},
-            "pos": {}
+            "ne": {},  # ne: 实体类型
+            "pos": {}  # pos: 词语类型 n adj adv...
         }
 
         items = lexer_result["items"]
