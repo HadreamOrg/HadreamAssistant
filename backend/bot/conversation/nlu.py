@@ -124,15 +124,54 @@ class HANlu:
         self.log.add_log("HANlu: analyze result: %s" % nlu_result, 0)
         return nlu_result
 
-    def skill_analyze_intent(self, text, skill_name):
+    def analyze_skill_intent(self, text, skill_name, skill_intent_list):
 
         """
         技能内部意图分析
         :param text: 文本
         :param skill_name: 技能名称
+        :param skill_intent_list: 技能意图列表
         :return: list[0, "intent_name", $skill_name, "slot"]
         """
-        nlu_result = [0, 0, skill_name, 0]  # intent["operation", "intent_name", "handle_skill", "slot"]
+        nlu_result = [0, None, skill_name, 0]  # intent[0, skill_intent_name, handle_skill, slot]
+
+        if len(skill_intent_list[1]) > 1:
+            multiple_intents = True
+        else:
+            multiple_intents = False
+
+        intent_word_group_last_index = len(skill_intent_list[0])
+        for i in range(0, len(skill_intent_list[0])):
+            # 技能内意图匹配
+            intent_word_group = skill_intent_list[0][i]
+            intent_compared = False
+            # 关键词组匹配
+            for word_group in intent_word_group:
+                word_group_compared = True
+                for word in word_group:
+                    if word not in text:
+                        word_group_compared = False
+                        break
+                if word_group_compared:
+                    intent_compared = True
+                    break
+
+            if intent_compared:
+                # 第i个意图已经被匹配
+                self.log.add_log("HANlu: skill_intent-%s compared" % skill_intent_list[1][i], 1)
+                if multiple_intents:
+                    nlu_result[1] = skill_intent_list[1][i]
+                    slot_group = skill_intent_list[2][i]
+                else:
+                    nlu_result[1] = skill_intent_list[1][0]
+                    slot_group = skill_intent_list[2][0]
+                nlu_result[2] = skill_intent_list[-1]
+
+                # 开始解析词槽
+                nlu_result[-1] = self.get_slot(text, [slot_group])
+                break
+
+        return nlu_result
 
     def get_slot(self, text, slots):
 
