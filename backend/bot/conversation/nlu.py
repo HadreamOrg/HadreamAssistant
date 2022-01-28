@@ -146,14 +146,21 @@ class HANlu:
         STEPS:
             for slot in slots:
                 加载slot的参数(slot_name, slot_data)
-                    slot_data是"$"，那就是dict模式，可以使用nlp和字典匹配；如果是"*"，那就是规则模式，有前后文规则，语法规则和最垃圾的句子规则三种方式获取词槽
+                    slot_data是"$"，那就是dict模式，可以使用nlp和字典匹配；如果是"*"，那就是规则模式，有前后文规则，词性规则和最垃圾的句子规则三种方式获取词槽
                     如果slot_data还带有"!"，就意味着识别不到之后需要请求ask_slot进行询问
                 在字典模式中，可以通过nlp匹配，也可以通过关键词匹配，判断指标是key-canNlp
                     nlp匹配通过nlpItemType和nlpItemType2获得结果。
                         nlpItemType是ne或者pos
                         nlpItemType2是ne或者pos的下游key，即PLACE/PERSON;n/adj/adv...这些
-                    词匹配通过for遍历fst词典文件
-
+                    词匹配通过for遍历key-content下的内容
+                        key-content: [[real_word, SMW1, SMW2, SMWn], [real_word, ...]]
+                在规则模式中，可以通过前后文锁定词槽，也可以通过词性提取，还可以通过句子格式匹配
+                    前后文锁定模式(context_mode)
+                        其content为{"options": {"pos": "", "length": "*2x chara", "max": int}, "last": [], "next": []}
+                    词性模式(pos_mode)
+                        其content为{"pos": "", "length": "", "max": int}
+                    句子格式模式(sentence_mode)
+                        其content为["xxxx&xxxx,xxxx", "xxxxxx&"]这样的
         """
         self.log.add_log("HANlu: start analyzing slots...", 1)
         slot_result = {}
@@ -162,51 +169,54 @@ class HANlu:
         nlp_result = self.nlp.lexer_result_process(nlp_result)
 
         for slot in slots:
+            slot_name = slot[0]
+            slot_result[slot_name] = []
+
             ask = False
             if "!" in slot[1]:
                 ask = True
 
             if "$" in slot[1]:
                 # dict mode
-                slot_dict = json.load(open("./backend/data/json/skill_slots/dict_%s.json" % slot[1].replace("$", "").replace("!", "")))
+                slot_dict = json.load(open(r"./backend/data/json/skill_slots/dict_%s.json" % slot[1].replace("$", "").replace("!", "")))
                 if slot_dict["canNlp"]:
                     # nlp法
-                    self.log.add_log("HANlu: start filling slot-%s in nlp mode" % slot[0], 1)
+                    self.log.add_log("HANlu: start filling slot-%s in nlp mode" % slot_name, 1)
                     try:
-                        slot_result[slot[0]] = nlp_result[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]]
+                        slot_result[slot_name].append(nlp_result[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]])
                     except KeyError:
                         self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
                         if ask:
-                            slot_result[slot[0]] = self.ask_slot([slot])[slot[0]]
-                        self.log.add_log("HANlu: ask slot is not available, skip the slot", 1)
+                            slot_result[slot_name].append(self.ask_slot([slot])[slot_name])
+                        self.log.add_log("HANlu: asking slot is not required, skip the slot", 1)
                 else:
                     # 词匹配法
-                    slot_dict_content = slot_dict["content"] # read dict
+                    slot_dict_content = slot_dict["content"] # read word list
                     slot_compared = False
                     for content_group in slot_dict_content:
+                        group_compared = False
                         real_word = content_group[0]
-                        referring_dict = False
                         if "$" in real_word:
-                            referring_dict = True
-                            content_group = json.load(open("./backend/data/json/notion/personnel_list.json", "r", encoding="utf-8"))
+                            # 引用了字典文件，加载字典文件
+                            content_group = json.load(open(r"./backend/data/json/skill_dicts/%s.json" % real_word.replace("$", ""), "r", encoding="utf-8"))
+                            real_word = content_group[0]
                         for word in content_group:
                             if word in text:
-                                # 词槽存在
-                                if referring_dict:
-                                    real_word = word
+                                # 词语存在，该组已匹配
+                                group_compared = True
                                 slot_compared = True
                                 break
-                        if slot_compared:
-                            slot_result[slot[0]] = real_word
-                            break
+                        if group_compared:
+                            slot_result[slot_name].append(real_word)
+
                     if not slot_compared:
-                        slot_result[slot[0]] = None
+                        self.log.add_log("HANlu: slot-%s can't be compared in word list" % slot_name, 2)
 
             elif "*" in slot[1]:
                 # rule mode
-                slot_rule = json.load(open("./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
+                slot_rule = json.load(open(r"./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
 
-                self.log.add_log("HANlu: start filling slot-%s in rule_%s mode" % (slot[0], slot_rule["mode"]), 1)
+                self.log.add_log("HANlu: start filling slot-%s in rule_%s mode" % (slot_name, slot_rule["mode"]), 1)
                 if slot_rule["mode"] == "sentence_mode":
                     # sentence rule mode
                     slot_rule_content = slot_rule["content"]
@@ -217,13 +227,13 @@ class HANlu:
                             if i not in text:
                                 compared_b = False
                         if compared_b:
-                            slot_result[slot[0]] = text[text.index(a[0][-1]) + 1:text.index(a[1][0])]
+                            slot_result[slot_name] = text[text.index(a[0][-1]) + 1:text.index(a[1][0])]
                     try:
-                        c = slot_result[slot[0]]
+                        c = slot_result[slot_name]
                     except KeyError:
                         if ask:
                             self.log.add_log("HANlu: ask slot is available, request asking slot", 1)
-                            slot_result[slot[0]] = self.ask_slot([slot])[slot[0]]
+                            slot_result[slot_name] = self.ask_slot([slot])[slot_name]
                             # self.tts.start(slot[2])
                             # self.player.start_recording()
                             # self.recorder.record()
@@ -235,7 +245,7 @@ class HANlu:
                             #         if i not in asking_result:
                             #             compared_b = False
                             #     if compared_b:
-                            #         slot_result[slot[0]] = asking_result[text.index(a[0][-1]) + 1:asking_result.index(a[1][0])]
+                            #         slot_result[slot_name] = asking_result[text.index(a[0][-1]) + 1:asking_result.index(a[1][0])]
                         else:
                             self.log.add_log("HANlu: ask slot is not available, skip slot", 1)
                 elif slot_rule["mode"] == "pos_mode":
@@ -264,6 +274,7 @@ class HANlu:
             retried = 0
             slot_name = slot[0]
             asking_text = slot[-1]
+            result[slot_name] = []
             self.log.add_log("HANlu: now asking slot-%s" % slot_name)
 
             if "!" in slot[1]:
@@ -296,7 +307,7 @@ class HANlu:
                 else:
                     nlu_result = self.get_slot(text, [(slot_name, slot[1])])
                     try:
-                        result[slot_name] = nlu_result[slot_name]
+                        result[slot_name].append(nlu_result[slot_name])
                     except KeyError:
                         self.log.add_log("HASkillNotion: ask for place fail, can't get the slot, skip", 2)
                         continue

@@ -23,10 +23,8 @@ while True:
             elif i == word_length:
                 result[chara] = real_word
             else:
-                for j in range(i, 0, -1):
-                    if chara in result[word[i-j]]:
-                        #
-                        pass
+                if chara in result[word[i-1]]:
+                    pass
 
 
 # {"A": {"B": {"D": ["ABE"], "C": ["ABF"]}}}
