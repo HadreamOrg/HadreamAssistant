@@ -2,11 +2,6 @@
   "name": "action",
   "mode": "pos_mode",
   "content": [
-    {
-      "pos": "v",
-      "order": "",
-      "length": "",
-      "max": 1
-    }
+    {"pos": "v", "length": [], "max": 1}
   ]
 }

@@ -106,7 +106,7 @@ class HANlu:
                         # print(intent)
 
                         # 开始解析词槽
-                        slot_result = self.get_slot(text, slot_group)
+                        slot_result = self.get_slot(text, [slot_group])
                         break
                     
                     if i == intent_word_group_last_index-1 and not intent_compared:
@@ -139,7 +139,7 @@ class HANlu:
         """
         提取词槽
         :param text: 文本
-        :param slots: 要获取的词槽名称及其对应数据 [(name, dict/rule), (...)]
+        :param slots: 要获取的词槽名称及其对应数据 [(slot_name, slot_data, asking), (...)]
         :return: {}
         注意！！！来自于ask_slot的解析请求，不允许再次ask，否则将会陷入死循环
 
@@ -156,9 +156,9 @@ class HANlu:
                         key-content: [[real_word, SMW1, SMW2, SMWn], [real_word, ...]]
                 在规则模式中，可以通过前后文锁定词槽，也可以通过词性提取，还可以通过句子格式匹配
                     前后文锁定模式(context_mode)
-                        其content为{"options": {"pos": "", "length": "*2x chara", "max": int}, "last": [], "next": []}
+                        其content为{"length": [int, int], "last": ["xxx", "zzz"], "next": ["yyy", None]}
                     词性模式(pos_mode)
-                        其content为{"pos": "", "length": "", "max": int}
+                        其content为[{"pos": "", "length": [], "max": int}]
                     句子格式模式(sentence_mode)
                         其content为["xxxx&xxxx,xxxx", "xxxxxx&"]这样的
         """
@@ -181,14 +181,16 @@ class HANlu:
                 slot_dict = json.load(open(r"./backend/data/json/skill_slots/dict_%s.json" % slot[1].replace("$", "").replace("!", "")))
                 if slot_dict["canNlp"]:
                     # nlp法
-                    self.log.add_log("HANlu: start filling slot-%s in nlp mode" % slot_name, 1)
+                    self.log.add_log("HANlu: start analyzing slot-%s in nlp mode" % slot_name, 1)
                     try:
                         slot_result[slot_name].append(nlp_result[slot_dict["nlpItemType"]][slot_dict["nlpItemType2"]])
                     except KeyError:
                         self.log.add_log("HANlu: cannot resolve slot from nlp's preset", 1)
                         if ask:
-                            slot_result[slot_name].append(self.ask_slot([slot])[slot_name])
-                        self.log.add_log("HANlu: asking slot is not required, skip the slot", 1)
+                            self.log.add_log("HANlu: slot-%s not compared and asking is available, request ask_slot" % slot_name, 1)
+                            slot_result[slot_name] = self.ask_slot([slot])[slot_name]
+                        else:
+                            self.log.add_log("HANlu: asking slot is not required, skip the slot", 1)
                 else:
                     # 词匹配法
                     slot_dict_content = slot_dict["content"] # read word list
@@ -210,48 +212,96 @@ class HANlu:
                             slot_result[slot_name].append(real_word)
 
                     if not slot_compared:
-                        self.log.add_log("HANlu: slot-%s can't be compared in word list" % slot_name, 2)
+                        if ask:
+                            self.log.add_log("HANlu: slot-%s not compared and asking is available, request ask_slot" % slot_name, 1)
+                            slot_result[slot_name] = self.ask_slot([slot])[slot_name]
+                        else:
+                            self.log.add_log("HANlu: asking slot is not required, skip the slot", 1)
 
             elif "*" in slot[1]:
                 # rule mode
                 slot_rule = json.load(open(r"./backend/data/json/skill_slots/rule_%s.json" % slot[1].replace("*", "").replace("!", "")))
 
-                self.log.add_log("HANlu: start filling slot-%s in rule_%s mode" % (slot_name, slot_rule["mode"]), 1)
-                if slot_rule["mode"] == "sentence_mode":
-                    # sentence rule mode
-                    slot_rule_content = slot_rule["content"]
-                    for sentence in slot_rule_content:
-                        a = sentence.split("$")
-                        compared_b = True
-                        for i in a:
-                            if i not in text:
-                                compared_b = False
-                        if compared_b:
-                            slot_result[slot_name] = text[text.index(a[0][-1]) + 1:text.index(a[1][0])]
+                self.log.add_log("HANlu: start analyzing slot-%s in rule_%s mode" % (slot_name, slot_rule["mode"]), 1)
+                mode = slot_rule["mode"]
+                slot_compared = False
+
+                if mode == "context_mode":
                     try:
-                        c = slot_result[slot_name]
+                        length_group = slot_rule["content"]["length"]
                     except KeyError:
-                        if ask:
-                            self.log.add_log("HANlu: ask slot is available, request asking slot", 1)
-                            slot_result[slot_name] = self.ask_slot([slot])[slot_name]
-                            # self.tts.start(slot[2])
-                            # self.player.start_recording()
-                            # self.recorder.record()
-                            # asking_result = self.stt.start()
-                            # compared_b = True
-                            # for sentence in slot_rule_content:
-                            #     a = sentence.split("$")
-                            #     for i in a:
-                            #         if i not in asking_result:
-                            #             compared_b = False
-                            #     if compared_b:
-                            #         slot_result[slot_name] = asking_result[text.index(a[0][-1]) + 1:asking_result.index(a[1][0])]
+                        length_group = None
+                    last_group = slot_rule["content"]["last"]
+                    next_group = slot_rule["content"]["next"]
+                    # both; 1,None
+                    for i in range(0, len(last_group)):
+                        last_word = last_group[i]
+                        next_word = next_group[i]
+
+                        try:
+                            offset = text.index(last_word) + len(last_word)
+                            if (next_word is None or next_word == "") and length_group is not None:
+                                end = offset + length_group[i]
+                                word = text[offset:end]
+                            else:
+                                end = text.index(next_word)
+                                word = text[offset:end]
+                                if length_group is not None:
+                                    if len(word) != length_group[i]:
+                                        self.log.add_log("HANlu: word's length not matched, skip", 3)
+                                        continue
+                                    else:
+                                        slot_compared = True
+                        except ValueError:
+                            self.log.add_log("HANlu: last/next_word was not found in text(context_mode), continue", 2)
+                            continue
                         else:
-                            self.log.add_log("HANlu: ask slot is not available, skip slot", 1)
-                elif slot_rule["mode"] == "pos_mode":
-                    # pos rule mode
-                    pass
-                # [sentence x rule]-mix mode
+                            slot_result[slot_name].append(word)
+                elif mode == "pos_mode":
+                    for group in slot_rule["content"]:
+                        pos = group["pos"]
+                        length = group["length"]
+                        max_ = group["max"]
+
+                        count = 0
+                        for word_data in nlp_result["pos"][pos]:
+                            if word_data["length"] in length:  # 注意这里是in哦
+                                count += 1
+                                slot_compared = True
+                                slot_result[slot_name].append(word_data["content"])
+                                if count >= max_:
+                                    break
+                elif mode == "sentence_mode":
+                    # sentence mode
+                    sentence_group = slot_rule["content"]
+
+                    for sentence in sentence_group:
+                        sentence_parts = sentence.split("$")
+                        sentence_compared = True
+                        for part in sentence_parts:
+                            if part not in text:
+                                sentence_compared = False
+
+                        if sentence_compared:
+                            # 句型完全匹配
+                            for i in range(0, len(sentence_parts)):
+                                part = sentence_parts[i]
+                                next_part = sentence_parts[i+1]
+                                offset = text.index(part) + len(part)
+                                end = offset + text.index(next_part)
+                                slot_result[slot_name].append(text[offset:end])
+                            slot_compared = True
+                            break  # sentence_mode是这样的
+                else:
+                    self.log.add_log("HANlu: rule_mode-mode-%s does not supported" % mode, 2)
+                    continue
+
+                if slot_compared is False:
+                    if ask:
+                        self.log.add_log("HANlu: slot-%s not compared and asking is available, request ask_slot" % slot_name, 1)
+                        slot_result[slot_name] = self.ask_slot([slot])[slot_name]
+                    else:
+                        self.log.add_log("HANlu: asking slot is not required, skip the slot", 1)
         return slot_result
 
     def ask_slot(self, slots_param, retried_limit=2):
