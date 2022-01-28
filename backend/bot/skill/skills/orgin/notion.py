@@ -38,30 +38,27 @@ class HASkillNotion:
         if intent is None:
             intent = self.intent
         self.log.add_log("HASkillNotion: start search handle_func, intent-%s" % intent, 1)
-        intent_mapping_list = [
-            ["book_meeting", self.book_meeting],
-            ["cancel_meeting", self.cancel_meeting],
-            ["edit_meeting", self.edit_meeting],
-            ["add_message", self.add_message],
-            ["discard_message", self.discard_message],
-            ["edit_message", self.edit_message],
-            ["review_message", self.review_message],
-            ["add_task", self.add_task],
-            ["delete_task", self.delete_task],
-            ["edit_task", self.edit_task],
-            ["add_project", self.add_project]
-        ]
+        intent_mapping_list = {
+            "book_meeting": self.book_meeting,
+            "cancel_meeting": self.cancel_meeting,
+            "edit_meeting": self.edit_meeting,
+            "add_message": self.add_message,
+            "discard_message": self.discard_message,
+            "edit_message": self.edit_message,
+            "review_message": self.review_message,
+            "add_task": self.add_task,
+            "delete_task": self.delete_task,
+            "edit_task": self.edit_task,
+            "add_project": self.add_project
+        }
 
-        intent_found = False
-        for intent_func in intent_mapping_list:
-            if intent_func[0] == intent:
-                intent_found = True
-                intent_func[1]()
-
-        if not intent_found:
-            self.log.add_log("HASkillNotion: intent-%s was not found!" % intent, 3)
+        try:
+            intent_mapping_list[intent]()
+            return True
+        except KeyError:
+            self.log.add_log("HASkillNotion: intent-%s was not supported!" % intent, 3)
             # self.player.play("./backend/data/audio/skill_intent_not_found.wav")
-            self.tts.start("抱歉，技能无法解析该意图——找不到该意图-%s，请联系管理员" % intent)
+            self.tts.start("抱歉，技能无法处理意图：%s, 无对应的处理函数。请联系管理员" % intent)
             return False
 
     def launch(self):
@@ -79,10 +76,11 @@ class HASkillNotion:
         nlu_result = self.conversation.skill_conversation("notion")
         self.start(nlu_result[1])
 
-    def book_meeting(self, boot_way="intent"):
+    def book_meeting(self, boot_way="normal"):
 
         """
         预定会议
+        :param boot_way: 启动方式 normal/func
         STEPS:
             1.fetch the meeting arrangement
             2.ask for basic meeting info
@@ -96,7 +94,7 @@ class HASkillNotion:
               if true: call up self.add_message
         :return:
         """
-        if boot_way == "intent":
+        if boot_way == "normal":
             self.log.add_log("HASkillNotion: start intent_handler-book_meeting", 1)
             # 1.fetch the meeting arrangement
             # try cache's database_id list
