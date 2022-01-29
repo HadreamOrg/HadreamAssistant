@@ -158,6 +158,14 @@ class HANotionBase:
         url, email, number, time
         files, checkbox
         created_by, last_edited_time, last_edited_by
+
+        {
+          "property_name": {
+            "id": "xnfui",
+            "type": "date/url/email/rich_text..."
+            "[type]": {its data}
+          }
+        }
         """
         self.log.add_log("HANotionBase: start generate property_value_object", 1)
         property_info = {}
@@ -172,6 +180,25 @@ class HANotionBase:
             }
 
         return property_info
+
+    def get_property_value(self, type_, raw_value):
+
+        """
+        根据type生成value
+        如：
+        "select(type_)": {(value_output)
+            "id": "c839f5b5-fe82-4aca-b58c-d26d0e7277ac",
+            "name": "28班",
+            "color": "gray"
+        }
+        :param type_: property类型
+        :param raw_value: property原始值
+        :return: dict/list
+        """
+        if type_ == "date":
+            return {
+
+            }
 
     def transfer_time_format(self, raw, format_="ISO 8601"):
 
@@ -309,12 +336,13 @@ class HANotionBase:
             self.log.add_log("HANotionBase: query page failed, code-%s" % code, 3)
             return False
 
-    def create_page(self, parent, properties, children=None, icon=None, cover=None):
+    def create_page(self, parent, properties, title, children=None, icon=None, cover=None):
 
         """
         创建一个页面
         :param parent: 父级对象
         :param properties: 页面性质 dict
+        :param title: 标题(str)
         :param children: 子对象 list
         :param icon:
         :param cover:
@@ -325,6 +353,7 @@ class HANotionBase:
         self.log.add_log("HANotionBase: create a page")
         url = "https://api.notion.com/v1/pages/"
 
+        properties["Name"] = {"title": [{"text": {"content": title}}]}
         body = {
             "parent": parent,
             "properties": properties

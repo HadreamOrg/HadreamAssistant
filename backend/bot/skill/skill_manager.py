@@ -44,7 +44,7 @@ class HASkillManager:
                     "message"
                 ],
                 [
-                    [("date", "$date!", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？"),
+                    [("date_start", "$date!", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？"),
                      ("place", "$place", "会议在哪里举行呢")],
                     [("date", "$date", "请问您想要在哪天的几时举行会议"), ("attender", "$attender", "会议参会人有谁呢？"),
                      ("place", "$place", "会议在哪里举行呢")],
