@@ -181,7 +181,7 @@ class HANotionBase:
 
         return property_info
 
-    def get_property_value(self, type_, raw_value):
+    def generate_property_value(self, type_, raw_value):
 
         """
         根据type生成value

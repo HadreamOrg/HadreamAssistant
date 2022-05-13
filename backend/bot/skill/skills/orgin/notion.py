@@ -167,6 +167,14 @@ class HASkillNotion:
             except KeyError:
                 pass
 
+            attenders = []
+            for attender in meeting_info_list["host"]:
+                attenders.append({"name": attender, "color": "default"})
+
+            hosts = []
+            for host in meeting_info_list["attender"]:
+                hosts.append({"name": host, "color": "default"})
+
             for meeting in meeting_arrangement:
                 properties = meeting["properties"]
                 status = properties["状态"]["select"]["name"]
@@ -199,11 +207,13 @@ class HASkillNotion:
                                          self.notion_base.create_property_value_object(
                                              ["会议时间", "参会人", "场所", "主持人", "状态"],
                                              ["date", "multi_select", "select", "multi_select", "select"],
-                                             [meeting_info_list["date"], meeting_info_list["attender"],
-                                              meeting_info_list["place"], meeting_info_list["host"], "未开始"]
+                                             [{"start": meeting_info_list["date"][0], "end": meeting_info_list["date"][1]},
+                                              attenders,
+                                              {"name": meeting_info_list["place"], "color": "default"},
+                                              hosts,
+                                              {"name": "未开始"}]
                                          ),
                                          meeting_info_list["meeting_name"])
-
 
     def add_message(self):
 
