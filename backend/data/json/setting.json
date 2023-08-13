@@ -2,17 +2,17 @@
   "bot": {
     "conversation": {
       "stt": {
-        "appKey": "TSFp0BKH547h7Agjf2WkV2Ll",
-        "secretKey": "c9RZ1ZLxPe6wQVWOUwjaWOLvM7EpXHwe"
+        "appKey": "",
+        "secretKey": ""
       },
       "tts": {
-        "appKey": "TSFp0BKH547h7Agjf2WkV2Ll",
-        "secretKey": "c9RZ1ZLxPe6wQVWOUwjaWOLvM7EpXHwe",
+        "appKey": "",
+        "secretKey": "",
         "per": 5118
       },
       "nlp": {
-        "appKey": "EzSEdCoje0SVvCUsFmI7bLwG",
-        "secretKey": "Zsyx4x9LiuzNMfhyAH2B4yCBluYCRnS2"
+        "appKey": "",
+        "secretKey": ""
       },
       "nlu": {
 
@@ -38,9 +38,9 @@
       "orgin": {
         "tuling": {
           "apiKey": [
-            "869429e05ea142ef9e3784f8e7965d1c",
-            "c88026c156ec49099510625329f9b79d",
-            "1f39526b070d4f2791b4c3347033f191"
+            "",
+            "",
+            ""
           ],
           "userId": "167031"
         }
@@ -48,8 +48,8 @@
     },
     "ai": {
       "faceReg": {
-        "appKey": "s6zYbMuLgvl6oWr1wEHTnGXW",
-        "secretKey": "H3HH76qFIqWTiR9HMxBfWlBW59zcdwAj"
+        "appKey": "",
+        "secretKey": ""
       }
     },
     "maintain": {
