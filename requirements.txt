@@ -1,0 +1,7 @@
+Flask
+requests
+webrtcvad
+RPi.GPIO
+pvporcupine
+Flask-Cors
+spidev

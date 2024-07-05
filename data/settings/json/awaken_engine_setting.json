@@ -1,0 +1,21 @@
+{
+    "snowboy": {
+        "hotword": "./lib/snowboy/hotword/snowboy.umdl",
+        "sensitivity": 0.7,
+        "sleepTime": 0.03
+    },
+    "porcupine": {
+        "accessKey": "sJWc74EM1Sb2U9CKLFGo1CegdEv9RsPvVgiFl50c+0+lmkxwVUyehQ==",
+        "keywordPath": "./lib/porcupine/codmao_cn_kw.ppn",
+        "modelPath": "./lib/porcupine/porcupine_params_zh.pv"
+    },
+    "keyboard": {
+        "key": "enter"
+    },
+    "socket": {
+        "port": 6680
+    },
+    "http": {
+        "port": 6680
+    }
+}

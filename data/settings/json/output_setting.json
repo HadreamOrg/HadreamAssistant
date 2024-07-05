@@ -1,0 +1,12 @@
+{   
+    "player": {
+        "say": "./data/audio/say.wav",
+        "start_recording": "./data/audio/start_recording.wav",
+        "stop_recording": "./data/audio/stop_recording.wav"
+    },
+    "tts": {
+        "appKey": "fDHdGCpq4uNzBYb4Rtxw2nts",
+        "secretKey": "pmRuKBFRmR22xAljpNp5hQTyv4n49Sep",
+        "per": 5118
+    }
+}

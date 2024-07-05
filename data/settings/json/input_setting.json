@@ -1,0 +1,14 @@
+{
+  "stt": {
+    "appKey": "fDHdGCpq4uNzBYb4Rtxw2nts",
+    "secretKey": "pmRuKBFRmR22xAljpNp5hQTyv4n49Sep"
+  },
+  "recorder": {
+    "recordTime": 5,
+    "maxRecordTime": 10,
+    "channels": 1,
+    "rate": 16000,
+    "chunkSize": 1024,
+    "outputPath": "./data/audio/record.wav"
+  }
+}

@@ -1,0 +1,29 @@
+{
+      "nlp": {
+        "appKey": "fDHdGCpq4uNzBYb4Rtxw2nts",
+        "secretKey": "pmRuKBFRmR22xAljpNp5hQTyv4n49Sep"
+      },
+      "nlu": {
+        "appKey": "fDHdGCpq4uNzBYb4Rtxw2nts",
+        "secretKey": "pmRuKBFRmR22xAljpNp5hQTyv4n49Sep",
+        "l1IntentJudgeUrl": "https://aip.baidubce.com/rpc/2.0/ai_custom/v1/text_cls/nl_l1_intent_judege",
+        "l1IntentList": [
+          "smarthome", "music", "schedule", "weather", "translate"
+        ],
+        "l1IntentMapping": {
+          "智能家居": "smarthome",
+          "音乐": "music",
+          "日程": "schedule",
+          "天气": "weather",
+          "翻译": "translate"
+        },
+        "intentJudgeScoreThreshold": [0.74, 0.54]
+      },
+      "intentIdentifyingExpressions": {
+        "smarthome": "智能家居",
+        "music": "音乐",
+        "schedule": "日程",
+        "weather": "天气",
+        "translate": "翻译"
+      }
+}

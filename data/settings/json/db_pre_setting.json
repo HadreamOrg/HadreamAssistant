@@ -1,0 +1,13 @@
+{
+    "slotConfigDB": {
+        "dictTables": {
+            "test": ["main", "fuzzy"]
+        },
+        "lexerRuleTable": {
+            "test": ["n", "ATT"]
+        },
+        "sentenceRuleTable": {
+            "test": ["xxxx$<slot_id>xxxxx"]
+        }
+    }
+}

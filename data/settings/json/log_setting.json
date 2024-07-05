@@ -1,0 +1,7 @@
+{
+    "displayLevel": 0,
+    "logPath": "./data/logs/",
+    "writeThreshold": 15,
+    "isDebug": false
+}
+  

@@ -1,0 +1,25 @@
+{
+  "interfaceModeMapping": {
+    "KeyboardAwakenEngine": 1,
+    "SnowboyAwakenEngine": 1,
+    "PvporcupineAwakenEngine": 1,
+    "SocketAwakenEngine": 2,
+    "HttpAwakenEngine": 1
+  },
+  "bot": {
+    "ai": {
+      "faceReg": {
+        "appKey": "s6zYbMuLgvl6oWr1wEHTnGXW",
+        "secretKey": "H3HH76qFIqWTiR9HMxBfWlBW59zcdwAj"
+      }
+    }
+  },
+  "device": {
+    "camera": {
+      "cameraId": 0,
+      "photoResolution": "1920x1080",
+      "videoResolution": "1920x1080",
+      "videoFps": 30.0
+    }
+  }
+}
